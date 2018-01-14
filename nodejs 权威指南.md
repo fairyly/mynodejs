@@ -15,3 +15,12 @@
 console.dir(对象)：将对象信息输出到控制台；
 console.time(string),console.timeEnd(string):统计一段代码的执行时间时
 ```
+
+* 3.全局作用域及全局函数
+
+```
+console.log(global)
+定时器对象的 unref 和 ref
+unref: 取消定时器回调函数调用
+ref: 恢复回调函数调用
+```
