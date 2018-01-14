@@ -1,5 +1,7 @@
 # nodejs 权威指南
 
+**示例中参数带 `[]` 表示可选参数
+
 * 1.REPL:交互式运行环境
 
 ```
@@ -81,5 +83,10 @@ npm i -g node-inspector
 * 4.使用 Buffer 类处理二进制数据
 
 ```
-new Buffer(size)
+buf = new Buffer(size);
+buf.fill(value,[offset],[end])
+
+new Buffer(array);
+
+new Buffer(str);
 ```
