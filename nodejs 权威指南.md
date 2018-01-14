@@ -89,4 +89,8 @@ buf.fill(value,[offset],[end])
 new Buffer(array);
 
 new Buffer(str);
+
+字符串之间转换:
+buf.toString([encodinf],[start],[end])
+buf.toString('utf8',3,5)
 ```
