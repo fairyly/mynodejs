@@ -23,4 +23,11 @@ console.log(global)
 定时器对象的 unref 和 ref
 unref: 取消定时器回调函数调用
 ref: 恢复回调函数调用
+
+console.log(require.cache): 查看已加载模块的缓存区
+
+__filename: 获取当前模块问阿金的带有完整绝对路径的文件名；
+__dirname: 获取当前模块问阿金的带有完整绝对路径;
+
+
 ```
