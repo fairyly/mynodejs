@@ -47,5 +47,31 @@ server.on('request',function(req,res){
 })
 server.listen(3000,'127.0.0.1')
 
+
+调试脚本：
+
+node debug app.js
+
+如果继续执行，在 debug 命令后输入 cont 或 c, 继续执行
+
+next 或 n  :执行下一句
+step 或 s : 暂停第一行代码以前
+out 或 o : 立即执行剩余代码
+
+观察变量值或表达式：
+watch('i');
+watch('i==100');
+
+unwatch(): 解除观察
+
+设置断点和取消断点：
+setBreakpoint(filename,line): setBreakpoint(12)
+或
+sb(filename,line):
+
+取消断点：
+clearBreakpoint(filename,line)
+或
+cb(filename,line):
 ```
 
