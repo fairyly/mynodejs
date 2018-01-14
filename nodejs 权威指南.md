@@ -13,5 +13,5 @@
 * 2.控制台
 ```
 console.dir(对象)：将对象信息输出到控制台；
-console.time(string):统计一段代码的执行时间时
+console.time(string),console.timeEnd(string):统计一段代码的执行时间时
 ```
