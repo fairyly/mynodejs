@@ -93,4 +93,27 @@ new Buffer(str);
 字符串之间转换:
 buf.toString([encodinf],[start],[end])
 buf.toString('utf8',3,5)
+
+Buffer 的 write 方法
+buf.write(string,[offset],[length],[encoding])
+buf.write('test',5,6)
+
+也可以使用 StringDecoder 将 Buffer 中的数据转换成字符串
+var StringDecoder = require('string_decoder').StringDecoder
+var decoder = new StringDecoder([encoding])
+decoder.write(buf)
+
+与 json 之间转换：
+JSON.stringify(buf);
+new Buffer(JSON.parse(json));
+
+复制缓存数据：
+buf.copy(targtbuf,[targetStart],[sourceStart],[sourceEnd])
+```
+Buffer 类的类方法
+```
+Buffer.isBuffer(obj): 判断一个对象是否为 Buffer 对象
+Buffer.byteLength(string,[encoding]): 计算一个指定字符串的字节数
+Buffer.concat([buf1,buf2]): 合并 Buffer 对象
+Buffer.isEncoding(encoding): 检查一个字符串是否为一个有效的编码格式字符串
 ```
