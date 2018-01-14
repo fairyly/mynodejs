@@ -67,11 +67,19 @@ unwatch(): 解除观察
 设置断点和取消断点：
 setBreakpoint(filename,line): setBreakpoint(12)
 或
-sb(filename,line):
+sb(filename,line)
 
 取消断点：
 clearBreakpoint(filename,line)
 或
-cb(filename,line):
-```
+cb(filename,line)
 
+node-inspector: nodejs 调试工具
+npm i -g node-inspector
+
+```
+* 4.使用 Buffer 类处理二进制数据
+
+```
+new Buffer(size)
+```
