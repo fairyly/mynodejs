@@ -13,8 +13,7 @@
 * [阮一峰 nodejs 教程](http://javascript.ruanyifeng.com/nodejs/assert.html)
 * [带你入门Nodejs](https://nodelover.me/course/nodejs)
 
->>>
-使用NPM下载和发布代码时都会接触到版本号。NPM使用语义版本号来管理代码，这里简单介绍一下。
+>>> 使用NPM下载和发布代码时都会接触到版本号。NPM使用语义版本号来管理代码，这里简单介绍一下。
 
 语义版本号分为X.Y.Z三位，分别代表主版本号、次版本号和补丁版本号。当代码变更时，版本号按以下原则更新。
 
