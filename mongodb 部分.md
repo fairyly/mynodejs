@@ -13,7 +13,7 @@
 * 2.mongodb 下载安装
   - 下载地址：https://www.mongodb.com/download-center?jmp=nav#enterprise
   - 安装完成后：新建目录I:\momgodb\data ,I:\momgodb\logs  
-  - 配置了环境变量:mongod --dbpath I:\momgodb\data 
+  - 配置了环境变量:mongod --dbpath I:\momgodb\data  
   - 设置Windows 服务：
     ```
         新建文件mongo.config;
@@ -26,7 +26,11 @@
         有人提醒改为如下：
         mongod --config i:\momgodb\mongo.config --install --serviceName "MongoDB"
     ```
-
+  - net stat MongoDB服务无法启动，windows提示发生服务特定错误：100
+    ```
+    1.找到你数据库文件夹中的这两个文件 mongod.lock storage.bson
+    2.删掉他们
+    ```
 * 1.常用的命令
 ```
 show dbs    显示数据库列表
