@@ -12,9 +12,20 @@
   ```
 * 2.mongodb 下载安装
   - 下载地址：https://www.mongodb.com/download-center?jmp=nav#enterprise
-  - 安装完成后：新建目录
-  
-
+  - 安装完成后：新建目录I:\momgodb\data ,I:\momgodb\logs  
+  - 配置了环境变量:mongod --dbpath I:\momgodb\data 
+  - 设置Windows 服务：
+    ```
+        新建文件mongo.config;
+        用记事本打开mongo.config输入：
+        dbpath=D:\mongodb\data\db
+        logpath=D:\mongodb\data\log\mongo.log 
+        
+        用管理员身份打开cmd命令行，进入D:\mongodb\bin目录，输入如下的命令
+        i:\momgodb\bin>mongod --config D:\mongodb\mongo.config 
+        有人提醒改为如下：
+        mongod --config i:\momgodb\mongo.config --install --serviceName "MongoDB"
+    ```
 
 * 1.常用的命令
 ```
