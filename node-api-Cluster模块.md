@@ -149,4 +149,8 @@ http.createServer(app).listen(8080, function () {
 });
 
 
+使用：
+$ node server.js
+
+
 ```
