@@ -161,3 +161,24 @@ $ kill -SIGHUP 10538
 
 $ kill 10538
 ```
+
+
+### 4.PM2模块
+
+PM2模块是cluster模块的一个包装层。它的作用是尽量将cluster模块抽象掉，让用户像使用单进程一样，部署多进程Node应用。
+```
+// app.js
+var http = require('http');
+
+http.createServer(function(req, res) {
+  res.writeHead(200);
+  res.end("hello world");
+}).listen(8080);
+```
+上面代码是标准的Node架设Web服务器的方式，然后用PM2从命令行启动这段代码。
+```
+$ pm2 start app.js -i 4
+
+# 重启所有worker进程
+$ pm2 reload all
+```
