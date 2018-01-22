@@ -66,3 +66,26 @@ process.send({ foo: 'bar' });
 ```
 
 ### 6.send()
+使用 child_process.fork() 生成新进程之后，就可以用 child.send(message, [sendHandle]) 向新进程发送消息。新进程中通过监听message事件，来获取消息。
+
+```
+var cp = require('child_process');
+
+var n = cp.fork(__dirname + '/sub.js');
+
+n.on('message', function(m) {
+  console.log('PARENT got message:', m);
+});
+
+n.send({ hello: 'world' });
+
+
+
+子进程sub.js代码。
+
+process.on('message', function(m) {
+  console.log('CHILD got message:', m);
+});
+
+process.send({ foo: 'bar' });
+```
