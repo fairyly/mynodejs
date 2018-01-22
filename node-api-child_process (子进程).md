@@ -24,6 +24,12 @@ child_process模块用于新建子进程。子进程的运行结果储存在系�
   });
   ```
 
+- child_process.exec(): 衍生一个 shell 并在 shell 上运行命令，当完成时会传入 stdout 和 stderr 到回调函数。
+- child_process.execFile(): 类似 child_process.exec()，但直接衍生命令，且无需先衍生一个 shell。
+- child_process.fork(): 衍生一个新的 Node.js 进程，并通过建立一个 IPC 通讯通道来调用一个指定的模块，该通道允许父进程与子进程之间相互发送信息。
+- child_process.execSync(): child_process.exec() 的同步方法，会阻塞 Node.js 事件循环。
+- child_process.execFileSync(): child_process.execFile() 的同步方法，会阻塞 Node.js 事件循环。
+
 ### 1.exec()
 
 exec方法用于执行bash命令，它的参数是一个命令字符串
