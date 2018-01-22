@@ -181,4 +181,9 @@ $ pm2 start app.js -i 4
 
 # 重启所有worker进程
 $ pm2 reload all
+
+
+每个worker进程都有一个id，可以用下面的命令查看单个worker进程的详情。
+
+$ pm2 show <worker id>
 ```
