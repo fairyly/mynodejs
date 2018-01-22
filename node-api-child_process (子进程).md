@@ -47,6 +47,17 @@ var ls = exec('ls -l', function (error, stdout, stderr) {
 });
 ```
 
+### 3.execFile() 
+execFile方法直接执行特定的程序，参数作为数组传入，不会被bash解释，因此具有较高的安全性
+```
+const { execFile } = require('child_process');
+const child = execFile('node', ['--version'], (error, stdout, stderr) => {
+  if (error) {
+    throw error;
+  }
+  console.log(stdout);
+});
+```
 
 ### 5.fork()
 fork会在父进程与子进程之间，建立一个通信管道，用于进程之间的通信。
