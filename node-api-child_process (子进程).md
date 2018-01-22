@@ -46,3 +46,23 @@ var ls = exec('ls -l', function (error, stdout, stderr) {
   console.log('Child Process STDOUT: ' + stdout);
 });
 ```
+
+
+### 5.fork()
+fork会在父进程与子进程之间，建立一个通信管道，用于进程之间的通信。
+
+```
+var n = child_process.fork('./child.js');
+n.on('message', function(m) {
+  console.log('PARENT got message:', m);
+});
+n.send({ hello: 'world' });
+
+child.js脚本的内容如下。
+process.on('message', function(m) {
+  console.log('CHILD got message:', m);
+});
+process.send({ foo: 'bar' });
+```
+
+### 6.send()
