@@ -152,5 +152,8 @@ http.createServer(app).listen(8080, function () {
 使用：
 $ node server.js
 
+然后，向主进程连续发出两次SIGHUP信号。
 
+$ kill -SIGHUP 10538
+$ kill -SIGHUP 10538
 ```
