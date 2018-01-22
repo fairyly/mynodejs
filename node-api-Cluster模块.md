@@ -105,4 +105,48 @@ cluster.on('listening', function (worker, address) {
 
 ### 完整的实例
 ```
+先是主进程的代码master.js。
+
+var cluster = require('cluster');
+
+console.log('started master with ' + process.pid);
+
+// 新建一个worker进程
+cluster.fork();
+
+process.on('SIGHUP', function () {
+  console.log('Reloading...');
+  var new_worker = cluster.fork();
+  new_worker.once('listening', function () {
+    // 关闭所有其他worker进程
+    for(var id in cluster.workers) {
+      if (id === new_worker.id.toString()) continue;
+      cluster.workers[id].kill('SIGTERM');
+    }
+  });
+});
+上面代码中，主进程监听SIGHUP事件，如果发生该事件就关闭其他所有worker进程。之所以是SIGHUP事件，是因为nginx服务器监听到这个信号，会创造一个新的worker进程，重新加载配置文件。另外，关闭worker进程时，主进程发送SIGTERM信号，这是因为Node允许多个worker进程监听同一个端口。
+
+下面是worker进程的代码server.js。
+
+var cluster = require('cluster');
+
+if (cluster.isMaster) {
+  require('./master');
+  return;
+}
+
+var express = require('express');
+var http = require('http');
+var app = express();
+
+app.get('/', function (req, res) {
+  res.send('ha fsdgfds gfds gfd!');
+});
+
+http.createServer(app).listen(8080, function () {
+  console.log('http://localhost:8080');
+});
+
+
 ```
