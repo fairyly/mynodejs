@@ -45,3 +45,60 @@ if(cluster.isMaster) {
   });
 }
 ```
+
+### 1.2.worker对象
+
+worker对象是cluster.fork()的返回值，代表一个worker进程。
+
+它的属性和方法如下。
+
+（1）worker.id
+
+worker.id返回当前worker的独一无二的进程编号。这个编号也是cluster.workers中指向当前进程的索引值。
+
+（2）worker.process
+
+所有的worker进程都是用child_process.fork()生成的。child_process.fork()返回的对象，就被保存在worker.process之中。通过这个属性，可以获取worker所在的进程对象。
+
+（3）worker.send()
+
+该方法用于在主进程中，向子进程发送信息。
+```
+if (cluster.isMaster) {
+  var worker = cluster.fork();
+  worker.send('hi there');
+} else if (cluster.isWorker) {
+  process.on('message', function(msg) {
+    process.send(msg);
+  });
+}
+```
+
+### 2.cluster模块的属性与方法
+
+- isMaster，isWorker
+isMaster属性返回一个布尔值，表示当前进程是否为主进程。这个属性由process.env.NODE_UNIQUE_ID决定，如果process.env.NODE_UNIQUE_ID为未定义，就表示该进程是主进程。
+
+isWorker属性返回一个布尔值，表示当前进程是否为work进程。它与isMaster属性的值正好相反。
+
+- fork()  
+fork方法用于新建一个worker进程，上下文都复制主进程。只有主进程才能调用这个方法。
+
+该方法返回一个worker对象。
+
+- kill()  
+kill方法用于终止worker进程。它可以接受一个参数，表示系统信号。
+
+如果当前是主进程，就会终止与worker.process的联络，然后将系统信号法发向worker进程。如果当前是worker进程，就会终止与主进程的通信，然后退出，返回0。
+
+在以前的版本中，该方法也叫做 worker.destroy() 。
+
+- listening事件  
+worker进程调用listening方法以后，“listening”事件就传向该进程的服务器，然后传向主进程。
+
+该事件的回调函数接受两个参数，一个是当前worker对象，另一个是地址对象，包含网址、端口、地址类型（IPv4、IPv6、Unix socket、UDP）等信息。这对于那些服务多个网址的Node应用程序非常有用。
+```
+cluster.on('listening', function (worker, address) {
+  console.log("A worker is now connected to " + address.address + ":" + address.port);
+});
+```
