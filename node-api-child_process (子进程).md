@@ -30,6 +30,8 @@ child_process模块用于新建子进程。子进程的运行结果储存在系�
 - child_process.execSync(): child_process.exec() 的同步方法，会阻塞 Node.js 事件循环。
 - child_process.execFileSync(): child_process.execFile() 的同步方法，会阻塞 Node.js 事件循环。
 
+child_process.spawn()、child_process.fork()、child_process.exec() 和 child_process.execFile() 方法都遵循与其他 Node.js API 一样的惯用的异步编程模式
+
 ### 1.exec()
 
 exec方法用于执行bash命令，它的参数是一个命令字符串
