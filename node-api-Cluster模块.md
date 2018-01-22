@@ -186,4 +186,15 @@ $ pm2 reload all
 每个worker进程都有一个id，可以用下面的命令查看单个worker进程的详情。
 
 $ pm2 show <worker id>
+
+关闭worker进程的时候，可以部署下面的代码，让worker进程监听shutdown消息。一旦收到这个消息，进行完毕收尾清理工作再关闭。
+
+process.on('message', function(msg) {
+  if (msg === 'shutdown') {
+    close_all_connections();
+    delete_logs();
+    server.close();
+    process.exit(0);
+  }
+});
 ```
