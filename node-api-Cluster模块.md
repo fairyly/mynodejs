@@ -156,4 +156,8 @@ $ node server.js
 
 $ kill -SIGHUP 10538
 $ kill -SIGHUP 10538
+
+向主进程发出SIGTERM信号，关闭主进程。
+
+$ kill 10538
 ```
