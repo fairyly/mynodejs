@@ -17,7 +17,7 @@ $ node /path/to/your/script.js &
 （1）forever
 
 forever是一个Node应用程序，用于一个子进程意外退出时，自动重启。
-
+```
 # 启动进程  
 $ forever start example.js
 
@@ -31,3 +31,4 @@ $ forever stop 0
 
 # 停止所有正在运行的进程  
 $ forever stopall
+```
