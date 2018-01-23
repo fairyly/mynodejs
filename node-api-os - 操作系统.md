@@ -82,3 +82,25 @@ os.platform() 方法返回一个字符串, 指定Node.js编译时的操作系统
 'win32'
 等价于 process.platform.
 ```
+
+```
+下面例子列出当前系列的所有IP地址。
+
+
+var os = require('os');
+var interfaces = os.networkInterfaces();
+
+for (item in interfaces) {
+  console.log('Network interface name: ' + item);
+  for (att in interfaces[item]) {
+    var address = interfaces[item][att];
+
+    console.log('Family: ' + address.family);
+    console.log('IP Address: ' + address.address);
+    console.log('Is Internal: ' + address.internal);
+    console.log('');
+  }
+  console.log('==================================');
+}
+
+```
