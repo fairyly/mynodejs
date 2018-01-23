@@ -66,3 +66,19 @@ internal <boolean> 如果 网络接口是loopback或相似的远程不能用的�
 scopeid <number> IPv6 数字领域识别码 (只有当 family 是IPv6时可用)
 cidr <string> 以 CIDR 表示法分配的带有路由前缀的 IPv4 或 IPv6 地址。如果 netmask 参数不可用，则该属性是 null
 ```
+
+### 8.os.platform()
+
+os.platform() 方法返回一个字符串, 指定Node.js编译时的操作系统平台
+
+当前可能的值有:
+```
+'aix'
+'darwin'
+'freebsd'
+'linux'
+'openbsd'
+'sunos'
+'win32'
+等价于 process.platform.
+```
