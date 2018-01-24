@@ -137,4 +137,82 @@ fs.open('<directory>', 'a+', (err, fd) => {
 
 许多函数也是基于 fs.open() 拥有这样的效果。例: fs.writeFile(), fs.readFile(), 等
 ```
+### 8.watchfile()，unwatchfile()
 
+watchfile方法监听一个文件，如果该文件发生变化，就会自动触发回调函数。
+```
+var fs = require('fs');
+
+fs.watchFile('./testFile.txt', function (curr, prev) {
+  console.log('the current mtime is: ' + curr.mtime);
+  console.log('the previous mtime was: ' + prev.mtime);
+});
+
+fs.writeFile('./testFile.txt', "changed", function (err) {
+  if (err) throw err;
+
+  console.log("file write complete");   
+});
+unwatchfile方法用于解除对文件的监听
+```
+
+### 9.createReadStream()
+createReadStream方法往往用于打开大型的文本文件，创建一个读取操作的数据流。  
+所谓大型文本文件，指的是文本文件的体积很大，读取操作的缓存装不下，只能分成几次发送，每次发送会触发一个data事件，发送结束会触发end事件。
+```
+var fs = require('fs');
+
+function readLines(input, func) {
+  var remaining = '';
+
+  input.on('data', function(data) {
+    remaining += data;
+    var index = remaining.indexOf('\n');
+    var last  = 0;
+    while (index > -1) {
+      var line = remaining.substring(last, index);
+      last = index + 1;
+      func(line);
+      index = remaining.indexOf('\n', last);
+    }
+
+    remaining = remaining.substring(last);
+  });
+
+  input.on('end', function() {
+    if (remaining.length > 0) {
+      func(remaining);
+    }
+  });
+}
+
+function func(data) {
+  console.log('Line: ' + data);
+}
+
+var input = fs.createReadStream('lines.txt');
+readLines(input, func);
+```
+### 10.createWriteStream()
+createWriteStream方法创建一个写入数据流对象，该对象的write方法用于写入数据，end方法用于结束写入操作。
+```
+var out = fs.createWriteStream(fileName, {
+  encoding: 'utf8'
+});
+out.write(str);
+out.end();
+```
+### createWriteStream方法和createReadStream方法配合，可以实现拷贝大型文件。
+```
+function fileCopy(filename1, filename2, done) {
+  var input = fs.createReadStream(filename1);
+  var output = fs.createWriteStream(filename2);
+
+  input.on('data', function(d) { output.write(d); });
+  input.on('error', function(err) { throw err; });
+  input.on('end', function() {
+    output.end();
+    if (done) done();
+  });
+}
+```
