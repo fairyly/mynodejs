@@ -122,3 +122,19 @@ stat方法的参数是一个文件或目录，它产生一个对象，该对象�
 
 不建议在调用 fs.open() 、fs.readFile() 或 fs.writeFile() 之前使用 fs.stat() 检查一个文件是否存在。   
 作为替代，用户代码应该直接打开/读取/写入文件，当文件无效时再处理错误
+
+### 7.fs.open(path, flags[, mode], callback) 异步地打开文件
+```
+// macOS 与 Linux
+fs.open('<directory>', 'a+', (err, fd) => {
+  // => [Error: EISDIR: illegal operation on a directory, open <directory>]
+});
+
+// Windows 与 FreeBSD
+fs.open('<directory>', 'a+', (err, fd) => {
+  // => null, <fd>
+});
+
+许多函数也是基于 fs.open() 拥有这样的效果。例: fs.writeFile(), fs.readFile(), 等
+```
+
