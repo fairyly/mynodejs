@@ -96,3 +96,70 @@ server.listen('/tmp/echo.sock', () => {
   console.log('server bound');
 });
 ```
+
+
+### 例子
+
+下面代码是另一个例子，用到了更多的接口。
+```
+var serverPort = 9099;
+var net = require('net');
+var server = net.createServer(function(client) {
+  console.log('client connected');
+  console.log('client IP Address: ' + client.remoteAddress);
+  console.log('is IPv6: ' + net.isIPv6(client.remoteAddress));
+  console.log('total server connections: ' + server.connections);
+
+  // Waiting for data from the client.
+  client.on('data', function(data) {
+    console.log('received data: ' + data.toString());
+
+    // Write data to the client socket.
+    client.write('hello from server');
+  });
+
+  // Closed socket event from the client.
+  client.on('end', function() {
+    console.log('client disconnected');
+  });
+});
+
+server.on('error',function(err){
+  console.log(err);
+  server.close();
+});
+
+server.listen(serverPort, function() {
+  console.log('server started on port ' + serverPort);
+});
+```
+上面代码中，createServer方法建立了一个服务端，一旦收到客户端发送的数据，就发出回应，同时还监听客户端是否中断通信。最后，listen方法打开服务端
+
+客户端Socket接口用来向服务器发送数据。
+
+```
+var serverPort = 9099;
+var server = 'localhost';
+var net = require('net');
+
+console.log('connecting to server...');
+var client = net.connect({server:server,port:serverPort},function(){
+  console.log('client connected');
+
+  // send data
+  console.log('send data to server');
+  client.write('greeting from client socket');
+});
+
+client.on('data', function(data) {
+  console.log('received data: ' + data.toString());
+  client.end();
+});
+
+client.on('error',function(err){
+  console.log(err);
+});
+client.on('end', function() {
+  console.log('client disconnected');
+});
+```
