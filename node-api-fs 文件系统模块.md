@@ -19,3 +19,106 @@ console.log('process.cwd()：', process.cwd())
 console.log('./：', path.resolve('./'))
 ```
 
+### 1.删除文件操作 fs.unlink 不加 sync 的都是异步操作，加 sync 的都是同步操作
+
+```
+const fs = require('fs');
+
+fs.unlink('/tmp/hello', (err) => {
+  if (err) throw err;
+  console.log('成功删除 /tmp/hello');
+});
+
+同步方法的例子：
+
+const fs = require('fs');
+
+fs.unlinkSync('/tmp/hello');
+console.log('成功删除 /tmp/hello');
+```
+### 2.readFile()，readFileSync()
+
+```
+readFile方法用于异步读取数据。
+
+fs.readFile('./image.png', function (err, buffer) {
+  if (err) throw err;
+  process(buffer);
+});
+```
+
+### 3.writeFile()，writeFileSync()
+```
+writeFile方法用于异步写入文件。
+
+fs.writeFile('message.txt', 'Hello Node.js', (err) => {
+  if (err) throw err;
+  console.log('It\'s saved!');
+});
+```
+
+### 4.mkdir()，writeFile()，readFile()
+mkdir方法用于新建目录。
+```
+
+var fs = require('fs');
+
+fs.mkdir('./helloDir',0777, function (err) {
+  if (err) throw err;
+});
+
+mkdir接受三个参数，第一个是目录名，第二个是权限值，第三个是回调函数。
+上面代码中，writeFile方法的第一个参数是写入的文件名，第二个参数是写入的字符串，第三个参数是回调函数。
+
+writeFile方法用于写入文件。
+
+
+var fs = require('fs');
+
+fs.writeFile('./helloDir/message.txt', 'Hello Node', function (err) {
+  if (err) throw err;
+  console.log('文件写入成功');
+});
+
+readFile方法用于读取文件内容。
+
+var fs = require('fs');
+
+fs.readFile('./helloDir/message.txt','UTF-8' ,function (err, data) {
+  if (err) throw err;
+  console.log(data);
+});
+```
+
+### 5.readdir()，readdirSync()
+readdir方法用于读取目录，返回一个所包含的文件和子目录的数组。
+```
+fs.readdir(process.cwd(), function (err, files) {
+  if (err) {
+    console.log(err);
+    return;
+  }
+
+  var count = files.length;
+  var results = {};
+  files.forEach(function (filename) {
+    fs.readFile(filename, function (data) {
+      results[filename] = data;
+      count--;
+      if (count <= 0) {
+        // 对所有文件进行处理
+      }
+    });
+  });
+});
+```
+
+### 6.stat()
+stat方法的参数是一个文件或目录，它产生一个对象，该对象包含了该文件或目录的具体信息。  
+
+我们往往通过该方法，判断正在处理的到底是一个文件，还是一个目录。
+
+如果要检查一个文件是否存在且不操作它，推荐使用 fs.access()。
+
+不建议在调用 fs.open() 、fs.readFile() 或 fs.writeFile() 之前使用 fs.stat() 检查一个文件是否存在。   
+作为替代，用户代码应该直接打开/读取/写入文件，当文件无效时再处理错误
