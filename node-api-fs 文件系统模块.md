@@ -18,3 +18,4 @@ console.log('__filename：', __filename)
 console.log('process.cwd()：', process.cwd())
 console.log('./：', path.resolve('./'))
 ```
+
