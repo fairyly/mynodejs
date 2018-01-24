@@ -43,7 +43,6 @@ new net.Server([options][, connectionListener])#
 ### 3.net.Server is an EventEmitter实现了以下事件:
 ```
 'close' 事件
-'close' 事件
 'error' 事件
 'listening' 事件
 server.address()
@@ -60,4 +59,40 @@ server.listen(() => {
   console.log('opened server on', server.address());
 });
 只有到了 'listening' 事件被触发时候.才可以调用 server.address()
+```
+
+
+
+### 4. net.Socket 类
+net.Socket可以被用户创建并直接与server通信。举个例子，它是通过net.createConnection()返回的，所以用户可以使用它来与server通信。
+
+这是一个简单的TCP回声服务器在8124端口上监听连接的例子：
+
+```
+const net = require('net');
+const server = net.createServer((c) => {
+  // 'connection' listener
+  console.log('client connected');
+  c.on('end', () => {
+    console.log('client disconnected');
+  });
+  c.write('hello\r\n');
+  c.pipe(c);
+});
+server.on('error', (err) => {
+  throw err;
+});
+server.listen(8124, () => {
+  console.log('server bound');
+});
+```
+用 telnet测试:
+```
+$ telnet localhost 8124
+```
+想监听 /tmp/echo.sock 只需改最后三行为：
+```
+server.listen('/tmp/echo.sock', () => {
+  console.log('server bound');
+});
 ```
