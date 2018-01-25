@@ -16,7 +16,7 @@
   
   根据上边的代码的完善
 
- //allow custom header and CORS
+  //allow custom header and CORS
   app.all('*',function (req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Headers', 'Content-Type, Content-Length, Authorization, Accept, X-Requested-With , yourHeaderFeild');
