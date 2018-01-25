@@ -158,3 +158,62 @@ var findRestaurants = function(db, callback) {
 ```
 
 ```
+
+
+### Mongoose
+多种中间件可以用于连接node.js与MongoDB，目前比较常用的Mongoose。
+
+首先，在项目目录将Mongoose安装为本地模块。
+```
+npm install mongoose --save
+```
+
+然后，就可以在node.js脚本中连接MongoDB数据库了。
+```
+var mongoose = require('mongoose');
+
+// 连接字符串格式为mongodb://主机/数据库名
+mongoose.connect('mongodb://localhost/mydatabase');
+```
+注意，运行上面这个脚本时，必须确保MongoDB处于运行中。
+
+数据库连接后，可以对open和error事件指定监听函数。
+```
+var db = mongoose.connection;
+
+db.on('error', function callback () {
+  console.log("Connection error");
+});
+
+db.once('open', function callback () {
+  console.log("Mongo working!");
+});
+```
+* mongoose.Schema方法用来定义数据集的格式（schema），mongoose.model方法将格式分配给指定的数据集。
+
+```
+var Schema = mongoose.Schema;
+var userSchema = new Schema({
+  name : String,
+  age : Number,
+  DOB : Date,
+  isAlive : Boolean
+});
+
+var User = mongoose.model('User', userSchema);
+
+var arvind = new User({
+  name : 'Arvind',
+  age : 99,
+  DOB : '01/01/1915',
+  isAlive : true
+});
+
+arvind.save(function (err, data) {
+  if (err){
+    console.log(err);
+  } else {
+    console.log('Saved : ', data );
+  }
+});
+```
