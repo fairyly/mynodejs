@@ -105,6 +105,16 @@ MongoClient.connect(url, function(err, db) {
 ```
 * 3.删除
 ```
+var removeRestaurants = function(db, callback) {
+   db.collection('restaurants').deleteMany(
+      { "borough": "Manhattan" },
+      function(err, results) {
+         console.log(results);
+         callback();
+      }
+   );
+};
+
 
 ```
 * 4.查找
