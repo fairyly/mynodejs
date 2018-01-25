@@ -105,6 +105,7 @@ MongoClient.connect(url, function(err, db) {
 ```
 * 3.删除
 ```
+删除符合条件的所有文档
 var removeRestaurants = function(db, callback) {
    db.collection('restaurants').deleteMany(
       { "borough": "Manhattan" },
