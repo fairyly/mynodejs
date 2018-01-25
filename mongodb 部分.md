@@ -133,6 +133,12 @@ db.collection('restaurants').deleteMany( {}, function(err, results) {
       callback();
    });
 
+删除整个集合。
+
+db.collection('restaurants').drop( function(err, response) {
+      console.log(response)
+      callback();
+   });
 ```
 * 4.查找
 ```
