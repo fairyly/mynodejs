@@ -115,6 +115,15 @@ var removeRestaurants = function(db, callback) {
    );
 };
 
+删除单一文档。
+
+db.collection('restaurants').deleteOne(
+      { "borough": "Queens" },
+      function(err, results) {
+         console.log(results);
+         callback();
+      }
+   );
 
 ```
 * 4.查找
