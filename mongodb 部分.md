@@ -125,6 +125,13 @@ db.collection('restaurants').deleteOne(
          callback();
       }
    );
+   
+ 删除所有文档。
+
+db.collection('restaurants').deleteMany( {}, function(err, results) {
+      console.log(results);
+      callback();
+   });
 
 ```
 * 4.查找
