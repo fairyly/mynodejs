@@ -41,7 +41,7 @@ show collections    显示数据库中的集合，相当于表格
 
 遇到问题：TypeError: db.collection is not a function  
 之后在连接数据库回调中加入 var mydb = db.db('myDatabaseNameAsAString');
-参考：https://stackoverflow.com/questions/43779323/typeerror-db-collection-is-not-a-function
+参考：https://stackoverflow.com/questions/43779323/typeerror-db-collection-is-not-a-function  
     https://mongodb.github.io/node-mongodb-native/api-generated/mongoclient.html
 ```
 var MongoClient = require('mongodb').MongoClient;
