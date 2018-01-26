@@ -100,7 +100,7 @@ var findRestaurants = function(db, callback) {
 MongoClient.connect(url, function(err, db) {
   assert.equal(null, err);
   console.log('Connected correctly to server.',db);
-  var mydb = db.db('myDatabaseNameAsAString');
+  var mydb = db.db('test');
   // 插入数据
   insertDocument(mydb, function() {
     db.close();
