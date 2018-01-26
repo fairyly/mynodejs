@@ -50,7 +50,7 @@ show collections    显示数据库中的集合，相当于表格
 var MongoClient = require('mongodb').MongoClient;
 var assert = require('assert');
 
-var url = 'mongodb://localhost:27017/test';
+var url = 'mongodb://localhost:27017';
 
 
 var insertDocument = function(db, callback) {
@@ -97,17 +97,17 @@ var findRestaurants = function(db, callback) {
 };
 
 // 连接数据库
-MongoClient.connect(url, function(err, db) {
+MongoClient.connect(url, function(err, database) {
   assert.equal(null, err);
   console.log('Connected correctly to server.',db);
-  var mydb = db.db('test');
+  var mydb = database.db('test');
   // 插入数据
   insertDocument(mydb, function() {
-    db.close();
+    database.close();
   });
   // 查询数据
   findRestaurants(mydb, function() {
-      db.close();
+      database.close();
   });
 });
 ```
