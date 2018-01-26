@@ -16,7 +16,7 @@
   - 安装完成后：新建目录I:\momgodb\data ,I:\momgodb\logs  
   - 配置了环境变量:mongod --dbpath I:\momgodb\data  
   - 设置Windows 服务：
-    ```
+    ```
         新建文件mongo.config;
         用记事本打开mongo.config输入：
         dbpath=D:\mongodb\data\db
