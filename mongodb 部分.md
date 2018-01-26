@@ -1,4 +1,4 @@
-# mongodb
+# mongodb  目前是用 3.0 api
 
 * nodejs mangodb 3.0 api:http://mongodb.github.io/node-mongodb-native/3.0/api/
 
