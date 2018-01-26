@@ -1,5 +1,6 @@
 # mongodb
 
+* nodejs mangodb 3.0 api:http://mongodb.github.io/node-mongodb-native/3.0/api/
 
 * 1.在mongodb上使用的GUI工具
   ```
