@@ -88,3 +88,18 @@
       }
     });
   ```
+3.entity保存方法
+
+  ```
+    Entity.save(文档数据, callback))
+  
+    TestEntity.save(function(error,doc){
+      if(error){
+        console.log("error :" + error);
+      }else{
+        console.log(doc);
+      }
+    });
+  ```
+
+4.数据更新
