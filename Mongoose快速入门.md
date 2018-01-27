@@ -116,3 +116,16 @@
       }
     });
   ```
+5. 删除数据
+  ```
+    obj.remove(查询条件,callback);
+    
+    var conditions = { name: 'tom' };
+    TestModel.remove(conditions, function(error){
+      if(error) {
+        console.log(error);
+      } else {
+        console.log('Delete success!');
+      }
+    });
+  ```
