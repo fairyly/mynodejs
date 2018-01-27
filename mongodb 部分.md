@@ -40,6 +40,8 @@ show collections    显示数据库中的集合，相当于表格
 ```
 * 2.创建&新增
 
+以下都是 node-mongodb-native
+
 * nodejs mongodb api:http://mongodb.github.io/node-mongodb-native/3.0/api/index.html
 
   遇到问题：TypeError: db.collection is not a function  3.0以上版本会报错 需要使用 var mydb = db.db('your dbname')  
