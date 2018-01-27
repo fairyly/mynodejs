@@ -36,3 +36,8 @@
       email: { type:String,default:''}
     });
   ```
+5. Model–操作数据库
+  ```
+    //创建model,在内存中创建结构为TestSchema名为test1的集合
+    var TestModel = db.model("test1", TestSchema );
+  ```
