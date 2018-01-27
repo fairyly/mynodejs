@@ -51,3 +51,13 @@
     console.log(TestEntity.name); // Lenka
     console.log(TestEntity.age); // 36
   ```
+7. //将test1写入到数据库中
+  ```
+    TestEntity.save(function(error,doc){
+	if(error){
+ 		console.log("error :" + error);
+	}else{
+ 		console.log(doc);
+	}
+    });
+  ```
