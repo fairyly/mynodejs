@@ -76,3 +76,15 @@
     }
   });
   ```
+2.model保存方法
+  ```
+    Model.create(文档数据, callback));
+    
+    TestModel.create({ name:"model\_create", age:26}, function(error,doc){
+      if(error) {
+        console.log(error);
+      } else {
+        console.log(doc);
+      }
+    });
+  ```
