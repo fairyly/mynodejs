@@ -26,7 +26,7 @@
   可以说是数据属性模型(传统意义的表结构)，又或着是"集合"的模型骨架。
 
   注：Schema定义集合结构（定义表的列）  
-  
+
   ```
     // 定义一个Schema
     var TestSchema = new mongoose.Schema({
