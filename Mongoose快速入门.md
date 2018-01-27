@@ -2,7 +2,7 @@
 
 * https://cnodejs.org/topic/595d9ad5a4de5625080fe118
 
-使用方法：
+### 使用方法：
 
 1. 安装好 mongodb 数据库后 启动数据库 介绍在 [mongodb 部分](https://github.com/fairyly/mynodejs/blob/gh-pages/mongodb%20%E9%83%A8%E5%88%86.md)
 
@@ -60,4 +60,19 @@
         console.log(doc);
       }
     });
+  ```
+
+### 增删改查
+
+1.查询
+  ```
+  find查询:obj.find(查询条件,callback);
+  
+  Model.find({ "age": 28 }, function (error, docs) {
+    if(error){
+      console.log("error :" + error);
+    }else{
+      console.log(docs); //docs: age为28的所有文档
+    }
+  });
   ```
