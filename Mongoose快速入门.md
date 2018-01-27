@@ -41,3 +41,13 @@
     //创建model,在内存中创建结构为TestSchema名为test1的集合
     var TestModel = db.model("test1", TestSchema );
   ```
+6. Entity--给集合赋值
+  ```
+    var TestEntity = new TestModel({
+  	name : "Lenka",
+   	age  : 36,
+   	email: "lenka@qq.com"
+    });
+    console.log(TestEntity.name); // Lenka
+    console.log(TestEntity.age); // 36
+  ```
