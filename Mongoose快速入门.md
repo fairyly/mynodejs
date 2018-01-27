@@ -103,3 +103,16 @@
   ```
 
 4.数据更新
+  ```
+    obj.update(查询条件,更新对象,callback);
+    
+    var conditions = {name : 'test\_update'};
+    var update = {$set : { age : 16 }};
+    TestModel.update(conditions, update, function(error){
+      if(error) {
+        console.log(error);
+      } else {
+        console.log('Update success!');
+      }
+    });
+  ```
