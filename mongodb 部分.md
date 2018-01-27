@@ -40,7 +40,11 @@ show collections    显示数据库中的集合，相当于表格
 ```
 * 2.创建&新增
 
-以下都是 node-mongodb-native
+以下都是 node-mongodb-native 
+
+多种中间件可以用于连接node.js与MongoDB，目前比较常用的Mongoose。
+
+首先，在项目目录将Mongoose安装为本地模块。
 
 * nodejs mongodb api:http://mongodb.github.io/node-mongodb-native/3.0/api/index.html
 
