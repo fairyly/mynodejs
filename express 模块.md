@@ -1,6 +1,7 @@
 # express 模块
 
 * Express:http://www.expressjs.com.cn/
+* Express 4.x API 中文手册:http://www.expressjs.com.cn/4x/api.html
 
 * 跨域问题
   - https://github.com/expressjs/cors
