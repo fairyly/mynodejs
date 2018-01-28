@@ -47,5 +47,5 @@
 
   - 你需要了解的项目主要目录为：routes和views，你最好再在项目里新建一个目录叫models（作用后面讲）
   - routes里index.js配置的都是get和post请求的路径映射关系，很简单的哦。
-  - views里index.ejs就相当于一个html文件，里面就是一些html标签和<%%>标签，感觉和jsp差不多哦。
-  - 看起来不错的样子，标准的MVC框架（models里放模型，views里面放展示，routes里面放控制）
+  - views里index.ejs就相当于一个html文件，里面就是一些html标签和<%%>标签，感觉和jsp差不多哦。
+  - 看起来不错的样子，标准的MVC框架（models里放模型，views里面放展示，routes里面放控制）
