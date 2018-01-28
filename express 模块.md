@@ -35,7 +35,7 @@
 
 - 先在cmd控制台里cd到一个目录下面，记住这你的workspace，然后是用是用express创建一个app项目
 
-  ```
+  ```
     express hello-world 
   ```
 - cd到hello-world目录 npm i （这样就会自动将项目需要的依赖modules安装到项目的modules里去了）
