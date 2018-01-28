@@ -114,3 +114,22 @@ app.delete('/user', function (req, res) {
   res.send('Got a DELETE request at /user');
 });
 ```
+
+
+### 如何处理 404 ？
+在 Express 中，404 并不是一个错误（error）。因此，错误处理器中间件并不捕获 404。  
+这是因为 404 只是意味着某些功能没有实现。也就是说，Express 执行了所有中间件、路由之后还是没有获取到任何输出。  
+你所需要做的就是在其所有他中间件的后面添加一个处理 404 的中间件。如下：  
+```  
+app.use(function(req, res, next) {
+  res.status(404).send('Sorry cant find that!');
+});
+```
+### 如何设置一个错误处理器？
+错误处理器中间件的定义和其他中间件一样，唯一的区别是 4 个而不是 3 个参数，即 (err, req, res, next)：
+```
+app.use(function(err, req, res, next) {
+  console.error(err.stack);
+  res.status(500).send('Something broke!');
+});
+```
