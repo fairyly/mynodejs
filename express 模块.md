@@ -49,3 +49,44 @@
   - routes里index.js配置的都是get和post请求的路径映射关系，很简单的哦。
   - views里index.ejs就相当于一个html文件，里面就是一些html标签和<%%>标签，感觉和jsp差不多哦。
   - 看起来不错的样子，标准的MVC框架（models里放模型，views里面放展示，routes里面放控制）
+
+
+### express 路由配置
+一、为Express添加about路由
+
+1、新建js文件，about.js
+
+2、打开about.js，并输入以下代码：
+```
+var express=require('express');
+
+var router=express.Router();
+
+router.get('/',function(req,res,next){
+
+　　res.send('Hello from the about route!');
+
+});
+
+module.exports=router;
+```
+
+2、打开app.js,然后输入以下代码：
+```
+var about=require('./routes/about');
+
+app.use('/about',about);
+```
+
+3、在浏览器输入：http://127.0.0.1:3000/about，然后回车，如果显示Hello from the about route!,表示路由配置成功。
+
+二、添加Post路由
+
+1、打开app.js,然后输入以下代码：
+```
+app.post('/',function(req,res,next){
+
+　　res.send(req.body);
+
+});
+```
