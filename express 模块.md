@@ -2,6 +2,7 @@
 
 * Express:http://www.expressjs.com.cn/
 * Express 4.x API 中文手册:http://www.expressjs.com.cn/4x/api.html
+* Express 应用生成器:  npm install express-generator -g
 
 * 跨域问题
   - https://github.com/expressjs/cors
