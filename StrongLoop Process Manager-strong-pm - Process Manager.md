@@ -15,4 +15,6 @@
 
 ```
   npm install -g strongloop
+  $ cd <my-app>
+  $ slc start
 ```
