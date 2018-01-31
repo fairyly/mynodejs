@@ -5,6 +5,10 @@
 
 ### log4js 使用
 
+- Logger: 输出的日志内容
+- Appender : 日志输出到哪里
+- Layout: 如何输出日志
+
 * 1.基本用法
 ```
   var log4js = require('log4js');
