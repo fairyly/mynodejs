@@ -2,6 +2,7 @@
 
 * https://github.com/strongloop/strong-pm/
 * http://strong-pm.io/
+* StrongLoop Node.js API Platform: https://docs.strongloop.com/pages/viewpage.action?pageId=10879061
 
 * 1.features
   - Build, package, and deploy your Node application to a local or remote system.
@@ -37,4 +38,14 @@
 
 ```
 $ slc ctl env-set express-example-app NODE_ENV=production
+```
+
+* 7.View CPU and memory profiles
+```
+$ slc ctl cpu-start 1.1.58224
+
+$ slc ctl cpu-stop 1.1.58224
+
+$ slc arc
+
 ```
