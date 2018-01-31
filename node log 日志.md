@@ -5,6 +5,8 @@
 
 ### log4js 使用
 
+打印颜色库: https://github.com/Marak/colors.js
+
 - Logger: 输出的日志内容
 - Appender : 日志输出到哪里
 - Layout: 如何输出日志
