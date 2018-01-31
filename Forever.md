@@ -11,7 +11,7 @@ To start a script, use the forever start command and specify the path of the scr
 $ forever start script.js
 This will run the script in daemon mode (in the background).
 ```
-* 3.To run the script attached to the terminal, omit start:
+To run the script attached to the terminal, omit start:
 ```
 $ forever script.js
 It is a good idea to log output from forever and the script using the logging options -l, -o, -e, as shown this example:
