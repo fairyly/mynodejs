@@ -23,9 +23,9 @@
         logpath=D:\mongodb\data\log\mongo.log 
         
         用管理员身份打开cmd命令行，进入D:\mongodb\bin目录，输入如下的命令
-        i:\momgodb\bin>mongod --config D:\mongodb\mongo.config 
+        D:\momgodb\bin>mongod --config D:\mongodb\mongo.config 
         有人提醒改为如下：
-        mongod --config i:\momgodb\mongo.config --install --serviceName "MongoDB"
+        mongod --config D:\mongodb\mongo.config --install --serviceName "MongoDB"
     ```
   - net stat MongoDB服务无法启动，windows提示发生服务特定错误：100
     ```
