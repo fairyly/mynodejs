@@ -2,6 +2,8 @@
 
 * log4js: https://github.com/log4js-node/log4js-node
 
+* 使用文档 blog:http://www.cnblogs.com/zqzjs/p/6160205.html
+
 
 ### log4js 使用
 
