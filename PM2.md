@@ -17,3 +17,19 @@ It also enables you to manage application logging, monitoring, and clustering.
 ```
   pm2 start app.js
 ```
+
+* 3.Monitoring
+```
+pm2 monit
+```
+
+* 4.Microservice
+```
+List all processes:
+pm2 list
+
+Act on them:
+pm2 stop    
+pm2 restart 
+pm2 delete  
+```
