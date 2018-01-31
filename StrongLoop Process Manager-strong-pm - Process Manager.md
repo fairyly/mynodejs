@@ -22,3 +22,9 @@
   ```
     $ slc ctl
   ```
+  
+  * Change cluster size
+  ```
+    $ slc ctl set-size express-example-app 2
+    $ slc ctl
+  ```
