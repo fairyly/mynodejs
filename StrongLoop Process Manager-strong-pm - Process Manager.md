@@ -1,6 +1,7 @@
 # strong-pm - Process Manager
 
 * https://github.com/strongloop/strong-pm/
+* http://strong-pm.io/
 
 * 1.features
   - Build, package, and deploy your Node application to a local or remote system.
@@ -10,3 +11,8 @@
   - Easily manage multi-host deployments with Nginx integration.
   - Unify multiple StrongLoop PMs to a distributed microservices runtime managed from Arc.
 
+* 2.install
+
+```
+  npm install -g strongloop
+```
