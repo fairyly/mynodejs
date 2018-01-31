@@ -1,5 +1,11 @@
 # log
 
+### 进程管理
+* strong-pm - Process Manager:https://github.com/strongloop/strong-pm/ 
+  http://www.expressjs.com.cn/advanced/pm.html  
+* pm2: https://github.com/Unitech/pm2
+* Forever:  https://github.com/foreverjs/forever
+
 * log4js: https://github.com/log4js-node/log4js-node
 
 * 使用文档 blog:http://www.cnblogs.com/zqzjs/p/6160205.html
