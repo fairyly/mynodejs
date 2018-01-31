@@ -33,3 +33,8 @@
 ```
   $ slc ctl log-dump express-example-app --follow
 ```
+* 6.Update your environment with no downtime
+
+```
+$ slc ctl env-set express-example-app NODE_ENV=production
+```
