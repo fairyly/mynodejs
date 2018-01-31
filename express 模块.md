@@ -115,6 +115,17 @@ app.delete('/user', function (req, res) {
 });
 ```
 
+### 方法	         描述
+- res.download()	提示下载文件。
+- res.end()	终结响应处理流程。
+- res.json()	发送一个 JSON 格式的响应。
+- res.jsonp()	发送一个支持 JSONP 的 JSON 格式的响应。
+- res.redirect()	重定向请求。
+- res.render()	渲染视图模板。
+- res.send()	发送各种类型的响应。
+- res.sendFile	以八位字节流的形式发送文件。
+- res.sendStatus()	设置响应状态代码，并将其以字符串形式作为响应体的一部分发送。
+
 
 ### 如何处理 404 ？
 在 Express 中，404 并不是一个错误（error）。因此，错误处理器中间件并不捕获 404。  
