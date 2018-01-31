@@ -18,3 +18,7 @@
   $ cd <my-app>
   $ slc start
 ```
+  * Display app status
+  ```
+    $ slc ctl
+  ```
