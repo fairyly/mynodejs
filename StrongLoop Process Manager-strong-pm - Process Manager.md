@@ -18,13 +18,18 @@
   $ cd <my-app>
   $ slc start
 ```
-  * Display app status
+* 3.Display app status
   ```
     $ slc ctl
   ```
   
-  * Change cluster size
+* 4.Change cluster size
   ```
     $ slc ctl set-size express-example-app 2
     $ slc ctl
   ```
+* 5.View logs
+
+```
+  $ slc ctl log-dump express-example-app --follow
+```
