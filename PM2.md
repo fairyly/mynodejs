@@ -5,7 +5,7 @@ It allows you to keep applications alive forever, to reload them without downtim
 It also enables you to manage application logging, monitoring, and clustering.  
 
 * https://github.com/Unitech/pm2
-* http://pm2.io/
+* http://pm2.keymetrics.io/
 
 * 1.Installation
 
