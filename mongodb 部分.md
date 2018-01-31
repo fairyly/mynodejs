@@ -27,7 +27,7 @@
         有人提醒改为如下：
         mongod --config D:\mongodb\mongo.config --install --serviceName "MongoDB"
     ```
-  - net stat MongoDB服务无法启动，windows提示发生服务特定错误：100
+  - net start MongoDB服务无法启动，windows提示发生服务特定错误：100
     ```
     1.找到你数据库文件夹中的这两个文件 mongod.lock storage.bson
     2.删掉他们
