@@ -1,6 +1,6 @@
 # demo
 
-```
+
 * app.js
 ```
 var server = require('./server');
