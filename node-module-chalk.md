@@ -24,8 +24,9 @@ console.log(chalk.blue('Hello world!'));
     Example: chalk.red.bold.underline('Hello', 'world');
 ```
 
-* Styles
-Modifiers  
+### Styles
+
+* Modifiers  
   - reset
   - bold
   - dim
@@ -36,8 +37,7 @@ Modifiers
   - strikethrough (Not widely supported)
   - visible (Text is emitted only if enabled)
 
-Colors
-
+* Colors
   - black
   - red
   - green
@@ -55,8 +55,7 @@ Colors
   - cyanBright
   - whiteBright
 
-Background colors
-
+* Background colors
   - bgBlack
   - bgRed
   - bgGreen
