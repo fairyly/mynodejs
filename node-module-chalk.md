@@ -25,7 +25,7 @@ console.log(chalk.blue('Hello world!'));
 ```
 
 * Styles
-Modifiers
+Modifiers  
   - reset
   - bold
   - dim
@@ -35,7 +35,9 @@ Modifiers
   - hidden
   - strikethrough (Not widely supported)
   - visible (Text is emitted only if enabled)
+
 Colors
+
   - black
   - red
   - green
@@ -52,7 +54,9 @@ Colors
   - magentaBright
   - cyanBright
   - whiteBright
+
 Background colors
+
   - bgBlack
   - bgRed
   - bgGreen
