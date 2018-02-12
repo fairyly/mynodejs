@@ -4,6 +4,8 @@
 
 * 网站： http://aheckmann.github.com/gm/
 
+* wiki: https://github.com/aheckmann/gm/wiki
+
 ### Getting started
 ```
 First download and install GraphicsMagick or ImageMagick. In Mac OS X, you can simply use Homebrew and do:
