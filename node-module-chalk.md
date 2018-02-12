@@ -15,3 +15,11 @@ const chalk = require('chalk');
 
 console.log(chalk.blue('Hello world!'));
 ```
+
+
+### API
+
+* 1.chalk.<style>[.<style>...](string, [string...])
+```
+    Example: chalk.red.bold.underline('Hello', 'world');
+```
