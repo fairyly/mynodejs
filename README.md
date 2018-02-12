@@ -16,6 +16,9 @@
 * [带你入门Nodejs](https://nodelover.me/course/nodejs)
 * node modules: https://github.com/node-modules
 
+
+学习 node module ：https://github.com/parro-it/awesome-micro-npm-packages
+
 * candybox:https://candy.one/i/1205413
 
 * 轻量级实时 Node.js 内核性能监控分析工具 http://easy-monitor.cn/index
