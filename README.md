@@ -14,6 +14,7 @@
 
 * [阮一峰 nodejs 教程](http://javascript.ruanyifeng.com/nodejs/assert.html)
 * [带你入门Nodejs](https://nodelover.me/course/nodejs)
+* node modules: https://github.com/node-modules
 
 * candybox:https://candy.one/i/1205413
 
