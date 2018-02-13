@@ -7,6 +7,11 @@
 ### use
 ```
 npm install --save async
+
+ES Modules
+We also provide Async as a collection of ES2015 modules, in an alternative async-es package on npm.
+
+$ npm install --save async-es
 ```
 
 
