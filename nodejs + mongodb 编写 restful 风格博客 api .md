@@ -7,6 +7,7 @@
 搭建一个restful风格的个人博客api。restful风格：就是使用同一个接口，通过不同的请求方式例如post，get，put，delete等实现数据的增删查改等。
 
 ## 需要的工具
+
 node
 
 Postman或者其他接口测试工具
@@ -26,14 +27,16 @@ jsonwebtoken : 用来生成和确认token数据
 ## 主要操作流程
 
 1.新建一个项目文件夹，使用npm初始化
-
+```
 npm init -y
+```
 
 2.手动输入依赖环境，或者npm install直接安装
-
+```
 cnpm install --save express mongoose body-parser morgan jsonwebtoken
 
 cnpm install
+```
 
 3.新建所需要的文件夹以及文件，目录结构如下
 
@@ -80,10 +83,12 @@ package
 
 ### 基础代码如下
 
-modules/ 模块文件  
+modules/ 模块文件 
+
 主要就是导出各种模板供启动文件server.js调用
 
 user.js user模块
+
 ```
 var mongoose = require('mongoose'); 
 //引入mongoose依赖
@@ -147,7 +152,9 @@ new Schema({
 ```
 
 * config.js
+
 内容为各种配置
+
 ```
 module.exports = {  
   'secret':'zp,zp',        
@@ -224,64 +231,25 @@ console.log('Magic happens at http://localhost:' + port);
 
 routes/setup.js
 ```
-var
- express = 
-require
-(
-"express"
-);
+var express = require("express");
 
-var
+var User = require("../modules/user");
+
+var router = express.Router();
+
+router.get('/',function(req,res){
  
-User
- = 
-require
-(
-"../modules/user"
-);
-
-
-var
- router = express.
-Router
-();
-
-
-router.
-get
-(
-'/'
-,
-function
-(req,res){
-
-
-    
-var
- admin = 
-new
- 
-User
-({
-
-        name:
-'zhoupeng1'
-,
-
-        password:
-'12345'
-,
-
-        admin:
-true
+var admin = new User({
+        name: 'zhoupeng1',
+        password: '12345',
+        admin: true
 
     })      
 //创建一个管理员
 
 
     admin.save(
-function
-(err){
+function (err){
 
         
 if
@@ -319,21 +287,13 @@ module
 
 ```
 然后server.js中导入路由文件，添加下面两句：
-
-var
- setupRoute = 
-require
-(
-'./app/routes/setup'
-);
+```
+var setupRoute = require('./app/routes/setup');
+```
 // 导入路由文件
 
 
-app.
-use
-(
-'/setup'
-,setupRoute);   
+app.use('/setup',setupRoute);   
 //设置访问路径
 
 测试：
@@ -342,7 +302,7 @@ use
 
 * 第二个接口 管理员登录
 routes/user.js
-
+```
 var
  express = 
 require
@@ -486,9 +446,11 @@ true
     })
 
 })
+```
 
 然后server.js中导入路由文件，添加下面两句：
 
+```
 var
  userRoute = 
 require
@@ -728,9 +690,11 @@ true
 
 module
 .exports = router;
+```
 
 然后server.js中导入路由文件，添加下面两句：
 
+```
 var
  categoryRoute = 
 require
@@ -747,6 +711,7 @@ use
 ,categoryRoute);   
 //设置访问路径
 
+```
 测试添加分类，查询分类：
 
 
@@ -768,6 +733,7 @@ use
 
 
 第四个接口，博客的编写
+```
 routes/blog.js
 
 var
@@ -838,7 +804,7 @@ RegExp
     
 //var reg = new RegExp('^'+category+'$')与/^category$/的区别
 
-    
+```
 //前者中的category是拼接上的一个变量，是动态的，
 
     
