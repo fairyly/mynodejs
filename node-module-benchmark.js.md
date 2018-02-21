@@ -5,7 +5,18 @@
 * https://benchmarkjs.com/
 
 
-* Usage example:
+* Usage :
+
+In Node.js:
+```
+var Benchmark = require('benchmark');
+Optionally, use the microtime module for Node.js by Wade Simmons:
+
+$ npm i --save microtime
+```
+
+example
+
 ```
 var suite = new Benchmark.Suite;
 
