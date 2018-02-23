@@ -2,7 +2,7 @@
 
 * github: https://github.com/substack/minimist
 
-* nstall
+* install
 ```
 
 npm install minimist
@@ -29,3 +29,8 @@ $ node example/parse.js -x 3 -y 4 -n5 -abc --beep=boop foo bar baz
 var parseArgs = require('minimist')
 ```
 
+# commander.js
+
+node.js command-line interfaces made easy
+
+* github: https://github.com/tj/commander.js
