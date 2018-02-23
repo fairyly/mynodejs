@@ -60,4 +60,9 @@ console.log('  - %s cheese', program.cheese);
 ```
 
 
+# yargs
 
+yargs the modern, pirate-themed successor to optimist.
+
+* github: https://github.com/yargs/yargs
+* website: http://yargs.js.org/
