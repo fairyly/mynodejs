@@ -13,3 +13,16 @@ request('http://www.google.com', function (error, response, body) {
   console.log('body:', body); // Print the HTML for the Google homepage.
 });
 ```
+
+* Table of contents
+  - Streaming
+  - Promises & Async/Await
+  - Forms
+  - HTTP Authentication
+  - Custom HTTP Headers
+  - OAuth Signing
+  - Proxies
+  - Unix Domain Sockets
+  - TLS/SSL Protocol
+  - Support for HAR 1.2
+  - All Available Options
