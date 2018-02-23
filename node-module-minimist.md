@@ -2,6 +2,12 @@
 
 * github: https://github.com/substack/minimist
 
+* nstall
+```
+
+npm install minimist
+```
+
 * example
 ```
 var argv = require('minimist')(process.argv.slice(2));
