@@ -26,3 +26,20 @@ request('http://www.google.com', function (error, response, body) {
   - TLS/SSL Protocol
   - Support for HAR 1.2
   - All Available Options
+
+1.Streaming
+```
+request('http://google.com/doodle.png').pipe(fs.createWriteStream('doodle.png'))
+
+fs.createReadStream('file.json').pipe(request.put('http://mysite.com/obj.json'))
+
+request.get('http://google.com/img.png').pipe(request.put('http://mysite.com/img.png'))
+
+request
+  .get('http://google.com/img.png')
+  .on('response', function(response) {
+    console.log(response.statusCode) // 200
+    console.log(response.headers['content-type']) // 'image/png'
+  })
+  .pipe(request.put('http://mysite.com/img.png'))
+```
