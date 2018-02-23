@@ -7,3 +7,8 @@
 * website: https://getpino.io/#/
 
 
+* Install
+```
+npm install pino --save
+```
+
