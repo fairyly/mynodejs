@@ -9,6 +9,19 @@ fast HTTP/1.1 benchmarking tool written in Node.js
 npm i autocannon -g
 ```
 
+* Programmatically
+```
+'use strict'
+
+const autocannon = require('autocannon')
+
+autocannon({
+  url: 'http://localhost:3000',
+  connections: 10, //default
+  pipelining: 1, // default
+  duration: 10 // default
+}, console.log)
+```
 
 # node-ab
 
