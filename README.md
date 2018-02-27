@@ -19,6 +19,15 @@
 * [awesome-nodejs](https://github.com/sindresorhus/awesome-nodejs) : https://github.com/sindresorhus/awesome-nodejs
 
 
+### 为node-gyp配置安装python2.7以及VC++ build Tools依赖
+```
+方法一
+同样使用npm
+
+npm install --global --production windows-build-tools
+
+```
+
 学习 node module ：https://github.com/parro-it/awesome-micro-npm-packages
 
 * candybox:https://candy.one/i/1205413
