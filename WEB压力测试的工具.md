@@ -7,8 +7,8 @@
 有人推荐:https://github.com/wg/wrk
 
 * loadtest: https://github.com/alexfernandez/loadtest 负载测试
-  - Runs a load test on the selected URL. Easy to extend minimally for your own ends.
-  ```
+  - Runs a load test on the selected URL. Easy to extend minimally for your own ends.
+  ```
   Basic Usage
   Run as a script to load test a URL:
 
