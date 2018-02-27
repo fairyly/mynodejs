@@ -16,6 +16,7 @@
 * [阮一峰 nodejs 教程](http://javascript.ruanyifeng.com/nodejs/assert.html)
 * [带你入门Nodejs](https://nodelover.me/course/nodejs)
 * node modules: https://github.com/node-modules
+* [awesome-nodejs]https://github.com/sindresorhus/awesome-nodejs : https://github.com/sindresorhus/awesome-nodejs
 
 
 学习 node module ：https://github.com/parro-it/awesome-micro-npm-packages
