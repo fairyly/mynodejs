@@ -4,7 +4,8 @@
 
 * github: https://github.com/pugjs/pug
 
-* website: https://pugjs.org/api/getting-started.html
+* website: https://pugjs.org/api/getting-started.html  
+  - https://pugjs.org/api/getting-started.html
 
 * 安装 Pug：npm install -g pug
 
