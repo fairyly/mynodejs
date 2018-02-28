@@ -5,6 +5,15 @@
 * Express 应用生成器:  npm install express-generator -g
 * 创建一个命名为 myapp 的应用: express myapp
 
+**express 有成百上千的第三方中间件，在开发过程中我们首先应该去 npm 上寻找是否有类似实现的中间件，尽量避免造轮子，节省开发时间。
+下面给出几个常用的搜索 npm 模块的网站：**
+```
+http://npmjs.com(npm 官网)
+http://node-modules.com
+https://npms.io
+https://nodejsmodules.org
+```
+
 
 * 跨域问题
   - https://github.com/expressjs/cors
