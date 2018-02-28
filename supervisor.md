@@ -12,3 +12,7 @@ Just run:
 ```
 npm install supervisor -g
 ```
+
+运行 supervisor index 启动程序
+
+supervisor 会监听当前目录下 node 和 js 后缀的文件，当这些文件发生改动时，supervisor 会自动重启程序。
