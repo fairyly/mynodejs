@@ -5,6 +5,7 @@
 * mongodb 可视化管理工具: 
   - RoboMongo: https://robomongo.org/
   - NoSQL Manager for MongoDB: https://www.mongodbmanager.com/
+  - MongoChef: https://studio3t.com/
 
 ### 使用方法：
 
