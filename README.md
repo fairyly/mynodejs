@@ -19,6 +19,13 @@
 * [awesome-nodejs](https://github.com/sindresorhus/awesome-nodejs) : https://github.com/sindresorhus/awesome-nodejs
 
 
+### demo 学习
+
+```
+https://github.com/nswbmw/N-blog/tree/master/book
+https://github.com/tywei90/CMS-of-Blog_Production
+```
+
 ### 为node-gyp配置安装python2.7以及VC++ build Tools依赖
 ```
 方法一
