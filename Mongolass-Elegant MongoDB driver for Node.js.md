@@ -2,6 +2,8 @@
 
 Elegant MongoDB driver for Node.js.
 
+* github: https://github.com/mongolass/mongolass
+
 
 ```
 lib/mongo.js
