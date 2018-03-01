@@ -27,7 +27,7 @@ exports.User.index({ name: 1 }, { unique: true }).exec()// 根据用户名找到
 小提示：Mongolass 中的 model 你可以认为相当于 mongodb 中的 collection，只不过添加了插件的功能。
 ```
 
-* 添加用户 demo
+* 添加用户 demo (部分代码)
 
 ```
 models/users.js
