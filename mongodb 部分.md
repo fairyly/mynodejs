@@ -14,7 +14,7 @@
 * 2.mongodb 下载安装
   - 下载地址：https://www.mongodb.com/download-center?jmp=nav#enterprise
   - 安装完成后：新建目录D:\momgodb\data ,D:\momgodb\logs  
-  - 配置了环境变量:mongod --dbpath I:\momgodb\data  
+  - 配置了环境变量:mongod --dbpath D:\momgodb\data  
   - 运行 MongoDB 服务器: D:\mongodb\bin>mongod --dbpath D:\mongodb\data
   - 设置Windows 服务：
     ```
