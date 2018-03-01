@@ -41,6 +41,10 @@ module.exports = {
   }
 }
 
+==============================================
+
+add.js
+const UserModel = require('../models/users')
 / 待写入数据库的用户信息
   let user = {
     name: name,
