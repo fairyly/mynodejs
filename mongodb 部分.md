@@ -10,6 +10,12 @@
   3.pycharm该插件介绍:JetBrains Plugin Repository :: Mongo Plugin
     https://plugins.jetbrains.com/plugin/7141-mongo-plugin
   4.MongoChef:https://studio3t.com/
+  
+  * mongodb 可视化管理工具: 
+  - RoboMongo: https://robomongo.org/
+  - NoSQL Manager for MongoDB: https://www.mongodbmanager.com/
+  - MongoChef: https://studio3t.com/
+
   ```
 * 2.mongodb 下载安装
   - 下载地址：https://www.mongodb.com/download-center?jmp=nav#enterprise
