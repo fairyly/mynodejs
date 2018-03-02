@@ -24,6 +24,8 @@
 ```
 https://github.com/nswbmw/N-blog/tree/master/book
 https://github.com/tywei90/CMS-of-Blog_Production
+
+mystudy-blog: https://github.com/fairyly/mynodedemo/tree/myblog-node-addcomment
 ```
 
 ### 为node-gyp配置安装python2.7以及VC++ build Tools依赖
