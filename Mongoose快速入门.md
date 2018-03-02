@@ -2,10 +2,6 @@
 
 * https://cnodejs.org/topic/595d9ad5a4de5625080fe118
 
-* mongodb 可视化管理工具: 
-  - RoboMongo: https://robomongo.org/
-  - NoSQL Manager for MongoDB: https://www.mongodbmanager.com/
-  - MongoChef: https://studio3t.com/
 
 ### 使用方法：
 
