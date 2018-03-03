@@ -22,8 +22,10 @@
 ### demo 学习
 
 ```
-https://github.com/nswbmw/N-blog/tree/master/book
+N-blog: https://github.com/nswbmw/N-blog/tree/master/book
 https://github.com/tywei90/CMS-of-Blog_Production
+
+n-chat: https://github.com/nswbmw/N-chat
 
 mystudy-blog: https://github.com/fairyly/mynodedemo/tree/myblog-node-addcomment
 ```
