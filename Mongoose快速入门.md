@@ -7,6 +7,7 @@
 
 * GitHub: https://github.com/Automattic/mongoose
 * website: http://mongoosejs.com/
+* doc: http://mongoosejs.com/docs/populate.html
 
 ### 使用方法：
 
