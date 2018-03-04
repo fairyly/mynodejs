@@ -1,7 +1,10 @@
 # Mongoose快速入门
 
-* https://cnodejs.org/topic/595d9ad5a4de5625080fe118
+* 实例教程 1: https://cnodejs.org/topic/595d9ad5a4de5625080fe118
+* 实例教程 2: https://cnodejs.org/topic/51ff720b44e76d216afe34d9
 
+* GitHub: https://github.com/Automattic/mongoose
+* website: http://mongoosejs.com/
 
 ### 使用方法：
 
