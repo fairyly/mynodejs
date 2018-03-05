@@ -39,8 +39,8 @@
     1.找到你数据库文件夹中的这两个文件 mongod.lock storage.bson
     2.删掉他们
     ```
-  - 命令启动批处理
-    ```
+  - 命令启动批处理  
+    ```
     @echo off
     color 0a 
     echo "connect mongodb"
@@ -48,7 +48,7 @@
     d: 
     cd D:\mongodb\bin 
     mongod --dbpath D:\mongodb\data
-    ```
+    ```
 * 1.常用的命令
 ```
 show dbs    显示数据库列表
