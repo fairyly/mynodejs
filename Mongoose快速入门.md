@@ -139,7 +139,7 @@
   ```
 
 
-* populate基本使用
+* populate基本使用:https://segmentfault.com/a/1190000002727265
 
 有很多场景都需要通过外键与另一张表建立关联，populate可以很方便的实现
 
@@ -164,4 +164,22 @@
 5.options(可选)
 
 类型：Object，可选，指定附加的其他查询选项，如排序以及条数限制等等。
+```
+
+使用方法:
+
+首先，在建立模型时（schema）,需要指定关联字段：
+```
+var mongoose = require('mongoose');
+var Schema   = mongoose.Schema;
+
+var UserSchema = new Schema({
+    name  : { type: String, unique: true },
+});
+var CommentSchema = new Schema({
+    commenter : { type: Schema.Types.ObjectId, ref: 'User' },
+    content   : String
+});
+
+仔细观察上述代码，有一个陌生字段“ref”，在这里ref表示commenter通过ObjectId字段关联了User
 ```
