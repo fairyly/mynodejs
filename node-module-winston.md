@@ -1,7 +1,7 @@
 # winston  生成日志
 
 * winston:  https://github.com/winstonjs/winston
-* express-winston: 
+* express-winston: https://github.com/bithavoc/express-winston
 
 demo:
 
