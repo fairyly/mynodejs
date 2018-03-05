@@ -183,3 +183,23 @@ var CommentSchema = new Schema({
 
 仔细观察上述代码，有一个陌生字段“ref”，在这里ref表示commenter通过ObjectId字段关联了User
 ```
+
+demo:
+```
+
+/填充所有 users 的 posts
+User.find()
+    .populate('posts', 'title', null, {sort: { title: -1 }})
+    .exec(function(err, docs) {
+        console.log(docs[0].posts[0].title); // post-by-aikin
+    });
+
+//填充 user 'luajin'的 posts
+User.findOne({name: 'luajin'})
+    .populate({path: 'posts', select: { title: 1 }, options: {sort: { title: -1 }}})
+    .exec(function(err, doc) {
+        console.log(doc.posts[0].title);  // post-by-luajin
+    });
+
+//这里的 populate 方法传入的参数形式不同，其实实现的功能是一样的，只是表示形式不一样。
+```
