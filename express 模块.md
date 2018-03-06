@@ -183,6 +183,22 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use(function(req, res, next) {
   res.status(404).send('Sorry cant find that!');
 });
+
+
+ // 404 page
+  app.use(function (req, res) {
+    if (!res.headersSent) {
+      res.status(404).render('404')
+    }
+  })
+
+  // 500 错误处理
+  app.use(function (err, req, res, next) {
+    console.error(err.stack)
+    if (!res.headersSent) {
+      res.status(500).render('500')
+    }
+  })
 ```
 ### 如何设置一个错误处理器？
 错误处理器中间件的定义和其他中间件一样，唯一的区别是 4 个而不是 3 个参数，即 (err, req, res, next)：
