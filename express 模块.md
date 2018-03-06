@@ -349,5 +349,23 @@ app.use(function(err, req, res, next) {
 
 生产环境使用
 ```
+  npm i pm2 -g
  
+  修改 package.json，添加 start 的命令：
+
+  package.json
+
+  "scripts": {
+    "test": "istanbul cover _mocha",
+    "start": "NODE_ENV=production pm2 start index.js --name 'myblog'"
+  }
+  然后运行 npm start 通过 pm2 启动程序
+
+  pm2 常用命令:
+
+  pm2 start/stop: 启动/停止程序
+  pm2 reload/restart [id|name]: 重启程序
+  pm2 logs [id|name]: 查看日志
+  pm2 l/list: 列出程序列表
+  更多命令请使用 pm2 -h 查看。
 ```
