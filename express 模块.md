@@ -157,6 +157,24 @@ app.use(function(err, req, res, next) {
 });
 ```
 
+### 在 Express 中使用模板引擎
+
+需要在应用中进行如下设置才能让 Express 渲染模板文件：
+```
+views, 放模板文件的目录，比如： app.set('views', './views')
+view engine, 模板引擎，比如： app.set('view engine', 'jade')
+
+
+// 设置模板目录
+app.set('views', path.join(__dirname, 'views'))
+// 设置模板引擎为 ejs
+app.set('view engine', 'ejs')
+
+// 设置静态文件目录
+app.use(express.static(path.join(__dirname, 'public')))
+
+```
+
 ### 如何处理 404 ？
 在 Express 中，404 并不是一个错误（error）。因此，错误处理器中间件并不捕获 404。  
 这是因为 404 只是意味着某些功能没有实现。也就是说，Express 执行了所有中间件、路由之后还是没有获取到任何输出。  
