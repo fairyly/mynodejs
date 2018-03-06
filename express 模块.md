@@ -346,3 +346,8 @@ app.use(function(err, req, res, next) {
   npm i -g supervisor
   运行 supervisor index 启动程序
 ```
+
+生产环境使用
+```
+ 
+```
