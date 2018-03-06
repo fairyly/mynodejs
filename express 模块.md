@@ -135,6 +135,27 @@ app.delete('/user', function (req, res) {
 - res.sendFile	以八位字节流的形式发送文件。
 - res.sendStatus()	设置响应状态代码，并将其以字符串形式作为响应体的一部分发送。
 
+### 路由级中间件
+
+```
+var app = express();
+var router = express.Router();
+
+// 没有挂载路径的中间件，通过该路由的每个请求都会执行该中间件
+router.use(function (req, res, next) {
+  console.log('Time:', Date.now());
+  next();
+});
+
+错误处理中间件:
+
+错误处理中间件和其他中间件定义类似，只是要使用 4 个参数，而不是 3 个，其签名如下： (err, req, res, next)。
+
+app.use(function(err, req, res, next) {
+  console.error(err.stack);
+  res.status(500).send('Something broke!');
+});
+```
 
 ### 如何处理 404 ？
 在 Express 中，404 并不是一个错误（error）。因此，错误处理器中间件并不捕获 404。  
