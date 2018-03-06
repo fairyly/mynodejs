@@ -337,3 +337,12 @@ app.use(function(err, req, res, next) {
   res.status(500).send('Something broke!');
 });
 ```
+
+
+### 进程管理
+
+开发环境使用 
+```
+  npm i -g supervisor
+  运行 supervisor index 启动程序
+```
