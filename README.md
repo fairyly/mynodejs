@@ -16,6 +16,7 @@
 * [阮一峰 nodejs 教程](http://javascript.ruanyifeng.com/nodejs/assert.html)
 * [带你入门Nodejs](https://nodelover.me/course/nodejs)
 * node modules: https://github.com/node-modules
+* 深入理解Node.js：核心思想与源码分析：https://github.com/yjhjstz/deep-into-node
 * [awesome-nodejs](https://github.com/sindresorhus/awesome-nodejs) : https://github.com/sindresorhus/awesome-nodejs
 
 
