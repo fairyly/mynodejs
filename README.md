@@ -18,6 +18,7 @@
 * node modules: https://github.com/node-modules
 * 深入理解Node.js：核心思想与源码分析：https://github.com/yjhjstz/deep-into-node
 * [awesome-nodejs](https://github.com/sindresorhus/awesome-nodejs) : https://github.com/sindresorhus/awesome-nodejs
+* awesome-micro-npm-packages: https://github.com/parro-it/awesome-micro-npm-packages
 
 
 ### demo 学习
