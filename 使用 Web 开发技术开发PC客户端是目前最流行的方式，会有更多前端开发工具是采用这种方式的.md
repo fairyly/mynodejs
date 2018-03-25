@@ -3,3 +3,10 @@
 
 * PC端的electron、nw.js，比如钉钉PC客户端、微信小程序IDE、微信客户端，移动的Cordova，即老的Phonegap，  
   还有更加有名的一站式开发框架Ionicframework
+
+
+* electron: 
+  - github: https://github.com/electron/electron
+  
+* nw.js:
+  -github: https://github.com/nwjs/nw.js
