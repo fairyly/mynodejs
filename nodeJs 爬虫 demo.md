@@ -6,5 +6,5 @@
 * https://github.com/blackmatch/pornhub-downloader
 
 * 两个迷你的
-  - https://github.com/x-cold/task-queue-sample
-  - https://github.com/scauhci/single_crawler
+  - https://github.com/x-cold/task-queue-sample
+  - https://github.com/scauhci/single_crawler
