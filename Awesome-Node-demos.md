@@ -7,7 +7,8 @@
 
 - 博客:
   - N-blog: https://github.com/nswbmw/N-blog
-  - 基于 Egg 的 CNode 社区: https://github.com/cnodejs/egg-cnode
+  - 基于 Egg 的 CNode 社区: https://github.com/cnodejs/egg-cnode
+  - 基于vue的nuxt框架cnode社区服务端渲染: https://github.com/Kim09AI/nuxt-cnode
 
 - 发布系统
   - vue+nuxt+sass+node+express+MongoDB 实现的文章发布系统: https://github.com/ITCNZ/mynuxt
