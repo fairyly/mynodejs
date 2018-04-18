@@ -20,6 +20,10 @@
 * [awesome-nodejs](https://github.com/sindresorhus/awesome-nodejs) : https://github.com/sindresorhus/awesome-nodejs
 * awesome-micro-npm-packages: https://github.com/parro-it/awesome-micro-npm-packages
 
+============================
+* node-orm2: https://github.com/dresende/node-orm2
+  - https://github.com/bookshelf/bookshelf
+  - https://github.com/sequelize/sequelize
 
 ### demo 学习
 
