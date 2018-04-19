@@ -14,3 +14,7 @@
 
 - 发布系统
   - vue+nuxt+sass+node+express+MongoDB 实现的文章发布系统: https://github.com/ITCNZ/mynuxt
+  
+  
+- Pretty unicode tables for the CLI with Node.JS
+  - https://github.com/Automattic/cli-table
