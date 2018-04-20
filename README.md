@@ -29,6 +29,10 @@
 ### 实用Node.js，简单粗暴，新手学习的最短曲线
 - practical-node-tutorial： https://github.com/dev-reading/practical-node-tutorial
 
+## nodejs 模板
+- pug(原名 jade): https://github.com/pugjs/pug
+- ejs : https://github.com/tj/ejs
+
 
 ### demo 学习
 
