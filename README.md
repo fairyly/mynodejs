@@ -33,6 +33,8 @@
 - pug(原名 jade): https://github.com/pugjs/pug
 - ejs : https://github.com/tj/ejs
 
+## 「node.js能开发大型网站吗？」https://www.zhihu.com/question/21176891/answer/81862847
+
 
 ### demo 学习
 
