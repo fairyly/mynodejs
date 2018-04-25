@@ -35,7 +35,7 @@
 
 ## 「node.js能开发大型网站吗？」https://www.zhihu.com/question/21176891/answer/81862847
 
-
+## node 调试：http://i5ting.github.io/node-debug-tutorial/
 ### demo 学习
 
 ```
