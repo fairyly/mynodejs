@@ -24,6 +24,7 @@
   - https://www.codementor.io/cuketest/one-quick-way-to-create-your-cucumber-js-test-script-iq5kxwy8y
   - CukeTest: http://cuketest.com/
   - https://github.com/zhentaoo/puppeteer-deep
+  - https://github.com/GoogleChrome/puppeteer
 
 
 - 面试
