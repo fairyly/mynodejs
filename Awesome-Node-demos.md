@@ -13,7 +13,7 @@
   - 基于vue的nuxt框架cnode社区服务端渲染: https://github.com/Kim09AI/nuxt-cnode
 
 - 发布系统
-  - vue+nuxt+sass+node+express+MongoDB 实现的文章发布系统: https://github.com/ITCNZ/mynuxt
+  - vue+nuxt+sass+node+express+MongoDB 实现的文章发布系统: https://github.com/ITCNZ/mynuxt
   
   
 - Pretty unicode tables for the CLI with Node.JS
@@ -21,8 +21,8 @@
   
   
 - 测试
-  - https://www.codementor.io/cuketest/one-quick-way-to-create-your-cucumber-js-test-script-iq5kxwy8y
-  - CukeTest: http://cuketest.com/
+  - https://www.codementor.io/cuketest/one-quick-way-to-create-your-cucumber-js-test-script-iq5kxwy8y
+  - CukeTest: http://cuketest.com/
 
 
 - 面试
