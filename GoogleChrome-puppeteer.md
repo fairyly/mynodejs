@@ -36,8 +36,21 @@ Puppeteer官方文档请[猛戳这里](https://github.com/GoogleChrome/puppeteer
 
       await browser.close();
     })();
-  ```
+  ```
+#### Example - create a PDF.
+```
+  const puppeteer = require('puppeteer');
 
+  (async () => {
+    const browser = await puppeteer.launch();
+    const page = await browser.newPage();
+    await page.goto('https://news.ycombinator.com', {waitUntil: 'networkidle2'});
+    await page.pdf({path: 'hn.pdf', format: 'A4'});
+
+    await browser.close();
+  })();
+
+```
 
 ### 项目Repo && Usage
 
