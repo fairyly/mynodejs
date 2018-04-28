@@ -3,7 +3,7 @@
 * awesome-nodejs: https://github.com/sindresorhus/awesome-nodejs
 
 - web 框架
-  - https://github.com/adonisjs/adonis-framework
+  - NodeJs Web Application Framework: https://github.com/adonisjs/adonis-framework
 
 - 商城:
   - zshop是一个nodejs写的商城系统: https://github.com/halloffamezwx/zshop
