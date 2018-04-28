@@ -24,7 +24,7 @@ Puppeteer官方文档请[猛戳这里](https://github.com/GoogleChrome/puppeteer
     npm i puppeteer
   ```
 
-- 访问制定域名网站 截图
+### 访问制定域名网站 截图
   ```
     const puppeteer = require('puppeteer');
 
@@ -36,7 +36,7 @@ Puppeteer官方文档请[猛戳这里](https://github.com/GoogleChrome/puppeteer
 
       await browser.close();
     })();
-  ```
+  ```
 #### Example - create a PDF.
 ```
   const puppeteer = require('puppeteer');
