@@ -2,6 +2,10 @@
 
 * https://github.com/GoogleChrome/puppeteer
 
+* install
+  ```
+    npm i puppeteer
+  ```
 
 - 访问制定域名网站 截图
   ```
