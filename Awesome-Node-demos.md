@@ -35,6 +35,9 @@
 
 - XML to JavaScript object converter.
   - https://github.com/Leonidas-from-XIV/node-xml2js
+  
+- 汉字拼音转换工具
+  - https://github.com/hotoo/pinyin
 
 - 测试
   - https://www.codementor.io/cuketest/one-quick-way-to-create-your-cucumber-js-test-script-iq5kxwy8y
