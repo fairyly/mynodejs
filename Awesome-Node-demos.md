@@ -27,6 +27,9 @@
 - Big是一个无配置系统，自然鼓励良好的演示设计
   - https://github.com/tmcw/big
 
+- 文档伴侣 http://html5ify.com/doxmate
+  - https://github.com/JacksonTian/doxmate
+
 - 测试
   - https://www.codementor.io/cuketest/one-quick-way-to-create-your-cucumber-js-test-script-iq5kxwy8y
   - CukeTest: http://cuketest.com/
