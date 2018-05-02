@@ -24,7 +24,7 @@
   - https://github.com/Automattic/cli-table
   
 
--  Big是一个无配置系统，自然鼓励良好的演示设计
+- Big是一个无配置系统，自然鼓励良好的演示设计
   - https://github.com/tmcw/big
 
 - 测试
