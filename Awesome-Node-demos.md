@@ -33,6 +33,8 @@
 - 随启随用的静态文件服务器
   - https://github.com/JacksonTian/anywhere
 
+- XML to JavaScript object converter.
+  - https://github.com/Leonidas-from-XIV/node-xml2js
 
 - 测试
   - https://www.codementor.io/cuketest/one-quick-way-to-create-your-cucumber-js-test-script-iq5kxwy8y
