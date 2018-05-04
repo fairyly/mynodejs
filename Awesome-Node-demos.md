@@ -39,6 +39,9 @@
 - 汉字拼音转换工具
   - https://github.com/hotoo/pinyin
 
+- Markdown to PDF converter https://npmjs.org/package/markdown-pdf
+  - https://github.com/alanshaw/markdown-pdf
+
 - 测试
   - https://www.codementor.io/cuketest/one-quick-way-to-create-your-cucumber-js-test-script-iq5kxwy8y
   - CukeTest: http://cuketest.com/
