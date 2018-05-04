@@ -39,6 +39,12 @@
 
 ### 《Node.js 实战》 源码: https://github.com/MiYogurt/nodejs_shizhan
 
+
+### A neat wrapper around node.js fs.watch / fs.watchFile / fsevents. https://paulmillr.com
+  - github: https://github.com/paulmillr/chokidar
+  
+  
+  
 ### demo 学习
 
 ```
