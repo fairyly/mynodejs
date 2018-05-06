@@ -37,7 +37,9 @@
 
 ## node 调试：http://i5ting.github.io/node-debug-tutorial/
 
-### 《Node.js 实战》 源码: https://github.com/MiYogurt/nodejs_shizhan
+## 《Node.js 实战》 源码: https://github.com/MiYogurt/nodejs_shizhan
+  - 《Node.js实战》(node-in-action) book: https://github.com/SFantasy/node-in-action
+  - gitbook: https://sfantasy.gitbooks.io/node-in-action/content/zh/
 
 
 ### A neat wrapper around node.js fs.watch / fs.watchFile / fsevents. https://paulmillr.com
