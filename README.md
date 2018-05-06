@@ -41,6 +41,8 @@
   - 《Node.js实战》(node-in-action) book: https://github.com/SFantasy/node-in-action
   - gitbook: https://sfantasy.gitbooks.io/node-in-action/content/zh/
 
+## 《Node.js 包教不包会》 -- by alsotang
+  - gitbook: https://xikong1995.gitbooks.io/nodejs/content/
 
 ### A neat wrapper around node.js fs.watch / fs.watchFile / fsevents. https://paulmillr.com
   - github: https://github.com/paulmillr/chokidar
