@@ -52,6 +52,7 @@
 ```
 N-blog: https://github.com/nswbmw/N-blog/tree/master/book
 https://github.com/tywei90/CMS-of-Blog_Production
+gitbook: https://maninboat.gitbooks.io/n-blog/content/
 
 n-chat: https://github.com/nswbmw/N-chat
 
