@@ -80,3 +80,7 @@
   - package.json: 存储项目名、描述、作者、依赖等等信息
 >遵循 MVC（模型(model)－视图(view)－控制器(controller/route)） 的开发模式
 
+>每次修改代码保存后，我们都需要手动重启程序，才能查看改动的效果。
+使用 supervisor 可以解决这个繁琐的问题，全局安装 supervisor：
+npm i -g supervisor 
+运行 supervisor index 启动程序
