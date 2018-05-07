@@ -3,7 +3,7 @@
 
 ## 目录
 - [1.搭建基本 node 环境](#1.搭建基本 node 环境)
-- [2.创建 express 项目](#创建 express 项目)
+- [2.创建 express 项目](#2.创建 express 项目)
 
 
 ### 1.搭建基本 node 环境
@@ -51,7 +51,7 @@
   Express: 4.15.5
 ```
 
-### 创建 express 项目
+### 2.创建 express 项目
 使用 express 创建 myblog 项目：初始化项目
 - 创建 myblog 项目目录
 - cd myblog
