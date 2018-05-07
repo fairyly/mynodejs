@@ -61,7 +61,7 @@
 - 目前 node 环境搭建完成
 ```
   Node.js: 8.9.1
-  MongoDB: 3.4.10
+  MongoDB: 3.6.2
   Express: 4.15.5
 ```
 
