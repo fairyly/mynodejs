@@ -71,7 +71,7 @@
   Express: 4.15.5
 ```
 
-### 2.创建 express 项目
+### 2.创建express项目
 使用 express 创建 myblog 项目：初始化项目
 - 创建 myblog 项目目录
 - cd myblog
