@@ -3,7 +3,7 @@
 
 ## 目录
 - [搭建基本 node 环境](#搭建基本 node 环境)
-- 
+- [创建 express 项目](创建 express 项目)
 
 
 ### 搭建基本 node 环境
@@ -21,4 +21,49 @@
     NoSQL Manager for MongoDB: https://www.mongodbmanager.com/  （用过，推荐）  
     MongoChef: https://studio3t.com/    
     
-- 安装 [express]()
+- 安装 [express](),
+  全局安装：`npm install express -g`；  
+  也可以通过应用生成器工具 express 可以快速创建一个应用的骨架：
+  ```sh
+    npm install express-generator -g
+    express myapp
+    这样就创建了一个名为 myapp 的应用
+    
+    然后安装所有依赖包：
+    cd myapp 
+    npm install
+    
+    启动这个应用：
+    npm start
+    然后在浏览器中打开 http://localhost:3000/ 网址就可以看到这个应用了
+  ```
+  查看 express 版本
+  ```
+    安装后，查看 express 版本
+    C:\Users\fairy>express --version
+    4.15.5
+  ```
+
+
+目前 node 环境搭建完成
+```
+  Node.js: 8.9.1
+  MongoDB: 3.4.10
+  Express: 4.15.5
+```
+
+### 创建 express 项目
+使用 express 创建 myblog 项目：初始化项目
+- 创建 myblog 项目目录
+- cd myblog
+- npm init
+- 在 myblog 目录下创建以下目录及空文件  
+  对应文件及文件夹的用处：
+  - models: 存放操作数据库的文件
+  - public: 存放静态文件，如样式、图片等
+  - routes: 存放路由文件
+  - views: 存放模板文件
+  - index.js: 程序主文件
+  - package.json: 存储项目名、描述、作者、依赖等等信息
+>遵循 MVC（模型(model)－视图(view)－控制器(controller/route)） 的开发模式
+
