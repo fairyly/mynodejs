@@ -2,11 +2,11 @@
 （我的Windows）
 
 ## 目录
-- [搭建基本 node 环境](#搭建基本 node 环境)
-- [创建 express 项目](创建 express 项目)
+- [1.搭建基本 node 环境](#1.搭建基本 node 环境)
+- [2.创建 express 项目](#创建 express 项目)
 
 
-### 搭建基本 node 环境
+### 1.搭建基本 node 环境
 - 安装 [node](https://nodejs.org/zh-cn/) ，可下载后安装；
   ```sh
     安装完成后，输入命令，查看 node 版本
@@ -37,15 +37,14 @@
     npm start
     然后在浏览器中打开 http://localhost:3000/ 网址就可以看到这个应用了
   ```
-  查看 express 版本
+- 查看 express 版本
   ```
     安装后，查看 express 版本
     C:\Users\fairy>express --version
     4.15.5
   ```
 
-
-目前 node 环境搭建完成
+- 目前 node 环境搭建完成
 ```
   Node.js: 8.9.1
   MongoDB: 3.4.10
