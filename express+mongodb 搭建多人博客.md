@@ -21,8 +21,8 @@
     RoboMongo: https://robomongo.org/  （用过，推荐）  
     NoSQL Manager for MongoDB: https://www.mongodbmanager.com/  （用过，推荐）  
     MongoChef: https://studio3t.com/    
-  - 查看 mongodb 版本: 找到安装目录
-    ```
+  - 查看 mongodb 版本: 找到安装目录
+  ```
       I:\momgodb\bin>mongo -version
       MongoDB shell version v3.6.2
       git version: 489d177dbd0f0420a8ca04d39fd78d0a2c539420
@@ -33,7 +33,7 @@
           distmod: windows-64
           distarch: x86_64
           target_arch: x86_64
-    ```
+  ```
 - 安装 [express](),  
   - [我的 express 部分](https://github.com/fairyly/mynodejs/blob/gh-pages/express%20%E6%A8%A1%E5%9D%97.md)  
   - 全局安装：`npm install express -g`;  
