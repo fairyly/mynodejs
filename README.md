@@ -49,6 +49,9 @@
   
 ### Inquirer.js A collection of common interactive command line user interfaces: 一组通用的交互式命令行用户界面
   - https://github.com/SBoudrias/Inquirer.js
+  
+### Excel Workbook Manager: Excel工作簿管理器
+  - https://github.com/guyonroche/exceljs
 
 ### demo 学习
 
