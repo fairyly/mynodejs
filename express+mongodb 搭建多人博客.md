@@ -2,8 +2,9 @@
 （我的Windows）
 
 ## 目录
-- [1.搭建基本 node 环境](#1.搭建基本 node 环境)
-- [2.创建 express 项目](#2.创建 express 项目)
+
+* [1.搭建基本 node 环境](#1.搭建基本 node 环境)
+* [2.创建 express 项目](#2.创建 express 项目)
 
 
 ### 1.搭建基本 node 环境
