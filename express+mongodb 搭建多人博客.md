@@ -9,10 +9,10 @@
 ### 搭建基本 node 环境
 - 安装 [node](https://nodejs.org/zh-cn/) ，可下载后安装；
   ```sh
-    安装完成后，输入命令，查看 node 版本
-    C:\Users\fairy>node -v
+    安装完成后，输入命令，查看 node 版本
+    C:\Users\fairy>node -v
     v8.9.3
-  ```
+  ```
   
 - 安装 [mongodb](https://www.mongodb.com/download-center#enterprise),还是下载后安装，只支持Windows 64位系统；
   - [我的mongodb安装部分](https://github.com/fairyly/mynodejs/blob/gh-pages/mongodb%20%E9%83%A8%E5%88%86.md)
