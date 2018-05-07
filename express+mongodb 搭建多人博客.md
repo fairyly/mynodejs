@@ -15,7 +15,7 @@
   ```
   
 - 安装 [mongodb](https://www.mongodb.com/download-center#enterprise),还是下载后安装，只支持Windows 64位系统；
-  - [我的mongodb安装部分](https://github.com/fairyly/mynodejs/blob/gh-pages/mongodb%20%E9%83%A8%E5%88%86.md)
+  - [我的mongodb安装部分](https://github.com/fairyly/mynodejs/blob/gh-pages/mongodb%20%E9%83%A8%E5%88%86.md)
   - 安装后，可以安装 mongodb 可视化管理工具: 
     RoboMongo: https://robomongo.org/  （用过，推荐）
     NoSQL Manager for MongoDB: https://www.mongodbmanager.com/  （用过，推荐）
