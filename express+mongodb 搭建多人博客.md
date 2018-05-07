@@ -23,6 +23,7 @@
     MongoChef: https://studio3t.com/    
     
 - 安装 [express](),
+  [我的 express 部分](https://github.com/fairyly/mynodejs/blob/gh-pages/express%20%E6%A8%A1%E5%9D%97.md)
   全局安装：`npm install express -g`；  
   也可以通过应用生成器工具 express 可以快速创建一个应用的骨架：
   ```sh
