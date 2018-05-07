@@ -27,20 +27,20 @@
   ```sh
     npm install express-generator -g
     express myapp
-    这样就创建了一个名为 myapp 的应用
+    这样就创建了一个名为 myapp 的应用
     
     然后安装所有依赖包：
     cd myapp 
     npm install
     
-    启动这个应用：
+    启动这个应用：
     npm start
     然后在浏览器中打开 http://localhost:3000/ 网址就可以看到这个应用了
   ```
 - 查看 express 版本
-  ```
-    安装后，查看 express 版本
-    C:\Users\fairy>express --version
+  ```sh
+    安装后，查看 express 版本
+    C:\Users\fairy>express --version
     4.15.5
   ```
 
