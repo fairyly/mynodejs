@@ -47,8 +47,9 @@
 ### A neat wrapper around node.js fs.watch / fs.watchFile / fsevents. https://paulmillr.com
   - github: https://github.com/paulmillr/chokidar
   
-  
-  
+### Inquirer.js A collection of common interactive command line user interfaces
+  - https://github.com/SBoudrias/Inquirer.js
+
 ### demo 学习
 
 ```
