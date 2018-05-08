@@ -71,7 +71,7 @@
   Express: 4.15.5
 ```
 
-### 2.创建express项目
+# 2.创建express项目
 使用 express 创建 myblog 项目：初始化项目
 - 创建 myblog 项目目录
 - cd myblog
@@ -91,7 +91,7 @@
 npm i -g supervisor 
 运行 supervisor index 启动程序
 
->安装依赖模块
+### 安装依赖模块
 
 ```
 npm i config-lite connect-flash connect-mongo ejs express express-formidable express-session marked moment mongolass objectid-to-timestamp sha1 winston express-winston --save
@@ -114,3 +114,42 @@ npm i config-lite connect-flash connect-mongo ejs express express-formidable exp
 - 13.winston: 日志
 - 14.express-winston: express 的 winston 日志中间件
 
+
+### 代码检查 eslint
+```
+npm i eslint -g
+
+eslint --init
+
+eslint 会创建一个 .eslintrc.json 的配置文件，同时自动安装并添加相关的模块到 devDependencies。
+这里我们使用 Standard 规范，其主要特点是不加分号。
+```
+
+### 代码风格 EditorConfig
+```
+在 myblog 目录下新建 .editorconfig 的文件，添加如下内容：
+
+# editorconfig.org
+root = true
+
+[*]
+indent_style = space
+indent_size = 2
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+tab_width = 2
+
+[*.md]
+trim_trailing_whitespace = false
+
+[Makefile]
+indent_style = tab
+这里我们使用 2 个空格缩进，tab 长度也是 2 个空格。trim_trailing_whitespace 用来删除每一行最后多余的空格，
+insert_final_newline 用来在代码最后插入一个空的换行。
+```
+
+
+### 参考内容（仅供学习）
+* https://github.com/nswbmw/N-blog
