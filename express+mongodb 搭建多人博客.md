@@ -10,7 +10,7 @@
 - [历史](#历史)
 - [科学](#科学)
 - [技术](#技术)
-- [杂类](#杂类)
+- [blog--heroku 部署.md](#blog部署)
 
 
 # 1.搭建基本node环境
@@ -172,6 +172,12 @@ port: 程序启动要监听的端口号
 session: express-session 的配置信息，后面介绍
 mongodb: mongodb 的地址，以 mongodb:// 协议开头，myblog 为 db 名
 ```
+
+
+
+# blog部署
+- [blog--heroku 部署](https://github.com/fairyly/mynodedemo/blob/myblog-pro/blog--heroku%20%E9%83%A8%E7%BD%B2.md)
+
 
 ### 参考内容（仅供学习）
 * https://github.com/nswbmw/N-blog
