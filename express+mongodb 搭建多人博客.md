@@ -149,7 +149,29 @@ indent_style = tab
 这里我们使用 2 个空格缩进，tab 长度也是 2 个空格。trim_trailing_whitespace 用来删除每一行最后多余的空格，
 insert_final_newline 用来在代码最后插入一个空的换行。
 ```
+### 将配置与代码分离 config-lite
+config-lite 是一个轻量的读取配置文件的模块。config-lite 会根据环境变量（NODE_ENV）的不同加载 config 目录下不同的配置文件
 
+```
+在 myblog 下新建 config 目录，在该目录下新建 default.js，添加如下代码：
+
+config/default.js
+
+module.exports = {
+  port: 3000,
+  session: {
+    secret: 'myblog',
+    key: 'myblog',
+    maxAge: 2592000000
+  },
+  mongodb: 'mongodb://localhost:27017/myblog'
+}
+配置释义：
+
+port: 程序启动要监听的端口号
+session: express-session 的配置信息，后面介绍
+mongodb: mongodb 的地址，以 mongodb:// 协议开头，myblog 为 db 名
+```
 
 ### 参考内容（仅供学习）
 * https://github.com/nswbmw/N-blog
