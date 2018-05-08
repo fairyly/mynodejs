@@ -14,14 +14,14 @@
 
 
 # 1.搭建基本node环境
-- 安装 [node](https://nodejs.org/zh-cn/) ，可下载后安装；
+- 1.1 安装 [node](https://nodejs.org/zh-cn/) ，可下载后安装；
   ```sh
     安装完成后，输入命令，查看 node 版本
     C:\Users\fairy>node -v
     v8.9.3
   ```
   
-- 安装 [mongodb](https://www.mongodb.com/download-center#enterprise),还是下载后安装，只支持Windows 64位系统；  
+- 1.2 安装 [mongodb](https://www.mongodb.com/download-center#enterprise),还是下载后安装，只支持Windows 64位系统；  
   - [我的mongodb安装部分](https://github.com/fairyly/mynodejs/blob/gh-pages/mongodb%20%E9%83%A8%E5%88%86.md)  
   - 安装后，可以安装 mongodb 可视化管理工具:   
     RoboMongo: https://robomongo.org/  （用过，推荐）  
@@ -40,7 +40,7 @@
           distarch: x86_64
           target_arch: x86_64
   ```
-- 安装 [express](),  
+- 1.3 安装 [express](),  
   - [我的 express 部分](https://github.com/fairyly/mynodejs/blob/gh-pages/express%20%E6%A8%A1%E5%9D%97.md)  
   - 全局安装：`npm install express -g`;  
   - 也可以通过应用生成器工具 express 可以快速创建一个应用的骨架：
@@ -72,7 +72,7 @@
 ```
 
 # 2.创建express项目
-使用 express 创建 myblog 项目：初始化项目
+### 2.1使用 express 创建 myblog 项目：初始化项目
 - 创建 myblog 项目目录
 - cd myblog
 - npm init
@@ -91,7 +91,7 @@
 npm i -g supervisor 
 运行 supervisor index 启动程序
 
-### 安装依赖模块
+### 2.2安装依赖模块
 
 ```
 npm i config-lite connect-flash connect-mongo ejs express express-formidable express-session marked moment mongolass objectid-to-timestamp sha1 winston express-winston --save
@@ -115,7 +115,7 @@ npm i config-lite connect-flash connect-mongo ejs express express-formidable exp
 - 14.express-winston: express 的 winston 日志中间件
 
 
-### 代码检查 eslint
+### 2.3代码检查 eslint
 ```
 npm i eslint -g
 
@@ -125,7 +125,7 @@ eslint 会创建一个 .eslintrc.json 的配置文件，同时自动安装并添
 这里我们使用 Standard 规范，其主要特点是不加分号。
 ```
 
-### 代码风格 EditorConfig
+### 2.4代码风格 EditorConfig
 ```
 在 myblog 目录下新建 .editorconfig 的文件，添加如下内容：
 
@@ -149,7 +149,7 @@ indent_style = tab
 这里我们使用 2 个空格缩进，tab 长度也是 2 个空格。trim_trailing_whitespace 用来删除每一行最后多余的空格，
 insert_final_newline 用来在代码最后插入一个空的换行。
 ```
-### 将配置与代码分离 config-lite
+### 2.5 将配置与代码分离 config-lite
 config-lite 是一个轻量的读取配置文件的模块。config-lite 会根据环境变量（NODE_ENV）的不同加载 config 目录下不同的配置文件
 
 ```
