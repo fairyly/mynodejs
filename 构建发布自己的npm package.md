@@ -1,5 +1,10 @@
 # 构建发布自己的npm package
 
+- npm init
+- 创建 index.js,编辑逻辑代码
+- npm login
+- npm publish
+
 
 1.使用 npm 的注意报错：
 ```
