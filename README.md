@@ -53,6 +53,10 @@
 ### Excel Workbook Manager: Excel工作簿管理器
   - https://github.com/guyonroche/exceljs
 
+
+### npm 
+ fairyilys@gmail.com  fairy  yueheqing  yhq1503534781
+ 
 ### demo 学习
 
 ```
