@@ -1,5 +1,8 @@
 # 基金爬虫
 
+原作者: 杨琢
+
+源码: https://github.com/fairyly/fundSpider
 
 ```sh
 
