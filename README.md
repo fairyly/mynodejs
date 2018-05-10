@@ -2,6 +2,7 @@
 
 ![awesome](https://raw.githubusercontent.com/github/explore/c304601f028774885ef27f72e6fe2d331729d8bc/topics/awesome/awesome.png)
 
+* Node.js 系列教程 Node Hero: https://github.com/simplefeel/react-node-learn
 
 >nodejs github: https://github.com/nodejs/node
 
