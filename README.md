@@ -4,6 +4,16 @@ mynodejs
 
 ## 创建项目须知
 
+- 代码检查 eslint
+```
+npm i eslint -g
+
+eslint --init
+
+eslint 会创建一个 .eslintrc.json 的配置文件，同时自动安装并添加相关的模块到 devDependencies。
+这里我们使用 Standard 规范，其主要特点是不加分号。
+```
+
 - 创建 .gitignore 文件,忽略提交的文件或目录
 ```
 
