@@ -14,3 +14,8 @@ npm install
 
 # npm start // 打开 http://localhost:3000/ 查看趋势图
 ```
+
+
+原作者: 杨琢
+
+源码: https://github.com/fairyly/fundSpider
