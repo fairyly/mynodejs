@@ -218,6 +218,7 @@ class FundSpider {
         edate = edate?edate:this.getDateStr(dateNow);
         fundUrl += ("&code="+code+"&sdate="+sdate+"&edate="+edate+"&per="+per);
         console.log(fundUrl);
+        console.log('=====================================');
         this.fetchFundUrl(fundUrl, callback);
     }
 }
@@ -293,6 +294,8 @@ app.get('/fetchFundData/:code/:per', (req, res) => {
         res.send(JSON.stringify(data));
     });
 });
+
+
 app.listen(1234,()=>{
   console.log("service start on port 1234");
 });
