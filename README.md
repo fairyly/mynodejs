@@ -19,3 +19,6 @@ npm install
 原作者: 杨琢
 
 源码: https://github.com/fairyly/fundSpider
+
+
+`app.js` 中还有抓取基金代码内容 以及保存到 `mongodb` 数据库部分
