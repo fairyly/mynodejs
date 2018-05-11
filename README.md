@@ -4,8 +4,9 @@ mynodejs
 
 ## 创建项目须知
 
+- 创建 .gitignore 文件,忽略提交的文件或目录
 ```
-创建 .gitignore 文件,忽略提交的文件或目录
+
 $ touch .gitignore
 
 
@@ -69,8 +70,14 @@ typings/
 # dotenv environment variables file
 .env
 
+```
+
 ================================================
-创建 .editorconfig ,统一代码风格
+
+
+- 创建 .editorconfig ,统一代码风格
+
+```
 $ touch .editorconfig
 
 .editorconfig常用内容设置：
