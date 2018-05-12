@@ -3,6 +3,9 @@
 ## AntV team
 - GitHub: https://github.com/antvis
 
+## Baidu FEX team
+- GitHub: https://github.com/fex-team
+
 
 ## 饿了么前端
-- https://github.com/ElemeFE
+- GitHub: https://github.com/ElemeFE
