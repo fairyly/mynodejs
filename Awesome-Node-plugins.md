@@ -28,3 +28,7 @@
 
 ### 用于Node的完全用JavaScript编写的图像处理库，具有零外部或本地依赖性。
 - GitHub: https://github.com/oliver-moran/jimp
+
+
+### 简单和现代的异步事件发射器
+- https://github.com/sindresorhus/emittery
