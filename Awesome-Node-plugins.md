@@ -40,3 +40,4 @@
 
 ### 将字符串/ Buffer / Uint8Array转换为可读流
 - https://github.com/sindresorhus/to-readable-stream
+- 一组有用的流实用程序模块，用于使用流编写更好的代码: https://github.com/maxogden/mississippi
