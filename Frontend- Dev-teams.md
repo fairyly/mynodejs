@@ -12,9 +12,14 @@
 ## 语雀 
 - GitHub: https://github.com/yuque
 
+## Tencent
+- https://github.com/Tencent
+
 ## 腾讯 AlloyTeam
 - GitHub: https://github.com/AlloyTeam
 
+## 微信
+- https://github.com/weixin
 
 ## Baidu FEX team
 - GitHub: https://github.com/fex-team
