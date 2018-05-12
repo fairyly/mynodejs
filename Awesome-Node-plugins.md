@@ -24,3 +24,7 @@
 
 ### 用于node.js的HTML表单数据的流式解析器
 - GitHub: https://github.com/mscdex/busboy
+
+
+### 用于Node的完全用JavaScript编写的图像处理库，具有零外部或本地依赖性。
+- GitHub: https://github.com/oliver-moran/jimp
