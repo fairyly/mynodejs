@@ -1,5 +1,8 @@
 # Awesome-Node-plugins
 
+### 将您的Node.js项目打包成一个可执行文件
+- https://npmjs.com/pkg
+- github: https://github.com/zeit/pkg
 
 
 ### excel 插件
