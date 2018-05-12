@@ -31,6 +31,12 @@
 - GitHub: https://github.com/meituan
 - GitHub: https://github.com/dianping
 
+## Douban Inc
+- https://github.com/douban
+
+## Xiaomi Open Source
+- https://github.com/xiaomi
+
 ## Google
 - GitHub: https://github.com/google
 
