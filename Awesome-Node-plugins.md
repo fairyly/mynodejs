@@ -32,3 +32,8 @@
 
 ### 简单和现代的异步事件发射器
 - https://github.com/sindresorhus/emittery
+
+
+### EasyWechat for Node.js
+- https://github.com/hpyer/node-easywechat
+- https://github.com/hpyer/node-easywechat-demo
