@@ -37,3 +37,6 @@
 ### EasyWechat for Node.js
 - https://github.com/hpyer/node-easywechat
 - https://github.com/hpyer/node-easywechat-demo
+
+### 将字符串/ Buffer / Uint8Array转换为可读流
+- https://github.com/sindresorhus/to-readable-stream
