@@ -41,3 +41,8 @@
 ### 将字符串/ Buffer / Uint8Array转换为可读流
 - https://github.com/sindresorhus/to-readable-stream
 - 一组有用的流实用程序模块，用于使用流编写更好的代码: https://github.com/maxogden/mississippi
+
+
+## 时间插件
+- Fast 2KB immutable date library alternative to Moment.js with the same modern API
+- dayjs: https://github.com/xx45/dayjs
