@@ -43,7 +43,7 @@
   - https://github.com/alanshaw/markdown-pdf
 
 - tesseract.js:(光学字符识别库) Pure Javascript OCR for 62 Languages booktadadesktop_computer http://tesseract.projectnaptha.com/
-  - github: https://github.com/naptha/tesseract.js
+  - github: https://github.com/naptha/tesseract.js
 
 
 - 测试
