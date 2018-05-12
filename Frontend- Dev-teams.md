@@ -6,16 +6,30 @@
 ## AntV team
 - GitHub: https://github.com/antvis
 
+## Taobao, Inc.
+- GitHub: https://github.com/taobao
+
 ## 语雀 
 - GitHub: https://github.com/yuque
+
+## 腾讯 AlloyTeam
+- GitHub: https://github.com/AlloyTeam
+
 
 ## Baidu FEX team
 - GitHub: https://github.com/fex-team
 
+## Baidu EFE team
+- GitHub: https://github.com/ecomfe
 
 ## 饿了么前端
 - GitHub: https://github.com/ElemeFE
 
+
+## 美团点评
+- GitHub: https://github.com/meituan-dianping
+- GitHub: https://github.com/meituan
+- GitHub: https://github.com/dianping
 
 ## Google
 - GitHub: https://github.com/google
