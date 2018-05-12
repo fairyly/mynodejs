@@ -27,6 +27,9 @@
 ## Baidu EFE team
 - GitHub: https://github.com/ecomfe
 
+## Baidu BEFE
+- https://github.com/be-fe
+
 ## 饿了么前端
 - GitHub: https://github.com/ElemeFE
 
