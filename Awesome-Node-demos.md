@@ -33,19 +33,6 @@
 - 随启随用的静态文件服务器
   - https://github.com/JacksonTian/anywhere
 
-- XML to JavaScript object converter.
-  - https://github.com/Leonidas-from-XIV/node-xml2js
-  
-- 汉字拼音转换工具
-  - https://github.com/hotoo/pinyin
-
-- Markdown to PDF converter https://npmjs.org/package/markdown-pdf
-  - https://github.com/alanshaw/markdown-pdf
-
-- tesseract.js:(光学字符识别库) Pure Javascript OCR for 62 Languages booktadadesktop_computer http://tesseract.projectnaptha.com/
-  - github: https://github.com/naptha/tesseract.js
-
-
 - 测试
   - https://www.codementor.io/cuketest/one-quick-way-to-create-your-cucumber-js-test-script-iq5kxwy8y
   - CukeTest: http://cuketest.com/
