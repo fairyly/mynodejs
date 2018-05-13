@@ -50,4 +50,10 @@
 
 ## 数据库插件
 - The wise MongoDB API：monk
-- GitHub：https://github.com/Automattic/monk
+  - GitHub：https://github.com/Automattic/monk
+
+- mongoose: https://github.com/Automattic/mongoose
+  - http://mongoosejs.com
+
+- mongolass: https://github.com/mongolass/mongolass
+  - 
