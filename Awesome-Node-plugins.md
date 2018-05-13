@@ -70,3 +70,11 @@
 
 - Forever： https://github.com/foreverjs/foreverjs
   - 
+
+
+
+
+
+## 测试
+- 未来的测试运行器 AVA ：https://github.com/avajs/ava
+  - doc: https://github.com/avajs/ava-docs/blob/master/zh_CN/readme.md
