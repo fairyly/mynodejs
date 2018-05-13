@@ -57,3 +57,16 @@
 
 - mongolass: https://github.com/mongolass/mongolass
   - 
+
+## 守护进程（重启应用）
+
+- supervisor(常用开发环境)：https://github.com/petruisfan/node-supervisor
+
+
+- nodemon：https://github.com/remy/nodemon/
+  - http://nodemon.io/
+- PM2：https://github.com/Unitech/PM2/
+  - https://pm2.keymetrics.io/
+
+- Forever： https://github.com/foreverjs/foreverjs
+  - 
