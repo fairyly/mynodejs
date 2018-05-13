@@ -74,6 +74,19 @@
 
 
 
+## 免费 mongodb 云数据库
+- Mlab: 数据库申请 [MLab](https://mlab.com/) 免费 512M
+- 
+
+
+
+## 部署服务器
+- Heroku: https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction
+- Redis: https://redis4you.com   yhq yhq123456
+
+## 日志
+- 
+
 
 ## 测试
 - 未来的测试运行器 AVA ：https://github.com/avajs/ava
