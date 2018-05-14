@@ -69,6 +69,11 @@
 - 打开XML文件（Microsoft Office 2007及更高版本）生成器。输出是一个流。
 - officegen: https://github.com/Ziv-Barber/officegen
 
+## 火焰图形工具
+- https://github.com/mapbox/flamebearer
+
+
+
 
 ## 数据库插件
 - The wise MongoDB API：monk
