@@ -65,6 +65,10 @@
 - GitHub：https://github.com/NodeRedis/node_redis
 
 
+## office: Office在JavaScript中为Word（docx），PowerPoint（pptx）和Excell（xlsx）
+- 打开XML文件（Microsoft Office 2007及更高版本）生成器。输出是一个流。
+- officegen: https://github.com/Ziv-Barber/officegen
+
 
 ## 数据库插件
 - The wise MongoDB API：monk
