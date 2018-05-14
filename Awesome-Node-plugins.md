@@ -61,6 +61,8 @@
 - GitHub：https://github.com/ianstormtaylor/slate
   - http://slatejs.org/#/rich-text
 
+## node_redis redis客户端
+- GitHub：https://github.com/NodeRedis/node_redis
 
 
 
