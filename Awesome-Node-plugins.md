@@ -72,6 +72,8 @@
 ## 火焰图形工具
 - https://github.com/mapbox/flamebearer
 
+## RSS 生成器
+- https://github.com/DIYgod/RSSHub
 
 
 
