@@ -25,6 +25,8 @@ Redis支持五种数据类型：string（字符串），hash（哈希），list�
 
 打开Redis客户端：
 ```
+字符串操作：
+
 redis 127.0.0.1:6379> SET name "runoob"
 OK
 redis 127.0.0.1:6379> GET name
@@ -32,12 +34,26 @@ redis 127.0.0.1:6379> GET name
 
 > incr name //若 name 值加 1，如果 name 不是整数提示错误
 --------------------------------
-Hash（哈希）
+Hash（哈希）操作：
 redis> HMSET myhash field1 "Hello" field2 "World"
 "OK"
 redis> HGET myhash field1
 "Hello"
 redis> HGET myhash field2
 "World"
+
+
+List（列表）操作：
+redis 127.0.0.1:6379> lpush runoob redis
+(integer) 1
+redis 127.0.0.1:6379> lpush runoob mongodb
+(integer) 2
+redis 127.0.0.1:6379> lpush runoob rabitmq
+(integer) 3
+redis 127.0.0.1:6379> lrange runoob 0 10
+1) "rabitmq"
+2) "mongodb"
+3) "redis"
+redis 127.0.0.1:6379>
 
 ```
