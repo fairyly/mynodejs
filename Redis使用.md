@@ -29,6 +29,8 @@ redis 127.0.0.1:6379> SET name "runoob"
 OK
 redis 127.0.0.1:6379> GET name
 "runoob"
+
+> incr name //若 name 值加 1，如果 name 不是整数提示错误
 --------------------------------
 Hash（哈希）
 redis> HMSET myhash field1 "Hello" field2 "World"
