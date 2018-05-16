@@ -80,4 +80,29 @@ redis 127.0.0.1:6379> smembers runoob
 1) "redis"
 2) "rabitmq"
 3) "mongodb"
+
+
+zset(sorted set：有序集合)：
+Redis zset 和 set 一样也是string类型元素的集合,且不允许重复的成员。
+不同的是每个元素都会关联一个double类型的分数。redis正是通过分数来为集合中的成员进行从小到大的排序。
+
+zset的成员是唯一的,但分数(score)却可以重复。
+
+zadd 命令
+添加元素到集合，元素在集合中存在则更新对应score
+
+zadd key score member 
+实例
+redis 127.0.0.1:6379> zadd runoob 0 redis
+(integer) 1
+redis 127.0.0.1:6379> zadd runoob 0 mongodb
+(integer) 1
+redis 127.0.0.1:6379> zadd runoob 0 rabitmq
+(integer) 1
+redis 127.0.0.1:6379> zadd runoob 0 rabitmq
+(integer) 0
+redis 127.0.0.1:6379> > ZRANGEBYSCORE runoob 0 1000
+1) "mongodb"
+2) "rabitmq"
+3) "redis"
 ```
