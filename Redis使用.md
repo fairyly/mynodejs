@@ -29,4 +29,13 @@ redis 127.0.0.1:6379> SET name "runoob"
 OK
 redis 127.0.0.1:6379> GET name
 "runoob"
+--------------------------------
+Hash（哈希）
+redis> HMSET myhash field1 "Hello" field2 "World"
+"OK"
+redis> HGET myhash field1
+"Hello"
+redis> HGET myhash field2
+"World"
+
 ```
