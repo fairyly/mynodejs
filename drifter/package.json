@@ -1,0 +1,9 @@
+{
+  "name": "redis",
+  "version": "1.0.0",
+  "description": "redis",
+  "dependencies": {
+    "express": "*",
+    "redis": "*"
+  }
+}
