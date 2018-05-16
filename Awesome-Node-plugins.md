@@ -79,9 +79,17 @@
 - cors-anywhere: https://github.com/Rob--W/cors-anywhere
 
 
+## 端到端，层次化，实时，丰富多彩的日志和故事
+- https://github.com/guigrpa/storyboard
+
+## A better npm publish
+- https://github.com/sindresorhus/np
+
 
 ## demo
 - Node写的一个招聘平台的后台系统: https://github.com/ruichengping/yigeinfo
+
+##
 
 
 ## 数据库插件
