@@ -56,4 +56,28 @@ redis 127.0.0.1:6379> lrange runoob 0 10
 3) "redis"
 redis 127.0.0.1:6379>
 
+
+Set（集合）：
+Redis的Set是string类型的无序集合。
+
+集合是通过哈希表实现的，所以添加，删除，查找的复杂度都是O(1)。
+
+sadd 命令
+添加一个 string 元素到 key 对应的 set 集合中，成功返回1，如果元素已经在集合中返回 0，如果 key 对应的 set 不存在则返回错误。
+
+sadd key member
+实例
+redis 127.0.0.1:6379> sadd runoob redis
+(integer) 1
+redis 127.0.0.1:6379> sadd runoob mongodb
+(integer) 1
+redis 127.0.0.1:6379> sadd runoob rabitmq
+(integer) 1
+redis 127.0.0.1:6379> sadd runoob rabitmq
+(integer) 0
+redis 127.0.0.1:6379> smembers runoob
+
+1) "redis"
+2) "rabitmq"
+3) "mongodb"
 ```
