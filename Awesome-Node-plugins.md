@@ -90,7 +90,7 @@
 
 ## REST APIs文档生成工具 ':mock 数据
 - easy-mock: https://github.com/easy-mock/easy-mock
-- 
+- swagger: https://github.com/swagger-api/swagger-editor
 
 ## demo
 - Node写的一个招聘平台的后台系统: https://github.com/ruichengping/yigeinfo
