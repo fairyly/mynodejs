@@ -88,6 +88,9 @@
 ## 文档生成
 - docsify: https://github.com/QingWei-Li/docsify
 
+## REST APIs文档生成工具 ':mock 数据
+- easy-mock: https://github.com/easy-mock/easy-mock
+- 
 
 ## demo
 - Node写的一个招聘平台的后台系统: https://github.com/ruichengping/yigeinfo
