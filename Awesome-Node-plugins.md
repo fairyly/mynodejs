@@ -85,6 +85,9 @@
 ## A better npm publish
 - https://github.com/sindresorhus/np
 
+## 文档生成
+- docsify: https://github.com/QingWei-Li/docsify
+
 
 ## demo
 - Node写的一个招聘平台的后台系统: https://github.com/ruichengping/yigeinfo
