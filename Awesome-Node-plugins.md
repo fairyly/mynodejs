@@ -5,6 +5,11 @@
   - 全局安装: npm install http-server -g
   - 到目录下,直接输入命令: http-server -p 8089 // -p 指定端口号
 
+## Anywhere 随启随用的静态文件服务器
+- anywhere: https://github.com/JacksonTian/anywhere
+  - 全局安装: npm install anywhere -g
+  - 到目录下,直接输入命令: anywhere -p 8089 // -p 指定端口号
+
 ### 将您的Node.js项目打包成一个可执行文件
 - https://npmjs.com/pkg
 - GitHub： https://github.com/zeit/pkg
