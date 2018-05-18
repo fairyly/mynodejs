@@ -1,4 +1,5 @@
 # Egg.js
+- doc: http://eggjs.org/zh-cn/intro/quickstart.html
 
 ## install
 ```
