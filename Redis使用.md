@@ -161,3 +161,18 @@ QUEUED
 
 redis 127.0.0.1:6379> EXEC
 ```
+
+
+# Redis 脚本
+
+```
+Eval 命令的基本语法如下：
+
+redis 127.0.0.1:6379> EVAL script numkeys key [key ...] arg [arg ...]
+```
+
+# 切换数据库
+
+```
+redis 127.0.0.1:6379> SELECT 1                # 使用 1 号数据库
+```
