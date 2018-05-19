@@ -174,5 +174,48 @@ redis 127.0.0.1:6379> EVAL script numkeys key [key ...] arg [arg ...]
 # 切换数据库
 
 ```
+# 默认使用 0 号数据库
+
 redis 127.0.0.1:6379> SELECT 1                # 使用 1 号数据库
+```
+
+# 获取 redis 服务器的统计信息
+```
+redis 127.0.0.1:6379> INFO
+```
+
+# Redis 数据备份与恢复
+```
+redis 127.0.0.1:6379> SAVE 
+```
+
+# Redis 性能测试
+```
+以下实例同时执行 10000 个请求来检测性能：
+
+$ redis-benchmark -n 10000  -q
+
+redis 性能测试工具可选参数如下所示：
+
+序号	选项	描述	默认值
+1	-h	指定服务器主机名	127.0.0.1
+2	-p	指定服务器端口	6379
+3	-s	指定服务器 socket	
+4	-c	指定并发连接数	50
+5	-n	指定请求数	10000
+6	-d	以字节的形式指定 SET/GET 值的数据大小	2
+7	-k	1=keep alive 0=reconnect	1
+8	-r	SET/GET/INCR 使用随机 key, SADD 使用随机值	
+9	-P	通过管道传输 <numreq> 请求	1
+10	-q	强制退出 redis。仅显示 query/sec 值	
+11	--csv	以 CSV 格式输出	
+12	-l	生成循环，永久执行测试	
+13	-t	仅运行以逗号分隔的测试命令列表。	
+14	-I	Idle 模式。仅打开 N 个 idle 连接并等待。	
+
+
+
+以下实例我们在服务启动时设置最大连接数为 100000：
+
+redis-server --maxclients 100000
 ```
