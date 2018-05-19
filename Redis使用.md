@@ -106,3 +106,30 @@ redis 127.0.0.1:6379> > ZRANGEBYSCORE runoob 0 1000
 2) "rabitmq"
 3) "redis"
 ```
+
+##  keys 命令
+```
+del key: 用于在 key 存在时删除 key
+ep: 
+set name 'test'
+del name
+
+exist name: 用于检查给定 key 是否存在
+
+
+
+```
+
+## 发布订阅
+
+```
+subscribe chanel : 订阅给定的一个或多个频道的信息
+ep: 
+subscribe chat
+
+重新开启个 redis 客户端，然后在同一个频道 redisChat 发布两次消息，订阅者就能接收到消息。
+
+publish chat '发布信息'
+
+
+```subscribe
