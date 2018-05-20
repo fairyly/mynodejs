@@ -18,6 +18,13 @@ git
 ```
 npm install -g yapi-cli --registry https://registry.npm.taobao.org
 yapi server 
+
+提示打开 浏览器 访问： localhost:9090
+按照提示填写内容，开始部署
+
+部署成功提示
+初始化管理员账号成功,账号名："1503534781@qq.com"，密码："ymfe.org"
+部署成功，请切换到部署目录，输入： "node vendors/server/app.js" 指令启动服务器, 然后在浏览器打开 http://127.0.0.1:3000 访问
 ```
 
 ### 升级
