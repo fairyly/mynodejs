@@ -3,6 +3,9 @@
 - npm init
 - 创建 index.js,编辑逻辑代码
 - npm login
+  ~username  
+  输入密码  
+  输入邮箱  
 - npm publish
 
 
@@ -22,3 +25,4 @@ npm whoami
 npm cache clean
 
 npm : 1503534781@qq.com yhqfairy  yhq1503534781
+      498745097@qq.com fairy  yhq1503534781
