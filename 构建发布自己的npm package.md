@@ -17,6 +17,8 @@ npm config set registry http://registry.npmjs.org
 
 npm config list
 
+npm whoami
+
 npm cache clean
 
 npm : 1503534781@qq.com yhqfairy  yhq1503534781
