@@ -2,7 +2,7 @@
 
 - npm init
 - 创建 index.js,编辑逻辑代码
-- npm login
+- npm login  
   ~username  
   输入密码  
   输入邮箱  
