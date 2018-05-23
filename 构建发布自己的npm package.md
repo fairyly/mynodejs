@@ -13,7 +13,7 @@
 ```
 no_perms Private mode enable, only admin can publish this module
 设置回原本的就可以了：
-npm config set registry http://registry.npmjs.org 
+npm config set registry https://registry.npmjs.org/
 
 发布后 再设置 npm config set registry https://registry.npm.taobao.org/
 ```
