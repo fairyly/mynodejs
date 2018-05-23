@@ -24,5 +24,5 @@ npm whoami
 
 npm cache clean
 
-npm : 1503534781@qq.com yhqfairy  yhq1503534781
+npm : yueheqing@demogic.com yhqfairy  yhq1503534781  
       498745097@qq.com fairy  yhq1503534781
