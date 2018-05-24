@@ -143,7 +143,8 @@
 - 获取 IP
   - public-ip： https://github.com/sindresorhus/public-ip
 
-- 
+- A collection of common interactive command line user interfaces.
+  - Inquirer.js： https://github.com/SBoudrias/Inquirer.js
 
 
 ## 免费 mongodb 云数据库
