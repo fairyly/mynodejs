@@ -113,6 +113,9 @@
 - doc: https://tswjs.org/guide/introduce/quickstart
 
 
+## 高级浏览器自动化库: 
+- https://github.com/segmentio/nightmare
+
 ## 数据库插件
 - The wise MongoDB API：monk
   - GitHub：https://github.com/Automattic/monk
