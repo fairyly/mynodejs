@@ -64,6 +64,7 @@
 ## 时间插件
 - Fast 2KB immutable date library alternative to Moment.js with the same modern API
 - dayjs: https://github.com/xx45/dayjs
+- chrono 日期解析器: https://github.com/wanasit/chrono
 
 
 
