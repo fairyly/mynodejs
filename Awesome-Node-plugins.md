@@ -116,6 +116,9 @@
 ## 高级浏览器自动化库: 
 - https://github.com/segmentio/nightmare
 
+## 代码格式化工具
+- https://github.com/prettier/prettier
+
 ## 数据库插件
 - The wise MongoDB API：monk
   - GitHub：https://github.com/Automattic/monk
