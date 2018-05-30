@@ -1,5 +1,7 @@
 # node-awesome-demos
 
+* koa2-note: 《Koa2进阶学习笔记》: https://github.com/chenshenhai/koa2-note
+
 * awesome-nodejs: https://github.com/sindresorhus/awesome-nodejs
 
 - web 框架
