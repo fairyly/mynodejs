@@ -119,6 +119,13 @@
 ## 代码格式化工具
 - https://github.com/prettier/prettier
 
+## The Admin Interface Framework
+- 生成管理微服务的开源工具: https://github.com/ForestAdmin/lumber
+
+## chokidar
+- node.js fs.watch / fs.watchFile / fsevents 封装: https://github.com/paulmillr/chokidar
+
+
 ## 数据库插件
 - The wise MongoDB API：monk
   - GitHub：https://github.com/Automattic/monk
