@@ -128,6 +128,10 @@
 ## JavaScript的Base64实现
 - github: https://github.com/dankogai/js-base64
 
+## mdast-util-to-hast 是一个处理文本与语法树并在它们之间转换的接口。
+- https://github.com/syntax-tree/mdast-util-to-hast
+
+
 
 
 
