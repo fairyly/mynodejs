@@ -125,6 +125,11 @@
 ## chokidar
 - node.js fs.watch / fs.watchFile / fsevents 封装: https://github.com/paulmillr/chokidar
 
+## JavaScript的Base64实现
+- github: https://github.com/dankogai/js-base64
+
+
+
 
 ## 数据库插件
 - The wise MongoDB API：monk
