@@ -142,6 +142,13 @@
 - https://github.com/muan/megamoji
 
 
+## 学习加密研讨会
+- https://github.com/sodium-friends/learntocrypto
+
+## kepler.gl: kepler.gl是一个数据不可知的，高性能的基于Web的应用程序，用于大规模地理定位数据集的可视化探索。
+- https://github.com/uber/kepler.gl
+
+
 
 
 ## 数据库插件
