@@ -1,5 +1,8 @@
 # Awesome-Node-plugins
 
+## awesome-npm
+- https://github.com/x-cold/awesome-npm
+
 ## node 本地服务器
 - http-server: https://github.com/indexzero/http-server
   - 全局安装: npm install http-server -g
