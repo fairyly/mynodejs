@@ -138,6 +138,7 @@
 ## 表情库
 - emojilib: https://github.com/muan/emojilib
 - mojime: https://github.com/JuanitoFatas/mojime
+- https://github.com/front-ends-developers/mojime
 
 
 
