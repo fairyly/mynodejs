@@ -17,6 +17,7 @@
   - 基于 Egg 的 CNode 社区: https://github.com/cnodejs/egg-cnode
   - 基于vue的nuxt框架cnode社区服务端渲染: https://github.com/Kim09AI/nuxt-cnode
   - 从0到1搭建和部署个人博客: https://github.com/keenjaan/blog
+  - 基于Nuxt.js服务器渲染(SSR)搭建的个人博客系统: https://github.com/warriorBrian/nuxt-blog
 
 - 发布系统
   - vue+nuxt+sass+node+express+MongoDB 实现的文章发布系统: https://github.com/ITCNZ/mynuxt
