@@ -35,6 +35,10 @@
 
 - 随启随用的静态文件服务器
   - https://github.com/JacksonTian/anywhere
+  
+  
+- Web端声纹识别
+  - https://github.com/ssttm169/tom-vpr 
 
 - 测试
   - https://www.codementor.io/cuketest/one-quick-way-to-create-your-cucumber-js-test-script-iq5kxwy8y
