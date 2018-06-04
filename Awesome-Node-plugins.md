@@ -153,6 +153,10 @@
 
 
 
+##  web调试
+- vconsole - 微信小程序推出的调试工具，直接内嵌在页面内，支持控制台、网络、系统信息.
+  - https://github.com/Tencent/vConsole
+
 
 ## 数据库插件
 - The wise MongoDB API：monk
