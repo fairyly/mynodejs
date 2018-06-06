@@ -1,5 +1,7 @@
 # node-awesome-demos
 
+- Awesome Hacking: https://github.com/Hack-with-Github/Awesome-Hacking
+
 * koa2-note: 《Koa2进阶学习笔记》: https://github.com/chenshenhai/koa2-note
 
 * awesome-nodejs: https://github.com/sindresorhus/awesome-nodejs
@@ -24,6 +26,14 @@
  
 ### node-in-debugging:
 - 《Node.js 调试指南》: https://github.com/nswbmw/node-in-debugging
+
+### 《Node.js 包教不包会》
+- https://github.com/alsotang/node-lessons
+
+### 关于JavaScript的书籍系列
+- You-Dont-Know-JS: https://github.com/getify/You-Dont-Know-JS
+
+------------------------------------------------
   
 - Pretty unicode tables for the CLI with Node.JS
   - https://github.com/Automattic/cli-table
