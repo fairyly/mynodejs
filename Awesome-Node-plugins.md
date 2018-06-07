@@ -152,6 +152,10 @@
 - https://github.com/uber/kepler.gl
 
 
+## A customizable life embetterment robot. http://hubot.github.com
+- https://github.com/hubotio/hubot
+
+
 
 ## 性能测试的统计分析工具
 - hiper: ttps://github.com/pod4g/hiper
