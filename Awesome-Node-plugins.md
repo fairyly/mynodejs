@@ -153,6 +153,9 @@
 
 
 
+## 性能测试的统计分析工具
+- hiper: ttps://github.com/pod4g/hiper
+
 ##  web调试
 - vconsole - 微信小程序推出的调试工具，直接内嵌在页面内，支持控制台、网络、系统信息.
   - https://github.com/Tencent/vConsole
