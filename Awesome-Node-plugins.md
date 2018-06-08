@@ -199,6 +199,8 @@
 - A collection of common interactive command line user interfaces.
   - Inquirer.js： https://github.com/SBoudrias/Inquirer.js
 
+- Node.js的可移植Unix shell命令
+  - shelljs: https://github.com/shelljs/shelljs
 
 ## 免费 mongodb 云数据库
 - Mlab: 数据库申请 [MLab](https://mlab.com/) 免费 512M
