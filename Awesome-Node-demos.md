@@ -20,6 +20,7 @@
   - 基于vue的nuxt框架cnode社区服务端渲染: https://github.com/Kim09AI/nuxt-cnode
   - 从0到1搭建和部署个人博客: https://github.com/keenjaan/blog
   - 基于Nuxt.js服务器渲染(SSR)搭建的个人博客系统: https://github.com/warriorBrian/nuxt-blog
+  - 🚀《Node.js从入门到上线》A blog build with Koa2.： https://github.com/liuxing/node-blog
 
 - 发布系统
   - vue+nuxt+sass+node+express+MongoDB 实现的文章发布系统: https://github.com/ITCNZ/mynuxt
