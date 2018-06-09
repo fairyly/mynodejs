@@ -12,8 +12,65 @@ Node：单线程
 
 目前API: http://nodejs.cn/api/
 
-事件轮询： Node 先去注册事件，随后不停的询问内核这些事件是否分发，当事件分发时，
-  对应的回调函数就会触发，然后继续执行下去，如果没有事件触发，则继续执行其他代码，直到有新事件时，再去执行对应的回调函数
+事件轮询： Node 先去注册事件，随后不停的询问内核这些事件是否分发，当事件分发时，  
+  对应的回调函数就会触发，然后继续执行下去，如果没有事件触发，则继续执行其他代码，  
+  直到有新事件时，再去执行对应的回调函数
+
+- http
+```
+// 创建 http 服务器
+var http = require('http');
+http.createServer(function(req,res){
+	var buf = '';
+	req.on('data',function(data){
+		bud += data;
+		console.log(data)
+	})
+
+	req.on('end',function(){
+		console.log('接收完毕')
+	})
+	res.writeHead(200,{});
+	res.end('hello');
+	// throw new Error('错误不会被捕捉');
+
+
+}).listen(3000)
+
+// 请求
+
+http.request({
+	host: '127.0.0.1',
+	port: 3000,
+	url: '/',
+	method: 'get'
+	},function(res){
+		res.setEncoding('utf8');
+		var body = '';
+		res.on('data',function(chunk){
+			body += chunk
+			})
+		res.on('end',function(){
+
+			})
+	}
+)
+```
+
+- superagent: http 方面的库，可以发起 get 或 post 请求
+```
+var request = require('superagent')
+request
+   .post('/api/pet')
+   .send({ name: 'Manny', species: 'cat' })
+   .set('X-API-Key', 'foobar')
+   .set('Accept', 'application/json')
+   .then(function(res) {
+      alert('yay got ' + JSON.stringify(res.body));
+   });
+```
+
+
 - get colors in your node.js console :在 node 控制台打印颜色
   - colors: https://github.com/Marak/colors.js
 
