@@ -10,6 +10,8 @@ mynodejs
 
 Node：单线程
 
+目前API: http://nodejs.cn/api/
+
 事件轮询： Node 先去注册事件，随后不停的询问内核这些事件是否分发，当事件分发时，
   对应的回调函数就会触发，然后继续执行下去，如果没有事件触发，则继续执行其他代码，直到有新事件时，再去执行对应的回调函数
 - get colors in your node.js console :在 node 控制台打印颜色
