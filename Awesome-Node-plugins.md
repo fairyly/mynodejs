@@ -165,6 +165,13 @@
   - https://github.com/Tencent/vConsole
 
 
+## http 请求插件
+- superagent： https://github.com/visionmedia/superagent
+
+
+
+
+
 ## 数据库插件
 - The wise MongoDB API：monk
   - GitHub：https://github.com/Automattic/monk
