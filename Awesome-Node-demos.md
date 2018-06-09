@@ -9,6 +9,11 @@
 - web 框架
   - NodeJs Web Application Framework: https://github.com/adonisjs/adonis-framework
 
+
+- node 游戏框架
+  - pomelo：https://github.com/NetEase/pomelo
+  - pinus： https://github.com/node-pinus/pinus
+
 - 商城:
   - zshop是一个nodejs写的商城系统: https://github.com/halloffamezwx/zshop
   - [廖雪峰全栈教程](https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000)
