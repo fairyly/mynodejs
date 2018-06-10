@@ -1,7 +1,7 @@
 require('colors');
 console.log('smashing node'.rainbow);
 
-// http 
+// http
 var http = require('http');
 var server = http.createServer(function(req,res){
 	var buf = '';
@@ -93,8 +93,28 @@ const wss = new WebSocket.Server({ port: 8087 });
 wss.on('connection', function connection(ws) {
   ws.on('message', function incoming(message) {
     console.log('received: %s', message);
-    
+
   });
 
   ws.send('something');
+});
+
+wss.on('close', function close() {
+  console.log('disconnected');
+});
+
+
+// socket.io
+
+var io = require('socket.io')(server);
+io.on('connection', function(client){
+  client.on('news', function(data){
+  	console.log('io')
+  });
+
+  client.emit('news',{"hello":"world"});
+
+  client.on('disconnect', function(){
+	console.log('io')
+  });
 });

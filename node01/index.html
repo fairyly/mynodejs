@@ -4,12 +4,17 @@
     <meta charset="utf-8">
     <title>首页</title>
     <meta name="viewport" content="width=800,user-scalable=no">
-    <meta name="apple-mobile-web-app-title" content="海报首页">  
+    <meta name="apple-mobile-web-app-title" content="海报首页">
 </head>
 <body>
 
-    <input id="sendInput" type="text"/> 
+    <input id="sendInput" type="text"/>
     <button id="sendBtn" onclick="sendMsg()">发送</button>
+
+
+
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"> </script>
     <script>
         var ws = new WebSocket('ws://localhost:8087');
         ws.onopen = function(){
@@ -32,9 +37,18 @@
             if (!!value.trim()) {
                 ping(value)
             }
-            
+
             document.getElementById('sendInput').value = ''
         }
+
+
+        //
+        // 建立 socket 连接
+        var socket = io('http://localhost:3000');
+        socket.on('news', function (data) {
+          console.log(data);
+          socket.emit('my other event', { my: 'data' });
+        });
     </script>
 </body>
 </html>
