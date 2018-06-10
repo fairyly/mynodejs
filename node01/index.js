@@ -3,7 +3,7 @@ console.log('smashing node'.rainbow);
 
 // http 
 var http = require('http');
-http.createServer(function(req,res){
+var server = http.createServer(function(req,res){
 	var buf = '';
 	req.on('data',function(data){
 		bud += data;
@@ -17,8 +17,11 @@ http.createServer(function(req,res){
 	res.end('hello');
 	// throw new Error('错误不会被捕捉');
 
+})
 
-}).listen(3000)
+server.listen(3000,function(){
+	console.log(new Date() + 'Server is listening on port 3000')
+})
 
 // console.log('server is on http://127.0.0.1:3000',global)
 console.log("==============================================")
@@ -26,7 +29,6 @@ console.log("==============================================")
 
 console.log(__filename)
 console.log(__dirname)
-
 // 添加 uncaughtException 处理器
 process.on('uncaughtException',function(err){
 	console.error(err);
@@ -81,3 +83,18 @@ fs.writeFile('logo.png',mybuffer,function(err){
 	// console.log("save")
 })
 
+
+// websocket
+
+const WebSocket = require('ws');
+
+const wss = new WebSocket.Server({ port: 8087 });
+
+wss.on('connection', function connection(ws) {
+  ws.on('message', function incoming(message) {
+    console.log('received: %s', message);
+    
+  });
+
+  ws.send('something');
+});

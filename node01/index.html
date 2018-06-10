@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>首页</title>
+    <meta name="viewport" content="width=800,user-scalable=no">
+    <meta name="apple-mobile-web-app-title" content="海报首页">  
+</head>
+<body>
+    <script>
+        var ws = new WebSocket('ws://localhost:8087');
+        ws.onopen = function(){
+            ping();
+        }
+
+        ws.onmessage = function(ev) {
+            console.log("get msg: " + ev.data)
+            ping()
+        }
+
+        function ping() {
+            lastmsg = +new Date();
+            ws.send('ping'+ lastmsg)
+        }
+    </script>
+</body>
+</html>
