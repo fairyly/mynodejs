@@ -7,6 +7,9 @@
     <meta name="apple-mobile-web-app-title" content="海报首页">  
 </head>
 <body>
+
+    <input id="sendInput" type="text"/> 
+    <button id="sendBtn" onclick="sendMsg()">发送</button>
     <script>
         var ws = new WebSocket('ws://localhost:8087');
         ws.onopen = function(){
@@ -18,9 +21,19 @@
             ping()
         }
 
-        function ping() {
+        function ping(v) {
             lastmsg = +new Date();
-            ws.send('ping'+ lastmsg)
+            ws.send('msg:'+v+ lastmsg);
+        }
+
+        function sendMsg() {
+            var value = document.getElementById('sendInput').value;
+            console.log(value);
+            if (!!value.trim()) {
+                ping(value)
+            }
+            
+            document.getElementById('sendInput').value = ''
         }
     </script>
 </body>
