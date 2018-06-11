@@ -170,6 +170,10 @@
 ## http 请求插件
 - superagent： https://github.com/visionmedia/superagent
 
+## 基于SVG的图像占位符
+- https://github.com/technopagan/sqip
+
+
 
 
 
