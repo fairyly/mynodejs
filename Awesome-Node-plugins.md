@@ -173,7 +173,8 @@
 ## 基于SVG的图像占位符
 - https://github.com/technopagan/sqip
 
-
+## 一个强大的用于管理JavaScript应用程序的UI工具包
+- JSUI: https://github.com/kitze/JSUI
 
 
 
