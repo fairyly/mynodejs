@@ -179,6 +179,8 @@
 ## Kue是由redis支持的优先级作业队列，为node.js构建
 - kue: https://github.com/Automattic/kue
 
+## 2017年官方F8应用程序的源代码，由React Native和其他Facebook开源项目提供支持
+- f8app: https://github.com/fbsamples/f8app
 
 
 
