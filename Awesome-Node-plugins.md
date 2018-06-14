@@ -176,6 +176,12 @@
 ## 一个强大的用于管理JavaScript应用程序的UI工具包
 - JSUI: https://github.com/kitze/JSUI
 
+## Kue是由redis支持的优先级作业队列，为node.js构建
+- kue: https://github.com/Automattic/kue
+
+
+
+
 
 
 
