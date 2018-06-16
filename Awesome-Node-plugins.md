@@ -186,6 +186,9 @@
 
 
 
+## 安全
+- lusca 模块 用户保护 xss 攻击保护
+  - https://github.com/krakenjs/lusca
 
 ## 数据库插件
 - The wise MongoDB API：monk
