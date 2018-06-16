@@ -53,7 +53,10 @@
 
 - 随启随用的静态文件服务器
   - https://github.com/JacksonTian/anywhere
-  
+
+- 中后端解决方案
+  - 基于 Egg + Vue + EasyWebpack 多页面和单页面服务端客户端渲染同构工程, UI解决方案iView + vant
+  - https://github.com/zhqlol/edgarserver
   
 - Web端声纹识别
   - https://github.com/ssttm169/tom-vpr 
