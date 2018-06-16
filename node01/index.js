@@ -124,7 +124,8 @@ var express = require('express');
 var mongodb = require('mongodb');
 var path = require('path');
 const config = require('config-lite')(__dirname);
-const pkg = require('./package')
+const pkg = require('./package');
+
 
 var app = express();
 // 中间件
@@ -158,5 +159,47 @@ app.get('/',function(req,res){
 
 
 app.listen(config.port, function () {
-    console.log(`${pkg.name} listening on port ${config.port}`)
-  })
+  console.log(`${pkg.name} listening on port ${config.port}`)
+})
+
+
+var MongoClient = require('mongodb').MongoClient;
+var url = "mongodb://localhost:27017/";
+
+MongoClient.connect(url, function(err, db) {
+    if (err) throw err;
+    var dbo = db.db("runoob");
+    // 插入一条数据
+    insertOneData(dbo,function(){
+      db.close()
+    });
+    // 插入多条数据
+    insertManyData(dbo,function(){
+       db.close()
+    })
+
+});
+
+// 插入一条数据 insertOne（）
+var insertOneData = function(db,callback){
+  var myobj = { name: "test", url: "www.runoob" };
+    db.collection("site").insertOne(myobj, function(err, res) {
+        if (err) throw err;
+        console.log("文档插入成功");
+        callback();
+    });
+}
+
+// 要插入多条数据可以使用 insertMany()
+var insertManyData = function(db,callback){
+  var myobj =  [
+        { name: '菜鸟工具', url: 'https://c.runoob.com', type: 'cn'},
+        { name: 'Google', url: 'https://www.google.com', type: 'en'},
+        { name: 'Facebook', url: 'https://www.google.com', type: 'en'}
+       ];
+    db.collection("site").insertMany(myobj, function(err, res) {
+        if (err) throw err;
+        console.log("插入的文档数量为: " + res.insertedCount);
+        callback();
+    });
+}
