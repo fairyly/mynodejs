@@ -14,14 +14,14 @@ var server = http.createServer(function(req,res){
 		console.log('接收完毕')
 	})
 	res.writeHead(200,{});
-	res.end('hello');
+	// res.end('hello');
 	// throw new Error('错误不会被捕捉');
 
 })
 
-server.listen(3000,function(){
-	console.log(new Date() + 'Server is listening on port 3000')
-})
+// server.listen(3000,function(){
+// 	console.log(new Date() + 'Server is listening on port 3000')
+// })
 
 // console.log('server is on http://127.0.0.1:3000',global)
 console.log("==============================================")
@@ -41,16 +41,16 @@ process.stdin.setEncoding('utf8');
 // 输入参数
 var num1, num2;
 /*2：向屏幕输出，提示信息，要求输入num1*/
-process.stdout.write('请输入num1的值：');
+// process.stdout.write('请输入num1的值：');
 /*3：监听用户的输入*/
 process.stdin.on('data', function (chunk) {
     if (!num1) {
         num1 = Number(chunk);
         /*4：向屏幕输出，提示信息，要求输入num2*/
-        process.stdout.write('请输入num2的值');
+        // process.stdout.write('请输入num2的值');
     } else {
         num2 = Number(chunk);
-        process.stdout.write('结果是：' + (num1 + num2));
+        // process.stdout.write('结果是：' + (num1 + num2));
     }
 });
 
@@ -118,3 +118,45 @@ io.on('connection', function(client){
 	console.log('io')
   });
 });
+
+// mongodb
+var express = require('express');
+var mongodb = require('mongodb');
+var path = require('path');
+const config = require('config-lite')(__dirname);
+const pkg = require('./package')
+
+var app = express();
+// 中间件
+// app.use(express.bodyParser());
+// app.use(express.cookieParser());
+// app.use(express.session({secret:'my secret'}))
+
+// 模板引擎
+app.set('view engine','jade');
+
+// 放模板文件的目录
+console.log(__dirname,__filename,path.join(__dirname,'public'))
+app.set('views',path.join(__dirname,'views'))
+
+
+// / 设置静态文件目录
+app.use(express.static(path.join(__dirname,'public')))
+
+
+// 设置模板全局常量，从package.json 取得的参数
+app.locals.blog = {
+  title: pkg.name,
+  description: pkg.description
+}
+
+
+app.get('/',function(req,res){
+  res.render('index')
+})
+
+
+
+app.listen(config.port, function () {
+    console.log(`${pkg.name} listening on port ${config.port}`)
+  })
