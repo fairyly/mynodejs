@@ -184,7 +184,7 @@ MongoClient.connect(url, function(err, db) {
 var insertOneData = function(db,callback){
   var myobj = { name: "test", url: "www.runoob" };
     db.collection("site").insertOne(myobj, function(err, res) {
-        if (err) throw err;
+        assert.equal(null, err);//if (err) throw err;
         console.log("文档插入成功");
         callback();
     });
@@ -198,7 +198,7 @@ var insertManyData = function(db,callback){
         { name: 'Facebook', url: 'https://www.google.com', type: 'en'}
        ];
     db.collection("site").insertMany(myobj, function(err, res) {
-        if (err) throw err;
+        assert.equal(null, err);//if (err) throw err;
         console.log("插入的文档数量为: " + res.insertedCount);
         callback();
     });
