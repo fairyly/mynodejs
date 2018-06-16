@@ -87,3 +87,43 @@ request
   - 流控制
   - 拥堵控制
   - 
+
+- webSocket
+```
+// server
+npm install --save ws
+
+const WebSocket = require('ws');
+const wss = new WebSocket.Server({ port: 8087 });
+
+wss.on('connection', function connection(ws) {
+  ws.on('message', function incoming(message) {
+    console.log('received: %s', message);
+    
+  });
+
+  ws.send('something');
+});
+
+// client
+ <script>
+        var ws = new WebSocket('ws://localhost:8087');
+        ws.onopen = function(){
+            ping();
+        }
+
+        ws.onmessage = function(ev) {
+            console.log("get msg: " + ev.data)
+            ping()
+        }
+
+        function ping() {
+            lastmsg = +new Date();
+            ws.send('ping'+ lastmsg)
+        }
+</script>
+
+
+```
+
+### mongoDB
