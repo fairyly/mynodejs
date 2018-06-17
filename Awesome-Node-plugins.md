@@ -169,6 +169,7 @@
 
 ## http 请求插件
 - superagent： https://github.com/visionmedia/superagent
+- axios: 
 
 ## 基于SVG的图像占位符
 - https://github.com/technopagan/sqip
@@ -185,6 +186,15 @@
 
 ## Pollyjs: 记录、回放和存根HTTP交互
 - https://github.com/Netflix/pollyjs
+
+## 创建server-rendered通用JavaScript应用程序没有配置
+- razzle: https://github.com/jaredpalmer/razzle
+
+## 基于浏览器的代码编辑器
+- monaco-editor: https://github.com/Microsoft/monaco-editor
+- https://microsoft.github.io/monaco-editor/
+
+
 
 
 
