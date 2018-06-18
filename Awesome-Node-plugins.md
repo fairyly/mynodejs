@@ -63,6 +63,8 @@
 - GitHub：https://github.com/sindresorhus/to-readable-stream
 - 一组有用的流实用程序模块，用于使用流编写更好的代码: https://github.com/maxogden/mississippi
 
+### 可读的流的数据合并到一个数组中
+- Stream to Array: https://github.com/stream-utils/stream-to-array
 
 ## 时间插件
 - Fast 2KB immutable date library alternative to Moment.js with the same modern API
