@@ -204,7 +204,10 @@
   - https://github.com/keenwon/antcolony
   - AntColony部署文档： https://github.com/keenwon/antcolony/blob/master/doc/%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3.md
 
-
+## 授权
+- OAuth2 Server/Provider with express in node.js
+  - https://github.com/oauthjs/node-oauth2-server
+  - plugin for egg.js： https://github.com/Azard/egg-oauth2-server
 
 
 
