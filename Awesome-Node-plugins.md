@@ -196,6 +196,16 @@
 - monaco-editor: https://github.com/Microsoft/monaco-editor
 - https://microsoft.github.io/monaco-editor/
 
+## 磁力链接工具
+- Nodejs实现的一个磁力链接爬虫 http://findit.keenwon.com (原域名http://findit.so )
+  - https://github.com/ssstk/findcl
+  - https://github.com/keenwon/antcolony
+  - AntColony部署文档： https://github.com/keenwon/antcolony/blob/master/doc/%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3.md
+
+
+
+
+
 
 
 
