@@ -149,6 +149,9 @@
 - mojime: https://github.com/JuanitoFatas/mojime
 - https://github.com/front-ends-developers/mojime
 - https://github.com/muan/megamoji
+- 在命令行上表情
+  - emojify： https://github.com/mrowa44/emojify
+
 
 
 ## 学习加密研讨会
@@ -169,7 +172,8 @@
 ##  web调试
 - vconsole - 微信小程序推出的调试工具，直接内嵌在页面内，支持控制台、网络、系统信息.
   - https://github.com/Tencent/vConsole
-
+- 桌面为移动开发者调试平台：
+  - Sonar： https://github.com/facebook/Sonar
 
 ## http 请求插件
 - superagent： https://github.com/visionmedia/superagent
