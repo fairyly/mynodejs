@@ -54,5 +54,6 @@ app.listen(4000, () => console.log('Now browse to localhost:4000/graphql'));
 ```
 
 * 参考：
+  - GitHub using GraphQL： https://developer.github.com/v4/
   - http://graphql.cn/code/#javascript
   - https://blog.csdn.net/chenhaifeng2016/article/details/72843284
