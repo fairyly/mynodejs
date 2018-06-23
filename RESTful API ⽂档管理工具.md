@@ -19,3 +19,10 @@
 - docsify
   - github: https://github.com/docsifyjs/docsify
   - DOC: https://docsify.js.org/#/quickstart
+
+- YAPI
+  - YApi 是一个可本地部署的、打通前后端及QA的、可视化的接口管理平台 https://yapi.ymfe.org
+  - GITHUB: Https://github.com/YMFE/yapi
+  - 可视化部署:
+  - npm install -g yapi-cli --registry https://registry.npm.taobao.org
+  - yapi server
