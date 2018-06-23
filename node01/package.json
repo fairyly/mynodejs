@@ -15,6 +15,8 @@
     "config-lite": "^2.1.0",
     "ejs": "^2.6.1",
     "express": "^4.16.3",
+    "express-graphql": "^0.6.12",
+    "graphql": "^0.13.2",
     "jade": "^1.11.0",
     "mongodb": "^3.0.10",
     "mongoose": "^5.1.5",
