@@ -26,3 +26,8 @@
   - 可视化部署:
   - npm install -g yapi-cli --registry https://registry.npm.taobao.org
   - yapi server
+
+
+- APIDOC：生成前需要创建好目录：[查看自己整理详细](https://github.com/fairyly/mynodejs/blob/gh-pages/RESTful%20web%20API%20doc%20generator-apidocjs.md)
+  - GitHub：https://github.com/apidoc/apidoc
+  - doc：http://apidocjs.com/#examples
