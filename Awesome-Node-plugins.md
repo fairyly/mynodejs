@@ -151,7 +151,8 @@
 - https://github.com/muan/megamoji
 - 在命令行上表情
   - emojify： https://github.com/mrowa44/emojify
-
+- https://github.com/iamcal/emoji-data
+- https://github.com/mroth/emoji-data-js
 
 
 ## 学习加密研讨会
