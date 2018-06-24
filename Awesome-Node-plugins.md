@@ -145,6 +145,7 @@
 - autotrack: https://github.com/googleanalytics/autotrack
 
 ## 表情库
+- https://github.com/muan/emoji
 - emojilib: https://github.com/muan/emojilib
 - mojime: https://github.com/JuanitoFatas/mojime
 - https://github.com/front-ends-developers/mojime
