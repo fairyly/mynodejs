@@ -37,7 +37,8 @@
 
 - A Node queue API for generating PDFs using headless Chrome.
   - GitHub：https://github.com/esbenp/pdf-bot
-
+- Html to pdf converter in nodejs.
+  - GitHub：https://github.com/marcbachmann/node-html-pdf
 
 ### tesseract.js:(光学字符识别库) [Pure Javascript OCR for 62 Languages booktadadesktop_computer ](http://tesseract.projectnaptha.com/)
   - GitHub： https://github.com/naptha/tesseract.js
