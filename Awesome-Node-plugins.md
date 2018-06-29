@@ -225,6 +225,12 @@
 - https://github.com/localForage/localForage
 
 
+## nativefier:把任意一个 web 应用转换成跨平台的桌面应用
+- https://github.com/jiahaog/nativefier?utm_source=gold_browser_extension
+
+
+
+
 
 
 
