@@ -217,6 +217,9 @@
   - plugin for egg.js： https://github.com/Azard/egg-oauth2-server
 
 
+## 团队之间共享代码
+- https://github.com/teambit/bit
+
 
 
 
