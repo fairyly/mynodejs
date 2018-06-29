@@ -220,6 +220,10 @@
 ## 团队之间共享代码
 - https://github.com/teambit/bit
 
+## 离线存储
+- https://github.com/localForage/localForage
+
+
 
 
 
