@@ -228,6 +228,13 @@
 ## nativefier:把任意一个 web 应用转换成跨平台的桌面应用
 - https://github.com/jiahaog/nativefier?utm_source=gold_browser_extension
 
+## alogs 是一个可以并行多个统计模块的框架
+- https://github.com/fex-team/alogs
+
+
+
+
+
 
 
 
