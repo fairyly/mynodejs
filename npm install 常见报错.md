@@ -27,3 +27,12 @@ npm install --registry=https://registry.npm.taobao.org
 ```
 npm cache clean --force
 ```
+2: windows npm install Can't find Python executable "e:\python2.7"
+
+```
+解决办法：
+1. 安装python ， 设置环境变量 ：cmd --> path='%path%';E:\Python27（pyhon本地安装路径）
+
+2. npm config set python "E:\Python27\python.exe"
+
+```
