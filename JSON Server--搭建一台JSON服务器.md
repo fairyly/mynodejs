@@ -4,7 +4,12 @@
 
 ## use
 ```
-Create a db.json file
+
+npm install -g json-server
+
+
+
+1.Create a db.json file
 
 {
   "posts": [
@@ -15,10 +20,18 @@ Create a db.json file
   ],
   "profile": { "name": "typicode" }
 }
-Start JSON Server
+2.Start JSON Server
 
 $ json-server --watch db.json
-Now if you go to http://localhost:3000/posts/1, you'll get
+
+ // http://localhost:3000/posts
+ // http://localhost:3000/comments
+ // http://localhost:3000/profile
+
+
+3.Now if you go to http://localhost:3000/posts/1, 
+
+you'll get
 
 { "id": 1, "title": "json-server", "author": "typicode" }
 ```
