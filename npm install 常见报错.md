@@ -1,6 +1,6 @@
 # npm install 报错：
 
-1、npm install 报错：
+## 1、npm install 报错：
 ```
 1.NPM Unexpected end of JSON input while parsing near
 2.npm ERR! A complete log of this run can be found in:
@@ -27,7 +27,7 @@ npm install --registry=https://registry.npm.taobao.org
 ```
 npm cache clean --force
 ```
-2: windows npm install Can't find Python executable "e:\python2.7"
+## 2: windows npm install Can't find Python executable "e:\python2.7"
 
 ```
 解决办法：
@@ -35,4 +35,21 @@ npm cache clean --force
 
 2. npm config set python "E:\Python27\python.exe"
 
+```
+
+
+## 3.在此解决方案中一次生成一个项目。若要启用并行生成，请添加“/m”开关。 
+```
+MSBUILD : error MSB3428: 未能加载 Visual C++ 组件“VCBuild.exe”。要解决此问题， 
+1) 安装 .NET Fram 
+ework 2.0 SDK；2) 安装 Microsoft Visual Studio 2005；或 3) 如果将该组件安装到了 
+其他位置，请将其位置添加到系统 
+路径中。 [G:\nodejs\moviesite\node_modules\bcrypt\build\binding.sln] 
+gyp ERR! build error
+
+如图： 
+
+
+
+需要安装Microsoft Visual Studio Express 2013 for Windows Desktop 
 ```
