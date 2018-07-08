@@ -25,7 +25,19 @@ npm config list
 直接修改配置文件
 npm config edit
 
+设置proxy
+npm config set proxy http://proxy.example.com:8080
 
+查看proxy
+npm config get proxy
+
+删除proxy
+npm delete proxy
+
+
+
+package更新
+npm update 包名
 ```
 
 
