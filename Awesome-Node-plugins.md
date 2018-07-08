@@ -248,6 +248,9 @@
 - https://medium.com/@alash3al/speed-any-website-by-3-4x-without-any-hassle-97ab34974dbc
 
 
+## validator.js 字符串验证库（邮箱，url,IP(4/6),类型，等等校验很全的库）
+- https://github.com/chriso/validator.js
+
 
 
 
