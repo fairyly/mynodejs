@@ -6,6 +6,17 @@
 npm config set registry https://registry.npm.taobao.org
 
 npm config set registry http://www.npmjs.org
+
+查看特定package的详细信息，输出的信息非常详尽，包括作者、版本、依赖等
+npm info vue
+
+dist:
+   { shasum: '07edb75e8412aaeed871ebafa99f4672584a0085',
+     size: 680927,
+     noattachment: false,
+     tarball: 'http://registry.npm.taobao.org/vue/download/vue-2.5.16.tgz' },
+  directories: {},
+  publish_time: 1520979268959 }
 ```
 
 
