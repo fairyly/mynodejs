@@ -17,6 +17,15 @@ dist:
      tarball: 'http://registry.npm.taobao.org/vue/download/vue-2.5.16.tgz' },
   directories: {},
   publish_time: 1520979268959 }
+  
+  
+查看所有配置
+npm config list
+
+直接修改配置文件
+npm config edit
+
+
 ```
 
 
