@@ -27,6 +27,21 @@ config/production.js、config/production.json、config/production.node、config/
 
 config-lite 还支持冒泡查找配置，即从传入的路径开始，从该目录不断往上一级目录查找 config 目录，直到找到或者到达根目录为止。
 
+- 一般在 项目 下新建 config 目录，在该目录下新建 default.js，添加代码：
+
+n-blog: config/default.js
+
+```
+module.exports = {
+  port: 3000,
+  session: {
+    secret: 'myblog',
+    key: 'myblog',
+    maxAge: 2592000000
+  },
+  mongodb: 'mongodb://localhost:27017/myblog'
+}
+```
 
 ## 参考资料
 - https://github.com/nswbmw/N-blog/blob/master/book/4.3%20%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.md
