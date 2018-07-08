@@ -1,5 +1,8 @@
 # 开发 node module 规范
 
+目前写了一个 显示 ipv6的 包，已经发布 [show-ipv6](https://www.npmjs.com/package/show-ipv6)
+- github: 
+
 ## demo
 
 ```
@@ -102,6 +105,20 @@ describe('test', () => {
 });
 
 ```
+
+
+## 发布到 npm 
+
+编写好模块后 ，登录 npm 
+
+npm publish 即可
+
+查看当前npm用户： npm who am i
+
+
+
+
+- 参考 ：https://github.com/fairyly/mynodejs/blob/gh-pages/%E6%9E%84%E5%BB%BA%E5%8F%91%E5%B8%83%E8%87%AA%E5%B7%B1%E7%9A%84npm%20package.md
 
 ## 参考资料
 
