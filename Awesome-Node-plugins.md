@@ -262,6 +262,10 @@
 - 一个命令行实用程序,允许读/写(我。e复制/粘贴)访问系统剪贴板
   - https://github.com/xavi-/node-copy-paste  
 
+## 创建目录
+- mkdirp：https://github.com/substack/node-mkdirp#readme
+
+
 
 
 
