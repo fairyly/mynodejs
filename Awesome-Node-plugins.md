@@ -252,6 +252,10 @@
 - https://github.com/chriso/validator.js
 
 
+## 得到当前的机器的IP和MAC地址
+- https://github.com/node-modules/address#readme
+
+
 
 
 
