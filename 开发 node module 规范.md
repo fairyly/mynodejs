@@ -87,6 +87,21 @@ module.exports = require('address').ip() || '0.0.0.0';
 
 ```
 
+- ipv4.test.js
+```
+'use strict';
+
+const ipv4 = require('..');
+const assert = require('assert');
+const validator = require('validator');
+
+describe('test', () => {
+  it('should be ok', () => {
+    assert(validator.isIP(ipv4), true);
+  });
+});
+
+```
 
 ## 参考资料
 
