@@ -4,7 +4,7 @@
 
 * Node.js 系列教程 Node Hero: https://github.com/simplefeel/react-node-learn
 * Node.js 系列文章：http://blog.fens.me/series-nodejs/
-
+* 零基础十分钟教你用Node.js写生成器: https://github.com/i5ting/write-scaffold-with-nodejs
 
 * Awehunt： https://awehunt.com/?tnid=5af1c0b67b4fac67bf3af2b4
 
