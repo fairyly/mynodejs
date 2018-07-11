@@ -75,5 +75,6 @@
   - doc: https://elemefe.github.io/node-interview/#/sections/zh-cn/
 
 
-## google blockly-games: 在线编程game
+## google blockly-games: 在线编程game 儿童编程
 - https://github.com/google/blockly-games
+  - web：https://blockly-games.appspot.com/puzzle?lang=zh-hans
