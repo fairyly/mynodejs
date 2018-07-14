@@ -96,6 +96,7 @@
 - AnyProxy： https://github.com/alibaba/anyproxy
 - cors-anywhere: https://github.com/Rob--W/cors-anywhere
 - 基于Node实现的跨平台调试代理工具 whistle： https://github.com/avwo/whistle
+- Zan Proxy： https://github.com/youzan/zan-proxy/blob/master/README.zh-CN.md
 
 
 ## 端到端，层次化，实时，丰富多彩的日志和故事
