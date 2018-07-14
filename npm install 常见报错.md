@@ -53,3 +53,13 @@ gyp ERR! build error
 
 需要安装Microsoft Visual Studio Express 2013 for Windows Desktop 
 ```
+
+## Windows 10 64bit MSBUILD : error MSB4132: 无法识别工具版本“2.0”。可用的工具版本为 "4.0"。
+
+- 参考：https://www.whidy.net/windows-10-64bit-nodejs-error-msbuild-error-msb4132.html
+- https://github.com/chjj/pty.js/issues/60
+
+```
+npm config set msvs_version 2012 --global
+```
+
