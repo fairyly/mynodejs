@@ -33,6 +33,10 @@ const asyncReadFile = async function () {
   console.log(f1.toString());
   console.log(f2.toString());
 };
+
+一比较就会发现，async函数就是将 Generator 函数的星号（*）替换成async，将yield替换成await，仅此而已。
+
+async函数对 Generator 函数的改进
 ```
 
 ## 参考资料
