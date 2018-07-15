@@ -272,6 +272,9 @@
 - 网易卡塔：https://kada.163.com/
 - codecombat: https://www.codecombat.cn/play
 - scratch社区
+  - https://scratch.mit.edu/#
+  - 论坛： http://www.teenstone.com/forum.php?mod=forumdisplay&fid=38
+  - scratch入门教程：http://bianchengla.youyu.im/jiaoshi#/course/0
 
 ## 对用户输入信息过滤，防止 XSS 跨站脚本注入
 - sanitize-html： https://github.com/punkave/sanitize-html
