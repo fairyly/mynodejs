@@ -66,9 +66,12 @@ if __name__ == "__main__":
 - JavaScript: [sanitize-html](https://github.com/punkave/sanitize-html)
 - PHP: [htmlpurifier](http://htmlpurifier.org/)
 
-## CSRF
+## CSRF 冒充用户之手: CSRF 顾名思义，是伪造请求，冒充用户在站内的正常操作
 
->
+>起初一直弄不清楚 CSRF 究竟和 XSS 有什么区别，后来才明白 CSRF 和 XSS 根本是两个不同维度上的分类。
+XSS 是实现 CSRF 的诸多途径中的一条，但绝对不是唯一的一条。一般习惯上把通过 XSS 来实现的 CSRF 称为 XSRF。
+
+CSRF 的全称是“跨站请求伪造”，而 XSS 的全称是“跨站脚本”
 
 ## 参考资料
 - https://blog.tonyseek.com/post/introduce-to-xss-and-csrf/
