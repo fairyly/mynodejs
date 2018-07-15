@@ -60,6 +60,12 @@ if __name__ == "__main__":
 
 而这个请求，会把包含了他们的帐号和其他隐私的信息发送到收集服务器上。
 
+- 这里附上一些“白名单”消毒 HTML 标签和属性（Sanitize HTML）的开源解决方案
+- Python: [lxml.html.clean](http://lxml.de/lxmlhtml.html#cleaning-up-html) / [bleach](https://github.com/jsocol/bleach)
+- Ruby: [Sanitize](https://github.com/rgrove/sanitize/)
+- JavaScript: [sanitize-html](https://github.com/punkave/sanitize-html)
+- PHP: [htmlpurifier](http://htmlpurifier.org/)
+
 ## CSRF
 
 >
