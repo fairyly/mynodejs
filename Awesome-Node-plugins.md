@@ -268,7 +268,9 @@
 
 ## 基于网络的可视化编程编辑器 edication game
 - https://blockly-games.appspot.com/?lang=zh-hans
-- https://github.com/google/blockly
+- blockly： https://github.com/google/blockly
+- 网易卡塔：https://kada.163.com/
+- codecombat: https://www.codecombat.cn/play
 
 ## 对用户输入信息过滤，防止 XSS 跨站脚本注入
 - sanitize-html： https://github.com/punkave/sanitize-html
