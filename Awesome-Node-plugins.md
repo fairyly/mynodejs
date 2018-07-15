@@ -266,12 +266,12 @@
 ## 创建目录
 - mkdirp：https://github.com/substack/node-mkdirp#readme
 
-
-
-
 ## 基于网络的可视化编程编辑器 edication game
 - https://blockly-games.appspot.com/?lang=zh-hans
 - https://github.com/google/blockly
+
+## 对用户输入信息过滤，防止 XSS 跨站脚本注入
+- sanitize-html： https://github.com/punkave/sanitize-html
 
 
 
