@@ -66,3 +66,4 @@ Promise.promisifyAll(require("pg"));
 - http://bluebirdjs.com/docs/features.html
 - https://itbilu.com/nodejs/npm/VJHw6ScNb.html
 - https://www.cnblogs.com/showtime813/p/nodejs.html
+- https://www.cnblogs.com/sunshine-anycall/p/4687791.html
