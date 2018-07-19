@@ -65,3 +65,4 @@ Promise.promisifyAll(require("pg"));
 ## 参考资料
 - http://bluebirdjs.com/docs/features.html
 - https://itbilu.com/nodejs/npm/VJHw6ScNb.html
+- https://www.cnblogs.com/showtime813/p/nodejs.html
