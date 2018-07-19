@@ -67,3 +67,4 @@ Promise.promisifyAll(require("pg"));
 - https://itbilu.com/nodejs/npm/VJHw6ScNb.html
 - https://www.cnblogs.com/showtime813/p/nodejs.html
 - https://www.cnblogs.com/sunshine-anycall/p/4687791.html
+- https://www.ibm.com/developerworks/cn/web/wa-lo-use-bluebird-implements-power-promise/index.html
