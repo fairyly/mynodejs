@@ -65,4 +65,4 @@ var curryN = require('lodash/fp/curryN');
 
 
 ## 参考资料
-- 
+- https://lodash.com/docs/4.17.10
