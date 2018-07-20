@@ -6,3 +6,7 @@
 
 ## 使用cnpm搭建私有NPM仓库 发布npm包
 - https://www.cnblogs.com/huangenai/p/6918667.html
+
+
+## 参考资料
+- https://blog.csdn.net/wyc_cs/article/details/51568925
