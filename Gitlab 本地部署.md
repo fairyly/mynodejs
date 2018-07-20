@@ -1,5 +1,12 @@
 # Gitlab 本地部署
 
+- 虚拟机 vmvare 14
+- ubantu 18.04
+- gitlab 11.04
+
+>虚拟机网络配置 : 桥接模式-直接连接物理网络
+ 刚开始使用NTA模式不行,
+
 <!-- 
 
       *.                   *
@@ -18,6 +25,7 @@
 -->
 
 ## ubantu 18.04
+
 
 安装步骤 : https://about.gitlab.com/installation/#ubuntu
 
@@ -63,6 +71,8 @@ c)  sudo apt-get install gitlab-ce
 #external_url 'http://当前电脑的IP地址'  #下面是我的IP地址
 
 external_url 'http://192.168.220.131'
+
+// 查看本机 ubantu ip: 输入命令: ifconfig  看到ipv4 
 ```
 安装后HTTPS需要额外的配置: https://docs.gitlab.com/omnibus/settings/nginx.html#enable-https
 
