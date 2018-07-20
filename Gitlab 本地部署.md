@@ -26,7 +26,15 @@ b)  sudo apt-get update
 
 c)  sudo apt-get install gitlab-ee
 
-3  vim /etc/gitlab/gitlab.rb   修改external_url   'http://localhost:90'（ip，参照本人虚拟机桥接设置博文设置，保证虚拟机访问外网和局域网其他机器访问虚拟机）
+3  vim /etc/gitlab/gitlab.rb  
+- 修改external_url   'http://localhost:90'（ip，参照本人虚拟机桥接设置博文设置，保证虚拟机访问外网和局域网其他机器访问虚拟机）
+```
+#external_url 'http://ubuntu'  #将ubuntu换成自己的IP地址
+
+#external_url 'http://当前电脑的IP地址'  #下面是我的IP地址
+
+external_url 'http://192.168.220.131'
+```
 
 4  sudo gitlab-ctl reconfigure
 
