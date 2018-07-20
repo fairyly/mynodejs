@@ -77,8 +77,14 @@ external_url 'http://192.168.220.131'
 安装后HTTPS需要额外的配置: https://docs.gitlab.com/omnibus/settings/nginx.html#enable-https
 
 4  sudo gitlab-ctl reconfigure
+  - 查看gitlab 运行状态: sudo gitlab-ctl status
 
 5  gitlab-ctl restart 
+
+## 问题
+- 初次修改密码 502
+
+
 
 ## 参考资料
 - https://blog.csdn.net/zerokkqq/article/details/79728527
@@ -88,3 +94,4 @@ external_url 'http://192.168.220.131'
 - https://docs.gitlab.com/omnibus/settings/nginx.html#enable-https
 - 清华大学开源软件镜像站: https://mirrors.tuna.tsinghua.edu.cn/gitlab-ce/ubuntu/pool/xenial/main/g/gitlab-ce/
 - http://ccimage.cn/2018-05/ubuntu18-04-install-gitlab-chinese-mirror.html
+- https://www.jianshu.com/p/92f97939e33a
