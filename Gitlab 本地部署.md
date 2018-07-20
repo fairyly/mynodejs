@@ -70,7 +70,7 @@ c)  sudo apt-get install gitlab-ce
 
 #external_url 'http://当前电脑的IP地址'  #下面是我的IP地址
 
-external_url 'http://192.168.220.131'
+external_url 'http://192.168.1.181/'
 
 // 查看本机 ubantu ip: 输入命令: ifconfig  看到ipv4 
 ```
@@ -81,9 +81,17 @@ external_url 'http://192.168.220.131'
 
 5  gitlab-ctl restart 
 
-## 问题
-- 初次修改密码 502
+## 客户端访问
 
+- 直接浏览器打开 配置的 ip 
+  http://192.168.1.181/
+
+
+## 问题
+- 初次修改密码 后出现 502
+  刷新下
+- 修改后出现 10 errors prohibited this user from being saved:
+  直接在输入 ip 去访问,使用 root 登录,使用刚才修改的密码登录
 
 
 ## 参考资料
