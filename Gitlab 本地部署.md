@@ -77,3 +77,4 @@ external_url 'http://192.168.220.131'
 - https://about.gitlab.com/installation/#ubuntu
 - https://docs.gitlab.com/omnibus/settings/nginx.html#enable-https
 - 清华大学开源软件镜像站: https://mirrors.tuna.tsinghua.edu.cn/gitlab-ce/ubuntu/pool/xenial/main/g/gitlab-ce/
+- http://ccimage.cn/2018-05/ubuntu18-04-install-gitlab-chinese-mirror.html
