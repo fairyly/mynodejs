@@ -279,6 +279,10 @@
 ## 对用户输入信息过滤，防止 XSS 跨站脚本注入
 - sanitize-html： https://github.com/punkave/sanitize-html
 
+## 一个只能在命令行访问的文档查询网站，使用方法就是命令行执行 curl cheat.sh 
+- https://github.com/chubin/cheat.sh
+
+
 
 
 
