@@ -1,0 +1,515 @@
+# 怎么用Node和Express打造restful API
+
+原文： [Build a RESTful API Using Node and Express 4](https://scotch.io/tutorials/build-a-restful-api-using-node-and-express-4#our-application)
+(原作者 Chris Sevilleja)
+
+2016年11月14日 杜梁 翻译。
+
+##目录：
+
+* 1.列出需求
+* 2.起步走，搭建基础设施
+* 3.启动server测试
+* 4.数据库和Bear Model
+* 5.Express Router 和 routes（路由）
+* 6.路由中间件
+* 7.配置基本路由
+* 8.为单条纪录创建路由
+* 9.总结
+
+##正文
+### 1.列出需求
+下面要打造的REST风格的应用有如下需求：
+
+* 处理CRUD（下面讲用bears）
+* 加一个标准的URL（http://example.com/api/bears）和(http://example.com/api/bears/:bear_id)
+* 用相应的http的动词达到rest效果（GET, POST, PUT, DELETE） 
+* 返回JSON数据
+* 在控制台打印所有的请求
+
+上面的名词bears可以换成任意名词users，students，books等。
+
+### 2.起步走，搭建基础设施
+下面列出了所有创建API需要的文件。需要完成这几个步骤：**定义Node packages（定义Node应用的包结构）， 用Express启动server， 定义model（数据模型）， 用Express定义路由** ，最后测试我们的API
+
+```javascript
+- app/
+    ----- models/
+    ---------- bear.js  // bear model
+    - node_modules/     // 由npm自动创建. 这里放的是应用依赖的外部模块
+    - package.json      // 描述应用的信息（应用名，作者信息，启动／测试／发布等脚本入口和依赖的外部模块）
+    - server.js         // 配置应用和应用的路由
+
+```
+
+####定义Node应用包结构
+
+当我们创建一个应用的时候，我们不用自己写全部的代码，有一些现有的模块只需要我们倒入到我们的应用我们就可以方便使用。Node 应用里 package.json文件里定义了Node应用依赖的外部模块。
+
+```
+// package.json
+//name是Node应用的名字，main是Node应用的入口文件，当启动server的时候Node会从这个文件开始调用。dependencies定义了应用依赖的外部模块，如果大家熟悉Java的maven的话一看就应该明白，相当于maven的pom.xml文件。
+{
+    "name": "node-api",
+    "main": "server.js",
+    "dependencies": {
+        "express": "~4.0.0",
+        "mongoose": "~3.6.13",
+        "body-parser": "~1.0.1"
+    }
+}
+
+```
+express是啥？epress是在Node基础上搭建的web框架，可以方便配置路由，定义中间件，错误处理，渲染模版等。mongoose是一个用于Node应用上的ORM框架，什么叫ORM（Object-relational mapping），英文字面意思是Object（程序对象）和Relation（关系型数据库）的映射，就是应用中的对象与数据库的纪录对应，应用中的类与数据库中的表对应。body-parser是一个中间件，会帮我们解析post request的body部分，然后我们在处理请求的时候可以直接使用req.body获得rquest的body部分。
+
+####安装Node依赖的模块
+进入应用文件夹的根目录，输入如下命令，这一步会package.json文件的配置安装外部模块。安装的外部模块会出现在根目录下的node_modules文件夹下
+####搭建server（server.js文件）
+启动server的时候Node会根据package.json文件中的main找到这个文件开始执行整个web应用。
+
+```
+// server.js
+
+// BASE SETUP
+// =============================================================================
+
+// 加载express
+var express    = require('express');        // call express
+var app        = express();                 // 获得express定义的app，app对象此时代表整个web应用
+bodyParser = require('body-parser');
+
+// 给app配置bodyParser中间件
+// 通过如下配置再路由种处理request时，可以直接获得post请求的body部分
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+var port = process.env.PORT || 8080;        // set our port
+
+// API路由配置
+// =============================================================================
+var router = express.Router();              // 获得express router对象
+// 用get动词访问 http://localhost:8080/api
+router.get('/', function(req, res) {
+    res.json({ message: 'hooray! welcome to our api!' });   
+});
+
+
+// 注册路由
+// 所有的路由会加上“／api”前缀
+app.use('/api', router);
+
+// 启动server
+// =============================================================================
+//开始监听端口
+app.listen(port);
+console.log('Magic happens on port ' + port);
+```
+以上做了如下事情
+
+####基本设置：
+通过require获取需要使用的模块，首先获取express，然后通过express模块获取代表当前web应用的app实例，然后在app中把我们需要的中间件bodyParser注册到其中，然后设置web应用的监听的接口。
+####配置路由
+这块通过express获取当前web应用的Router实例，然后在router上面注册上我们的路由，然后在以中间件的形式注册到web 应用上。
+####启动server
+让web应用监听指定的接口，启动之后，就可以测试我们的web应用了。
+
+
+### 3.启动server然后测试
+这一步启动我们的server然后向之前定义的路由发送请求，看server是否会有响应，命令行进入到应用的根目录，执行如下命令行启动server
+
+```
+node server.js
+```
+
+如下会看到，Node通过express创建一个server
+
+![Alt](https://starduliang.github.io/blog/2016.11/node_rest_api/node-api-start-server.png)
+
+如上server已经跑起来了，接下来测试一下
+####用postman来测试
+postman真的很好用([这里有篇文章给大家参考](http://jingyan.baidu.com/article/90808022ff18defd91c80f9a.html)，[这个是postman官网](https://www.getpostman.com/)),填上访问的url，选择HTTP动词（get, post, delete, put, patch等），也可以指定要传递的参数。
+下面看一下怎么用
+![Alt](https://starduliang.github.io/blog/2016.11/node_rest_api/postman-rest-client-node-api.png)
+要把请求发出去总共最多分三步: 1.填入URL，2.需选择http动词，3.填入传递参数（可选），非常之简单。
+
+输入http://localhost:8080/api，选择get方法，点击send
+
+![Alt](https://starduliang.github.io/blog/2016.11/node_rest_api/node-api-postman-test.png)
+
+干得漂亮，如图response的数据已经返回了，下面会封装上bears的crud操作。
+
+### 4.数据库和Bear Model
+这一块儿不做太多详细说明，简单说一下，然后进入下一阶段（配置路由打造CRUD的API），要做的大概分两步: 1.创建MongoDb数据库，然后让我们的web应用与数据库连接，2.在web应用里用mongoose创建一个bear的model，然后通过这个model跟数据库交互。
+####创建数据库，用web应用连接数据库
+创建数据库，并启动数据库后（安装mongodb[参考这里](http://jingyan.baidu.com/article/d5c4b52bef7268da560dc5f8.html)），会得到一个数据库暴露给外部应用访问的URL，我们用这个URL连接数据，代码形式如下
+
+```
+// server.js
+
+// BASE SETUP
+// =============================================================================
+...
+var url = "" // 连接mongodb的url
+var mongoose = require('mongoose');//加载mongoose模块
+mongoose.connect(url); // 连接数据库
+...
+
+```
+
+上面代是用mongoose连接数据库，下面我们来用mongoose创建的model来操作bears
+####BEAR MODEL  
+下面定义bear 的model 有一个name字段
+
+```
+// app/models/bear.js
+
+var mongoose   = require('mongoose');
+var Schema     = mongoose.Schema;
+
+var BearSchema = new Schema({
+    name: String
+});
+
+module.exports = mongoose.model('Bear', BearSchema);
+
+```
+在server.js中加载如上文件，来使用bear的model，在server.js中加上如下一行代码
+
+```
+// server.js
+
+// BASE SETUP
+// =============================================================================
+
+...
+
+var Bear     = require('./app/models/bear');
+
+...
+```
+现在web应用的基本搭建已经差不多了，下面用路由来配置我们的API。
+
+### 5.Express Router 和 routes（路由）
+下面用Express Router来处理routes，如下是一个http动词列表
+
+| Route               | HTTP Verb    | Description     |
+| ------------------- |-------------:| ---------------:|
+| /api/bears          | GET          | 获取所有的bears   | 
+| /api/bears          | POST         | 创建一条bear     |
+| /api/bears/:bear_id | GET          | 根据id获取一条bear|
+| /api/bears/:bear_id | PUT          | 根据id更新一条bear|
+| /api/bears/:bear_id | DELETE       | 根据id删除一条bear|
+
+以上包括了一个API的一套基本路由，通过HTTP的动词与数据库的增删改查操作相对应。
+### 6.路由中间件
+上面已经定义过了一个路由，并且也测试成功了。Express Router在定义路由时提供给我们很大的灵活性。
+
+如果我想在web应用每次收到request的时候都在控制台打印一些东西，会像如下加入 代码
+
+```
+// server.js
+
+...
+
+// API  的路由定义
+// =============================================================================
+var router = express.Router();              // 获取express Router的实例
+
+// 任何路由的每次request都执行
+router.use(function(req, res, next) {
+    // 打印
+    console.log('Something is happening.');
+    next(); // 在这里会将request交给下一个中间件，如果这个中间件后面没有其他中间件，请求会交给匹配的路由作处理
+});
+
+// 用这个路由来做简单的测试(用get动词访问 http://localhost:8080/api)
+router.get('/', function(req, res) {
+    res.json({ message: 'hooray! welcome to our api!' });   
+});
+
+// 这里可以配置更多的路由
+
+// 注册我们的路由 -------------------------------
+// 所有的路由都会加上前缀 /api
+app.use('/api', router);
+
+...
+```
+在注册中间件的时候用 **router.use(function())**种形式，注册中间件的顺序很重要，web应用收到request时会按照注册先后的顺序处理request。
+在这里将使用json的形式返回response。通过json的形式暴露API，可以方便浏览器和手机app使用。
+这里还有一个注意点，就是需要调用**next()**这样可以保证request处理不会中途停掉（在做权限的时候，如果reqeust权限不够也可以提前返回响应，此时不需调用next()）。
+
+使用中间件会使应用变得非常强大，Express里的中间件是从Node接收到request到匹配的路由正式处理reqeust这中间的处理过程，相当于过滤器，可以将多个中间件连接一个过滤器链，如果顺利（没有做提前返回处理），request从第一个中间件开始处理，到最后一个中间件，最后一个中间件处理过后，会做匹配路由处理，匹配上的路由会正式处理请求。中间件可以做很多功能，比如权限过滤，日志打印，数据分析等，在中间件中做权限验证时，如果request权限不够可以提前结束请求处理，如把权限不够的等信息作为响应返回等。如果权限够调用next()继续交给下一个中间件处理。
+
+####测试中间件
+
+现在用postman测试任意一个已经配置的路由的时候，**Something is happenning**会被打印到控制台。
+
+![Alt](https://starduliang.github.io/blog/2016.11/node_rest_api/node-api-route-middleware-express.png)
+
+### 7.配置基本路由
+现在加处理**获得所有bears**和**创建一条bear**的路由，两个路由都会匹配```/api/bears```,但是http动词会不同，我们先来配置创建操作的路由，创建以后就可以用创建的纪录来进行查询操作。
+
+####创建一条bear```POST /API/BEARS```
+下面用加一个POST的路由然后用postman测试
+
+```****
+// server.js
+
+...
+
+// API  的路由定义
+// =============================================================================
+
+... // <-- 路由中间件 和 第一个路由在这
+
+// 这里可以配置更多的路由
+
+// 匹配/bears的路由
+// ----------------------------------------------------
+router.route('/bears')
+
+    // 创建一条bear (用 POST动词访问uri http://localhost:8080/api/bears)
+    .post(function(req, res) {
+        
+        var bear = new Bear();      // 创建一个Bear model的实例
+        bear.name = req.body.name;  // 从request取出name参数的值然后设置bear的name字段
+
+        // 保存bear，加入错误处理，即把错误作为响应返回
+        bear.save(function(err) {
+            if (err)
+                res.send(err);
+
+            res.json({ message: 'Bear created!' });
+        });
+        
+    });
+
+// 注册我们的路由 -------------------------------
+// 所有的路由都会加上前缀 /api
+app.use('/api', router);
+
+...
+```
+用postman创建一条bear
+![Alt](https://starduliang.github.io/blog/2016.11/node_rest_api/node-api-postman-post-create-bear.png)
+####查询所有bear```GET /API/BEARS```
+
+```****
+// server.js
+
+...
+
+// API  的路由定义
+// =============================================================================
+
+... // <-- 路由中间件 和 第一个路由在这
+
+// 这里可以配置更多的路由
+
+// 匹配/bears的路由
+// ----------------------------------------------------
+router.route('/bears')
+
+    // 创建一条bear (用 POST动词访问uri http://localhost:8080/api/bears)
+    .post(function(req, res) {
+        
+        ...
+        
+    });
+
+
+    // 获取所有的 bears (用 GET动词访问uri http://localhost:8080/api/bears)
+    .get(function(req, res) {
+        Bear.find(function(err, bears) {
+            if (err)
+                res.send(err);
+
+            res.json(bears);
+        });
+    });
+
+// 注册我们的路由 -------------------------------
+// 所有的路由都会加上前缀 /api
+app.use('/api', router);
+
+...
+```
+这个地方不用多说已经非常明了，就是往```http://localhost:8080/api/bears ```发送get请求来获得所有的bears（以JSON格式）,如下图看到我们刚才创建的bear。
+![Alt](https://starduliang.github.io/blog/2016.11/node_rest_api/node-api-postman-get-all.png)
+### 8.为单条纪录创建路由
+之前已经做完了```/bears```的路由，现在开始配置url为```/bears/:bear_id```的路由(bear_id指一条bear的id),这个uri下会有三种操作的路由：
+
+
+   * 获得一条bear
+   * 更新一条bear的信息
+   * 删除一条bear
+ 
+ bear_id是通过之前配置的中间件```body-parser```解析出来的。
+ 
+####获取单条bear ```GET /API/BEARS/:BEAR_ID ```
+ 这里会新增加一个router.route()来匹配形式如/bears/:bear_id的url
+ 
+ 
+```
+// server.js
+
+...
+
+// API  的路由定义
+// =============================================================================
+
+...
+
+// 匹配/bears的路由
+// ----------------------------------------------------
+router.route('/bears')
+    ...
+
+// 匹配 /bears/:bear_id 的路由
+// ----------------------------------------------------
+router.route('/bears/:bear_id')
+
+    // 根据id获取指定的bear (GET 请求 http://localhost:8080/api/bears/:bear_id)
+    .get(function(req, res) {
+        Bear.findById(req.params.bear_id, function(err, bear) {
+            if (err)
+                res.send(err);
+            res.json(bear);
+        });
+    });
+
+// 注册我们的路由 -------------------------------
+// 所有的路由都会加上前缀 /api
+app.use('/api', router);
+
+...
+```
+访问/api/bears来查询所有bears的时候，我们发现其中的bear有一个长的id，接下来用那个id来查询单条的bear。
+![Alt](https://starduliang.github.io/blog/2016.11/node_rest_api/node-api-postman-get-single.png)
+如上图可以通过id查询单条的bear，接下来，根据id来更新一下name，把name的Klaus更新到Sir Klaus。
+
+####更新一条bear的信息 ```PUT /API/BEARS/:BEAR_ID```
+在上面的路由router.route()上再通过```.put().```串联上一个新的http动词。
+
+```
+// server.js
+
+...
+
+// API  的路由定义
+// =============================================================================
+
+...
+
+// 匹配/bears的路由
+// ----------------------------------------------------
+router.route('/bears')
+    ...
+
+// 匹配 /bears/:bear_id 的路由
+// ----------------------------------------------------
+router.route('/bears/:bear_id')
+
+     // 根据id获取指定的bear (GET 请求 http://localhost:8080/api/bears/:bear_id)
+    .get(function(req, res) {
+        ...
+    })
+
+    // 通过id更新指定的bear (put 请求 http://localhost:8080/api/bears/:bear_id)
+    .put(function(req, res) {
+
+        // 通过bear modle查询一条bear
+        Bear.findById(req.params.bear_id, function(err, bear) {
+
+            if (err)
+                res.send(err);
+
+            bear.name = req.body.name;  // update the bears info
+
+            // 保存bear
+            bear.save(function(err) {
+                if (err)
+                    res.send(err);
+
+                res.json({ message: 'Bear updated!' });
+            });
+
+        });
+    });
+
+// 注册我们的路由 -------------------------------
+// 所有的路由都会加上前缀 /api
+app.use('/api', router);
+
+...
+```
+ 下面通过发送put请求将指定id的bear的纪录查询出来，然后再把name字段更新成通过请求传递过来的name参数的值，最后把整条纪录更新到数据库（通过保存）
+![Alt](https://starduliang.github.io/blog/2016.11/node_rest_api/node-api-post-man-update-record.png)
+下面再通过之前配置的/api/bears (get)路由来查询所有的纪录，来看看刚才的更新是否成功。
+![Alt](https://starduliang.github.io/blog/2016.11/node_rest_api/node-api-postman-all-updated.png)
+####删除一条bear ```DELETE /API/BEARS/:BEAR_ID```
+当想要删除一条bear的时候只需要用delete动词发送到```/api/bears/:bear_id```
+下面代码是用来删除一条bear的代码
+
+
+```
+// server.js
+
+...
+
+// API  的路由定义
+// =============================================================================
+
+...
+
+// 匹配/bears的路由
+// ----------------------------------------------------
+router.route('/bears')
+    ...
+
+// 匹配 /bears/:bear_id 的路由
+// ----------------------------------------------------
+router.route('/bears/:bear_id')
+
+     // 根据id获取指定的bear (GET 请求 http://localhost:8080/api/bears/:bear_id)
+    .get(function(req, res) {
+        ...
+    })
+
+    // 通过id更新指定的bear (put 请求 http://localhost:8080/api/bears/:bear_id)
+    .put(function(req, res) {
+       ...
+    })
+    
+    // 通过id删除一条bear (DELETE 访问 http://localhost:8080/api/bears/:bear_id)应用
+    .delete(function(req, res) {
+        Bear.remove({
+            _id: req.params.bear_id
+        }, function(err, bear) {
+            if (err)
+                res.send(err);
+
+            res.json({ message: 'Successfully deleted' });
+        });
+    });    
+
+// 注册我们的路由 -------------------------------
+// 所有的路由都会加上前缀 /api
+app.use('/api', router);
+
+...
+```
+用postman，指定delete动词和要删除的bear的id来删除一条bear
+![Alt](https://starduliang.github.io/blog/2016.11/node_rest_api/node-api-postman-delete.png)
+这个时候查询所有的纪录的时候已经没有任何纪录了
+![Alt](https://starduliang.github.io/blog/2016.11/node_rest_api/node-api-postman-get-all-nothing.png)
+
+### 9.总结
+如上已经可以通过我们的API对资源进行CRUD（create, retrieve, update, delete）操作了，通过以上的规则，我们在定义路由的时候就更清晰明了，很有规则，这个规则用在大型应用时效果就非常明显了，程序员们不用再为url到底怎么叫而苦恼了。
+
+以上只是做了一套简单的API，如果要让应用更健全，还有很多处理，比如加权限，加错误处理（出错时返回更清晰的错误信息）等。
+
+## 参考
+- 原文： https://github.com/starduliang/blog/edit/master/2016.11/Node.js%20rest%20api.md
+
