@@ -27,6 +27,8 @@
   - 基于Nuxt.js服务器渲染(SSR)搭建的个人博客系统: https://github.com/warriorBrian/nuxt-blog
   - 🚀《Node.js从入门到上线》A blog build with Koa2.： https://github.com/liuxing/node-blog
   - 用Node.js和MongoDB搭建一个属于自己的博客: https://github.com/frogo/blog
+  - Ghost: 基于 Node.js 构建的开源博客平台： https://github.com/TryGhost/Ghost
+    
 
 
 - 发布系统
