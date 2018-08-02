@@ -35,4 +35,5 @@ server.start(function() {
 ```
 
 ## 参考资料
-- https://www.airpair.com/node.js/posts/nodejs-framework-comparison-express-koa-hapi
+- 译文：http://ourjs.com/detail/5490db1c8a34fa320400000e
+- 原文： https://www.airpair.com/node.js/posts/nodejs-framework-comparison-express-koa-hapi
