@@ -1,6 +1,7 @@
 # jenkins ubantu 自动化部署
 
 - web: https://jenkins.io/
+- doc: https://jenkins.io/doc/
 
 
 
