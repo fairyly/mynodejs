@@ -151,6 +151,10 @@ npm install --global --production windows-build-tools
   - 请求对象
   - I/O 线程池
 
+## 非 I/O 异步 API
+  - 定时器 (setTimeout(),setInterval(),setImmediate())
+  - process.nextTick()
+
 
 * Node提供以下几个全局对象
   ```
