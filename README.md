@@ -108,6 +108,7 @@ npm install --global --production windows-build-tools
 >>>
 
 ========================================================
+- https://blog.csdn.net/u012422829/article/details/52760981
 * Node 特点：
   - 异步 I/O
   - 事件与回调函数
@@ -117,6 +118,32 @@ npm install --global --production windows-build-tools
 * Node 应用场景
   - I/O 密集型
   - CPU 密集型
+
+* CommonJS 的模块规范
+  - 模块引入
+  - 模块定义
+  - 模块标识
+
+* Node 引入模块
+  - 路径分析
+  - 文件定位
+  - 编译执行
+  
+  Node 模块分为两类： Node 提供的模块-核心模块；用户编写的模块-文件模块；
+  
+* 模块编译
+  - JavaScript 编译会在头部添加 `(function (exports, require, module, __filename, __dirname) {\n，在尾部添加了\n})`
+```
+在编译的过程中，Node对获取的JavaScript文件内容进行了头尾包装。在头部添加了(function (exports, require, module, __filename, __dirname) {\n，在尾部添加了\n});。一个正常的JavaScript文件会被包装成如下的样子：
+
+
+(function (exports, require, module, __filename, __dirname) {
+  var math = require('math');
+  exports.area = function (radius) {
+    return Math.PI * radius * radius;
+  };
+});
+```
 
 * Node提供以下几个全局对象
   ```
