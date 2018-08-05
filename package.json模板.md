@@ -5,7 +5,6 @@
   "name": "vue-images-toastes",
   "description": "vue-images-toastes Plugin",
   "version": "1.0.10",
-  "license": "MIT",
   "private": false,
   "author":"fairyly",
   "main": "dist/vue-images-toastes.js",
@@ -38,9 +37,21 @@
   "devDependencies": {
    
   },
+  "bugs": {
+    "url": "https://github.com/front-ends-developers/issues/issues"
+  },
   "keywords": [
     
-  ]
+  ],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/front-ends-developers/issues/blob/master/LICENSE"
+    }
+  ],
+  "engines": {
+    "node": ">=0.4.0"
+  }
 }
 
 ```
