@@ -145,6 +145,13 @@ npm install --global --production windows-build-tools
 });
 ```
 
+## node 异步 I/O
+  - 事件循环
+  - 观察者
+  - 请求对象
+  - I/O 线程池
+
+
 * Node提供以下几个全局对象
   ```
     global：表示Node所在的全局环境，类似于浏览器的window对象。需要注意的是，如果在浏览器中声明一个全局变量，实际上是声明了一个全局对象的属性，比如var x = 1等同于设置window.x = 1，但是Node不是这样，至少在模块中不是这样（REPL环境的行为与浏览器一致）。在模块文件中，声明var x = 1，该变量不是global对象的属性，global.x等于undefined。这是因为模块的全局变量都是该模块私有的，其他模块无法取到。
