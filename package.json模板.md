@@ -9,6 +9,18 @@
   "private": false,
   "author":"fairyly",
   "main": "dist/vue-images-toastes.js",
+  "maintainers": [
+    {
+      "name": "fairyly",
+      "email": "498745097@qq.com"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "fairyly",
+      "email": "498745097@qq.com"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/front-ends-developers/vue-images-toastes.git"
