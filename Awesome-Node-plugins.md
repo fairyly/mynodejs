@@ -285,7 +285,7 @@
 
 ## gif
 - JavaScript GIF编码库: https://github.com/jnordberg/gif.js
-
+  - 可自定义字幕的Gif表情在线生成器: https://www.zhangxinxu.com/sp/gif/
 
 
 
