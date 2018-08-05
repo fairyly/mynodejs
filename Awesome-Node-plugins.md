@@ -283,6 +283,11 @@
 - https://github.com/chubin/cheat.sh
 
 
+## gif
+- JavaScript GIF编码库: https://github.com/jnordberg/gif.js
+
+
+
 
 
 
