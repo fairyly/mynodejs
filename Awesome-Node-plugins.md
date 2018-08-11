@@ -58,6 +58,9 @@
 - dom-to-image：https://github.com/tsayen/dom-to-image
 
 
+### 截图：html2canvas
+- html2canvas：https://github.com/niklasvh/html2canvas
+
 ### 简单和现代的异步事件发射器
 - GitHub：https://github.com/sindresorhus/emittery
 
