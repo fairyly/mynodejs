@@ -47,8 +47,15 @@
 - GitHub： https://github.com/mscdex/busboy
 
 
-### 用于Node的完全用JavaScript编写的图像处理库，具有零外部或本地依赖性。
-- GitHub： https://github.com/oliver-moran/jimp
+### 图像处理
+
+- GitHub： https://github.com/oliver-moran/jimp 用于Node的完全用JavaScript编写的图像处理库，具有零外部或本地依赖性。
+- sharp： https://github.com/lovell/sharp
+- node-canvas：https://github.com/Automattic/node-canvas
+
+
+### dom 生成图像
+- dom-to-image：https://github.com/tsayen/dom-to-image
 
 
 ### 简单和现代的异步事件发射器
