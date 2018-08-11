@@ -52,7 +52,16 @@
 - GitHub： https://github.com/oliver-moran/jimp 用于Node的完全用JavaScript编写的图像处理库，具有零外部或本地依赖性。
 - sharp： https://github.com/lovell/sharp
 - node-canvas：https://github.com/Automattic/node-canvas
+- node-imagemagick：https://github.com/yourdeveloper/node-imagemagick
 
+
+### 图片加水印
+- text-watermark：https://github.com/sahildua2305/text-watermark
+- 合成图片的canvas绘制库：https://github.com/xd-tayde/mcanvas
+- watermarkjs：https://github.com/brianium/watermarkjs
+- node-images：https://github.com/zhangyuanwei/node-images 轻量级跨平台图像编解码库
+- node-digital-watermarking：https://github.com/zy445566/node-digital-watermarking
+- image-watermark：https://github.com/luthraG/image-watermark
 
 ### dom 生成图像
 - dom-to-image：https://github.com/tsayen/dom-to-image
@@ -60,6 +69,9 @@
 
 ### 截图：html2canvas
 - html2canvas：https://github.com/niklasvh/html2canvas
+
+### 主题颜色
+- thmclrx：https://github.com/XadillaX/thmclrx
 
 ### 简单和现代的异步事件发射器
 - GitHub：https://github.com/sindresorhus/emittery
