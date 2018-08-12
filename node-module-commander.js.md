@@ -32,7 +32,7 @@ if (program.bbqSauce) console.log('  - bbq');
 console.log('  - %s cheese', program.cheese);
 ```
 
-- 终端输入 node index.js -help, 就会出现
+- 终端输入 `node index.js -help`, 就会出现
 ```
 Usage: index [options]
 
@@ -46,6 +46,10 @@ Usage: index [options]
     -h, --help           output usage information
 ```
 
+- 终端输入 `node index.js --version` ,就会输出版本号
+```
+0.1.0
+```
 
 
 ## 参考
