@@ -311,6 +311,13 @@
   - http://www.jackpu.com/qian-duan-zhi-jie-jie-qu-shi-pin-gif-dong-hua/
   - 视频片段转换为Gif的JavaScript库: https://github.com/JackPu/core-video-to-gif
 
+## http route : http 路由
+- router： https://github.com/trekjs/router
+
+
+
+
+
 
 
 
