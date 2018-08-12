@@ -54,6 +54,7 @@
 
 ## 《Node.js 包教不包会》 -- by alsotang
   - gitbook: https://xikong1995.gitbooks.io/nodejs/content/
+  - github: https://github.com/alsotang/node-lessons
 
 ### A neat wrapper around node.js fs.watch / fs.watchFile / fsevents. https://paulmillr.com
   - github: https://github.com/paulmillr/chokidar
