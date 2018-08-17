@@ -353,6 +353,7 @@
 ## 守护进程（重启应用）
 
 - supervisor(常用开发环境)：https://github.com/petruisfan/node-supervisor
+- 守护进程的简单但功能强大的数据聚合:statsd- https://github.com/etsy/statsd
 
 
 - nodemon：https://github.com/remy/nodemon/
