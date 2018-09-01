@@ -165,7 +165,19 @@ setImmediate
 事件循环的每个阶段（macrotask）之间都会执行 microtask，事件循环的开始会先执行一次 microtask。
 ```
 
+* 8
+```
+Promise.resolve(1)
+  .then(2)
+  .then(Promise.resolve(3))
+  .then(console.log)
 
+运行结果：
+
+1
+
+解释：.then 或者 .catch 的参数期望是函数，传入非函数则会发生值穿透。
+```
 
 ### Promise.all
 
@@ -256,4 +268,4 @@ preloadImage('https://b-gold-cdn.xitu.io/v3/static/img/conf.0367134.png')
 ## 参考资料
 - http://es6.ruanyifeng.com/#docs/promise
 - http://javascript.ruanyifeng.com/advanced/promise.html
-- 
+- https://github.com/nswbmw/node-in-debugging/blob/master/3.1%20Promise.md
