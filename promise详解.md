@@ -140,6 +140,20 @@ process.nextTick(function tick () {
 })
 ```
 
+* 8
+```
+Promise.resolve(1)
+  .then(2)
+  .then(Promise.resolve(3))
+  .then(console.log)
+
+运行结果：
+
+1
+
+解释：.then 或者 .catch 的参数期望是函数，传入非函数则会发生值穿透。
+```
+
 * 10
 
 ```
@@ -165,18 +179,21 @@ setImmediate
 事件循环的每个阶段（macrotask）之间都会执行 microtask，事件循环的开始会先执行一次 microtask。
 ```
 
-* 8
+
+## 值穿透
+- https://github.com/nswbmw/node-in-debugging/blob/master/3.1%20Promise.md#317-%E5%80%BC%E7%A9%BF%E9%80%8F
 ```
-Promise.resolve(1)
-  .then(2)
-  .then(Promise.resolve(3))
+值穿透即传入 then/catch 的参数如果不为函数，则忽略该值，返回上一个 promise 的结果。看一段代码：
+
+const promise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve('haha')
+  }, 1000)
+})
+promise
+  .then('hehe')
   .then(console.log)
-
-运行结果：
-
-1
-
-解释：.then 或者 .catch 的参数期望是函数，传入非函数则会发生值穿透。
+最终打印 haha 而不是 hehe。
 ```
 
 ### Promise.all
