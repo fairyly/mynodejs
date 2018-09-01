@@ -142,6 +142,23 @@ Promise.all 在接收到的所有的对象promise都变为 FulFilled 或者 Reje
 与之相对的是 Promise.race 只要有一个promise对象进入 FulFilled 或者 Rejected 状态的话，就会继续进行后面的处理。
 
 
+## demo
+```
+var preloadImage = function (path) {
+  return new Promise(function (resolve, reject) {
+    var image = new Image();
+    image.onload  = resolve;
+    image.onerror = reject;
+    image.src = path;
+  });
+};
+
+
+preloadImage('https://b-gold-cdn.xitu.io/v3/static/img/conf.0367134.png')
+  .then(function (e) { document.body.append(e.target) })
+  .then(function () { console.log('加载成功') })
+```
+
 
 ## 参考资料
 - http://es6.ruanyifeng.com/#docs/promise
