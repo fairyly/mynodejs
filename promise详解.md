@@ -123,6 +123,23 @@ throw new Error('error!!!')
 因为返回任意一个非 promise 的值都会被包裹成 promise 对象，即 return new Error('error!!!') 等价于 return Promise.resolve(new Error('error!!!'))。
 ```
 
+* 7
+```
+const promise = Promise.resolve()
+  .then(() => {
+    return promise
+  })
+promise.catch(console.error)
+```
+
+  - .then 或 .catch 返回的值不能是 promise 本身，否则会造成死循环。类似于：
+```
+process.nextTick(function tick () {
+  console.log('tick')
+  process.nextTick(tick)
+})
+```
+
 * 10
 
 ```
