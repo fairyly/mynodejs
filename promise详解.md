@@ -61,6 +61,67 @@ promise 有 3 种状态：pending、fulfilled 或 rejected。
 上面 promise2 并不是 promise1，而是返回的一个新的 Promise 实例。
 
 
+* 4 链式调用
+
+```
+Promise.resolve(1)
+  .then((res) => {
+    console.log(res)
+    return 2
+  })
+  .catch((err) => {
+    return 3
+  })
+  .then((res) => {
+    console.log(res)
+  })
+  
+  promise 可以链式调用。提起链式调用我们通常会想到通过 return this 实现，不过 Promise 并不是这样实现的。
+  promise 在每次调用 .then 或者 .catch 时都会返回一个新的 promise，从而可以实现链式调用。
+```
+
+* 5
+```
+const promise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    console.log('once')
+    resolve('success')
+  }, 1000)
+})
+
+const start = Date.now()
+promise.then((res) => {
+  console.log(res, Date.now() - start)
+})
+promise.then((res) => {
+  console.log(res, Date.now() - start)
+})
+
+promise 的 .then 或者 .catch 可以被调用多次，但这里 Promise 构造函数只执行一次。
+或者说，promise 内部状态一经改变，并且有了一个值，则后续在每次调用 .then 或者 .catch 时都会直接拿到该值。
+```
+
+* 6
+```
+Promise.resolve()
+  .then(() => {
+    return new Error('error!!!')
+  })
+  .then((res) => {
+    console.log('then: ', res)
+  })
+  .catch((err) => {
+    console.log('catch: ', err)
+  })
+  
+  
+  .then 或者 .catch 中 return 一个 error 对象并不会抛出错误，所以不会被后续的 .catch 捕获，需要改成如下其中一种：
+
+return Promise.reject(new Error('error!!!'))
+throw new Error('error!!!')
+
+因为返回任意一个非 promise 的值都会被包裹成 promise 对象，即 return new Error('error!!!') 等价于 return Promise.resolve(new Error('error!!!'))。
+```
 
 * 10
 
