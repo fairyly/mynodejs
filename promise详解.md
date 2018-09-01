@@ -143,6 +143,8 @@ Promise.all 在接收到的所有的对象promise都变为 FulFilled 或者 Reje
 
 ## 微任务
 
+then方法绑定两个回调函数：成功时的回调函数console.log，失败时的回调函数console.error（可以省略）
+
 ```
 new Promise(function (resolve, reject) {
   resolve(1);
