@@ -44,6 +44,39 @@ async函数对 Generator 函数的改进
 ```
 
 
+- 当一个 async 函数中有多个 await命令时，如果不想因为一个出错而导致其与的都无法执行，应将await放在try...catch语句中执行
+```
+async function testAwait () {
+    try {
+        await func1()
+        await func2()
+        await func3()
+    } catch (error) {
+        console.log(error)
+    }
+}
+```
+
+- 并发执行 await 命令
+
+```
+// 方法 1
+let [res1, res2] = await Promise.all([func1(), func2()])
+
+// 方法 2
+let func1Promise = func1()
+let func2Promise = func2()
+let res1 = await func1Promise
+let res2 = await func2Promise
+
+作者：次人君在野原之森网络工作室
+链接：https://www.jianshu.com/p/5fb1586b9164
+來源：简书
+简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。
+```
+
+
+
 ## egg 中控制器写法
 
 ```
@@ -72,3 +105,4 @@ module.exports = NewsController;
 - http://es6.ruanyifeng.com/#docs/async
 - https://github.com/nswbmw/node-in-debugging/blob/master/3.2%20Async%20%2B%20Await.md
 - https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function
+- https://www.jianshu.com/p/5fb1586b9164
