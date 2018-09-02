@@ -442,7 +442,48 @@ let dad = new Octopus("Man with the 8 strong legs");
 dad.name = "Man with the 3-piece suit"; // 错误! name 是只读的.
 ```
 
+- 存取器
+TypeScript支持通过getters/setters来截取对对象成员的访问。 它能帮助你有效的控制对对象成员的访问
 
+```
+class Employee {
+    fullName: string;
+}
+
+let employee = new Employee();
+employee.fullName = "Bob Smith";
+if (employee.fullName) {
+    console.log(employee.fullName);
+}
+
+
+===>
+
+let passcode = "secret passcode";
+
+class Employee {
+    private _fullName: string;
+
+    get fullName(): string {
+        return this._fullName;
+    }
+
+    set fullName(newName: string) {
+        if (passcode && passcode == "secret passcode") {
+            this._fullName = newName;
+        }
+        else {
+            console.log("Error: Unauthorized update of employee!");
+        }
+    }
+}
+
+let employee = new Employee();
+employee.fullName = "Bob Smith";
+if (employee.fullName) {
+    alert(employee.fullName);
+}
+```
 
 
 
