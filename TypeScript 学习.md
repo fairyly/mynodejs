@@ -96,37 +96,112 @@ alert(colorName);  // 显示'Green'因为上面代码里它的值是2
 
 ```
 
-
-
-
-
-
-
+### 任意值
 
 ```
-
-let decLiteral: number = 6;
-let hexLiteral: number = 0xf00d;
-let binaryLiteral: number = 0b1010;
-let octalLiteral: number = 0o744;
-
-let name: string = "bob";
-
-let name: string = `Gene`;
-let age: number = 37;
-let sentence: string = `Hello, my name is ${ name }.
-
-let list: number[] = [1, 2, 3];
-第二种方式是使用数组泛型，Array<元素类型>：
-
-let list: Array<number> = [1, 2, 3];
+let notSure: any = 4;
+notSure = "maybe a string instead";
+notSure = false; // okay, definitely a boolean
 
 
+在对现有代码进行改写的时候，any类型是十分有用的，它允许你在编译时可选择地包含或移除类型检查。 你可能认为Object有相似的作用，就像它在其它语言中那样。 但是Object类型的变量只是允许你给它赋任意值 - 但是却不能够在它上面调用任意的方法，即便它真的有这些方法：
+let notSure: any = 4;
+notSure.ifItExists(); // okay, ifItExists might exist at runtime
+notSure.toFixed(); // okay, toFixed exists (but the compiler doesn't check)
+
+let prettySure: Object = 4;
+prettySure.toFixed(); // Error: Property 'toFixed' doesn't exist on type 'Object'
 
 
+当你只知道一部分数据的类型时，any类型也是有用的。 比如，你有一个数组，它包含了不同的类型的数据：
+let list: any[] = [1, true, "free"];
+
+list[1] = 100;
+```
+
+### 空值
+
+```
+某种程度上来说，void类型像是与any类型相反，它表示没有任何类型。 当一个函数没有返回值时，你通常会见到其返回值类型是void：
+function warnUser(): void {
+    alert("This is my warning message");
+}
+声明一个void类型的变量没有什么大用，因为你只能为它赋予undefined和null：
+let unusable: void = undefined;
+```
+
+###  Null 和 Undefined
+
+```
+undefined和null两者各自有自己的类型分别叫做undefined和null。 和void相似，它们的本身的类型用处不是很大：
+
+// Not much else we can assign to these variables!
 let u: undefined = undefined;
 let n: null = null;
+
+默认情况下null和undefined是所有类型的子类型。 就是说你可以把null和undefined赋值给number类型的变量。
+
+然而，当你指定了--strictNullChecks标记，null和undefined只能赋值给void和它们各自。 这能避免很多常见的问题。 也许在某处你想传入一个string或null或undefined，你可以使用联合类型string | null | undefined。 再次说明，稍后我们会介绍联合类型。
+
+注意：我们鼓励尽可能地使用--strictNullChecks，但在本手册里我们假设这个标记是关闭的。
 ```
+
+### Never
+
+never类型表示的是那些永不存在的值的类型。
+
+never类型是任何类型的子类型，也可以赋值给任何类型；然而，没有类型是never的子类型或可以赋值给never类型（除了never本身之外）。 
+
+即使any也不可以赋值给never。
+
+```
+一些返回never类型的函数：
+// 返回never的函数必须存在无法达到的终点
+function error(message: string): never {
+    throw new Error(message);
+}
+
+// 推断的返回值类型为never
+function fail() {
+    return error("Something failed");
+}
+
+// 返回never的函数必须存在无法达到的终点
+function infiniteLoop(): never {
+    while (true) {
+    }
+}
+```
+
+### Object
+
+object表示非原始类型，也就是除number，string，boolean，symbol，null或undefined之外的类型。
+
+使用object类型，就可以更好的表示像Object.create这样的API
+
+```
+declare function create(o: object | null): void;
+
+create({ prop: 0 }); // OK
+create(null); // OK
+
+create(42); // Error
+create("string"); // Error
+create(false); // Error
+create(undefined); // Error
+
+```
+
+
+
+
+
+
+
+
+
+
+
 
 
 
