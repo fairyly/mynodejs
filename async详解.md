@@ -59,7 +59,7 @@ async function testAwait () {
 }
 ```
 
-- 并发执行 await 命令
+- 并发执行 await 命令: await 是顺序执行的,Promise.all() 是并行的
 
 ```
 // 方法 1
@@ -71,10 +71,7 @@ let func2Promise = func2()
 let res1 = await func1Promise
 let res2 = await func2Promise
 
-作者：次人君在野原之森网络工作室
-链接：https://www.jianshu.com/p/5fb1586b9164
-來源：简书
-简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。
+
 ```
 
 
