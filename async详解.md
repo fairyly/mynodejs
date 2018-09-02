@@ -105,3 +105,4 @@ module.exports = NewsController;
 - https://github.com/nswbmw/node-in-debugging/blob/master/3.2%20Async%20%2B%20Await.md
 - https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function
 - https://www.jianshu.com/p/5fb1586b9164
+- https://github.com/tc39/ecmascript-asyncawait
