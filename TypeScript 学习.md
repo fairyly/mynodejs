@@ -332,6 +332,133 @@ square.sideLength = 10;
 一个接口可以继承多个接口，创建出多个接口的合成接口。
 ```
 
+- 混合类型
+
+```
+有时你会希望一个对象可以同时具有上面提到的多种类型。
+一个例子就是，一个对象可以同时做为函数和对象使用，并带有额外的属性。
+interface Counter {
+    (start: number): string;
+    interval: number;
+    reset(): void;
+}
+
+function getCounter(): Counter {
+    let counter = <Counter>function (start: number) { };
+    counter.interval = 123;
+    counter.reset = function () { };
+    return counter;
+}
+
+let c = getCounter();
+c(10);
+c.reset();
+c.interval = 5.0;
+```
+
+- 接口继承类
+```
+class Control {
+    private state: any;
+}
+
+interface SelectableControl extends Control {
+    select(): void;
+}
+
+class Button extends Control implements SelectableControl {
+    select() { }
+}
+
+class TextBox extends Control {
+    select() { }
+}
+
+// Error: Property 'state' is missing in type 'Image'.
+class Image implements SelectableControl {
+    select() { }
+}
+
+class Location {
+
+}
+```
+
+## 类
+
+```
+class Greeter {
+    greeting: string;
+    constructor(message: string) {
+        this.greeting = message;
+    }
+    greet() {
+        return "Hello, " + this.greeting;
+    }
+}
+
+let greeter = new Greeter("world");
+```
+
+- 公共，私有与受保护的修饰符
+```
+默认为public
+
+class Animal {
+    public name: string;
+    public constructor(theName: string) { this.name = theName; }
+    public move(distanceInMeters: number) {
+        console.log(`${this.name} moved ${distanceInMeters}m.`);
+    }
+}
+
+当成员被标记成private时，它就不能在声明它的类的外部访问
+
+class Animal {
+    private name: string;
+    constructor(theName: string) { this.name = theName; }
+}
+
+protected修饰符与private修饰符的行为很相似，但有一点不同，protected成员在派生类中仍然可以访问
+class Person {
+    protected name: string;
+    constructor(name: string) { this.name = name; }
+}
+
+```
+
+
+- readonly修饰符
+  - 使用readonly关键字将属性设置为只读的。 只读属性必须在声明时或构造函数里被初始化。
+```
+class Octopus {
+    readonly name: string;
+    readonly numberOfLegs: number = 8;
+    constructor (theName: string) {
+        this.name = theName;
+    }
+}
+let dad = new Octopus("Man with the 8 strong legs");
+dad.name = "Man with the 3-piece suit"; // 错误! name 是只读的.
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
