@@ -192,6 +192,22 @@ create(false); // Error
 create(undefined); // Error
 
 ```
+
+### 类型断言
+
+```
+类型断言有两种形式。 其一是“尖括号”语法：
+let someValue: any = "this is a string";
+
+let strLength: number = (<string>someValue).length;
+另一个为as语法：
+let someValue: any = "this is a string";
+
+let strLength: number = (someValue as string).length;
+两种形式是等价的。 至于使用哪个大多数情况下是凭个人喜好；然而，当你在TypeScript里使用JSX时，只有as语法断言是被允许的。
+```
+
+
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
