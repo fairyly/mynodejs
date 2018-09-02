@@ -272,11 +272,65 @@ interface Point {
 let p1: Point = { x: 10, y: 20 };
 p1.x = 5; // error!
 ```
+- 函数类型
 
+```
+interface SearchFunc {
+  (source: string, subString: string): boolean;
+}
 
+let mySearch: SearchFunc;
+mySearch = function(source: string, subString: string) {
+  let result = source.search(subString);
+  return result > -1;
+}
+```
+- 可索引的类型
 
+可以描述那些能够“通过索引得到”的类型，比如a[10]或ageMap["daniel"]。 
 
+可索引类型具有一个索引签名，它描述了对象索引的类型，还有相应的索引返回值类型
 
+```
+interface StringArray {
+  [index: number]: string;
+}
+
+let myArray: StringArray;
+myArray = ["Bob", "Fred"];
+
+let myStr: string = myArray[0];
+```
+
+- 类类型
+
+```
+interface ClockInterface {
+    currentTime: Date;
+}
+
+class Clock implements ClockInterface {
+    currentTime: Date;
+    constructor(h: number, m: number) { }
+}
+```
+- 继承接口
+和类一样，接口也可以相互继承
+
+```
+interface Shape {
+    color: string;
+}
+
+interface Square extends Shape {
+    sideLength: number;
+}
+
+let square = <Square>{};
+square.color = "blue";
+square.sideLength = 10;
+一个接口可以继承多个接口，创建出多个接口的合成接口。
+```
 
 
 
