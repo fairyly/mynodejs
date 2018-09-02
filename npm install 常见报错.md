@@ -63,3 +63,19 @@ gyp ERR! build error
 npm config set msvs_version 2012 --global
 ```
 
+
+
+## Node Sass could not find a binding for your current environment: Windows 64-bit with Node.js 10.x
+```
+Found bindings for the following environments:
+  - Windows 64-bit with Node.js 8.x
+
+This usually happens because your environment has changed since running `npm install`.
+Run `npm rebuild node-sass --force` to build the binding for your current environment.
+```
+
+解决：
+```
+npm rebuild node-sass
+npm update
+```
