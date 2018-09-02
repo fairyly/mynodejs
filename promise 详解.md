@@ -286,3 +286,4 @@ preloadImage('https://b-gold-cdn.xitu.io/v3/static/img/conf.0367134.png')
 - http://es6.ruanyifeng.com/#docs/promise
 - http://javascript.ruanyifeng.com/advanced/promise.html
 - https://github.com/nswbmw/node-in-debugging/blob/master/3.1%20Promise.md
+- https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise
