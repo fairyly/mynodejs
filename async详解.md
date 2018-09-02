@@ -70,3 +70,5 @@ module.exports = NewsController;
 
 ## 参考资料
 - http://es6.ruanyifeng.com/#docs/async
+- https://github.com/nswbmw/node-in-debugging/blob/master/3.2%20Async%20%2B%20Await.md
+- https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function
