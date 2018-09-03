@@ -15,3 +15,9 @@ node中加载包会有这样的策略
 .. 可以认为是这样的：
 
 ../index.js or ../index.json
+
+
+
+
+## 参考
+- https://nodejs.org/dist/latest-v8.x/docs/api/modules.html#modules_require
