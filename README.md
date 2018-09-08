@@ -159,6 +159,19 @@ npm install --global --production windows-build-tools
 ## 非 I/O 异步 API
   - 定时器 (setTimeout(),setInterval(),setImmediate())
   - process.nextTick()
+  ```
+  process.nextTick()的意思就是定义出一个动作，并且让这个动作在下一个事件轮询的时间点上执行
+  
+  function foo() {console.error('foo');}process.nextTick(foo);console.error('bar');
+  
+  也可以使用setTimeout()函数来达到貌似同样的执行效果：
+  
+  setTimeout(foo, 0);
+  console.log('bar');
+  
+  但在内部的处理机制上，process.nextTick()和setTimeout(fn, 0)是不同的，process.nextTick()不是一个单纯的延时，他有更多的 特性。
+  更精确的说，process.nextTick()定义的调用会创建一个新的子堆栈。在当前的栈里，你可以执行任意多的操作。但一旦调用netxTick，函数就必须返回到父堆栈。   然后事件轮询机制又重新等待处理新的事件，如果发现nextTick的调用，就会创建一个新的栈。
+  ```
 
 
 * Node提供以下几个全局对象
