@@ -24,3 +24,20 @@ server.bind(41234);
 // 服务器监听 0.0.0.0:41234
 ```
 
+
+## 客户端
+
+```
+const dgram = require('dgram');
+const message = Buffer.from('Some bytes');
+const client = dgram.createSocket('udp4');
+client.send(message, 41234, 'localhost', (err) => {
+  client.close();
+});
+```
+
+
+
+## 参考
+- zh: http://nodejs.cn/api/dgram.html
+- en: https://nodejs.org/api/dgram.html
