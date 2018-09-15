@@ -13,3 +13,8 @@ var xss = require("xss");
 var html = xss('<script>alert("xss");</script>');
 console.log(html);
 ```
+
+
+
+## 参考
+- https://github.com/leizongmin/js-xss/blob/master/README.zh.md
