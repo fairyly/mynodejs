@@ -1,0 +1,23 @@
+# env2
+
+环境配置
+
+Node.js 可以通过 env2 的插件，来读取 .env 配置文件，加载后的环境配置参数，可以通过例如 process.env.PORT 来读取端口信息。
+
+## 使用
+ 
+1.创建` .env `文件,记得在 ` .gitignore ` 文件中增加一行 `.env`，用来避免该文件的` git `版本入库
+
+```
+# .env
+
+# 服务的启动名字和端口
+HOST = 127.0.0.1
+PORT = 3000
+```
+
+
+
+## 参考
+- https://github.com/dwyl/env2
+- https://juejin.im/book/5b63fdba6fb9a04fde5ae6d0/section/5b6c022c6fb9a04fca3ca4b9
