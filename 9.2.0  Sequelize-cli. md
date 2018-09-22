@@ -1,0 +1,8 @@
+# 表结构设计、迁移与数据填充 —— 使用 Sequelize-cli
+
+
+
+
+## 参考
+- https://github.com/sequelize/cli
+- https://juejin.im/book/5b63fdba6fb9a04fde5ae6d0/section/5b6c042b6fb9a04fd93e5e03
