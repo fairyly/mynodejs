@@ -59,6 +59,83 @@ Options:
 ```
 
 
+- migrations 目录
+  - 用于通过管理数据库表结构迁移的配置目录。初始化完成后目录中暂无内容。
+
+- seeders 目录
+  - 用于在数据库完成 migrations 初始化后，填补一些打底数据的配置目录。初始化完成后目录中暂无内容。
+
+
+## Migrations: 数据库迁移
+
+>对于一个持续迭代，长期维护的数据库而言，表结构的调整，字段的新增，回退，缺乏一种可追溯的程序化迁移管理，则会陷入各种潜在人为操作过程中的风险。
+Migration 迁移的功能的出现，正是为了解决上述人为操作所不可追溯的管理痛点
+
+我们需要为数据库创建一张 shops 新表，表结构如描述。
+
+使用 `sequelize migration:create` 来创建一个迁移文件 `create-shops-table`。
+
+```
+node_modules/.bin/sequelize migration:create --name create-shops-table
+```
+
+在 `migrations` 的目录中，会新增出一个 `xxxxxxxxx-create-shops-table.js` 的迁移文件
+
+自动生成的文件里，包涵有 up 与 down 两个空函数， up 用于定义表结构正向改变的细节，down 则用于定义表结构的回退逻辑。
+
+比如 up 中有 createTable 的建表行为，则 down 中配套有一个对应的 dropTable 删除表行为。
+
+
+
+- sequelize db:migrate
+
+```
+node_modules/.bin/sequelize db:migrate
+```
+
+sequelize db:migrate 的命令，可以最终帮助我们将 migrations 目录下的迁移行为定义，
+
+按时间戳的顺序，逐个地执行迁移描述，最终完成数据库表结构的自动化创建。
+
+并且，在数据库中会默认创建一个名为 SequelizeMeta 的表，用于记录在当前数据库上所运行的迁移历史版本。
+
+
+3. sequelize db:migrate:undo
+
+sequelize db:migrate:undo 则可以帮助我们按照 down 方法中所定义的规则，回退一个数据库表结构迁移的状态
+
+```
+node_modules/.bin/sequelize db:migrate:undo
+```
+
+通过使用 sequelize db:migrate:undo:all 命令撤消所有迁移，可以恢复到初始状态。 我们还可以通过将其名称传递到 --to 选项中来恢复到特定的迁移。
+```
+node_modules/.bin/sequelize db:migrate:undo:all --to xxxxxxxxx-create-shops-table.js
+```
+- 4. 向表中追加字段（扩展阅读）
+
+并非所有的迁移场景都是创建新表，随着业务的不断深入展开，表结构的字段新增，也是常见的需求。比如店铺 shops 表中增加一列 address 地址信息。
+
+创建一个名叫 add-columns-to-shops-table 的迁移迁移文件：
+
+```
+node_modules/.bin/sequelize migration:create --name add-columns-to-shops-table
+```
+
+然后我们向该文件中添加如下代码：
+
+```
+module.exports = {
+  up: (queryInterface, Sequelize) => Promise.all([
+    queryInterface.addColumn('shops', 'address', { type: Sequelize.STRING }),
+  ]),
+
+  down: queryInterface => Promise.all([
+    queryInterface.removeColumn('shops', 'address'),
+  ]),
+};
+```
+
 
 ## 参考
 - https://github.com/sequelize/cli
