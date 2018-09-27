@@ -2,21 +2,21 @@
 
 ![awesome](https://raw.githubusercontent.com/github/explore/c304601f028774885ef27f72e6fe2d331729d8bc/topics/awesome/awesome.png)
 
-* Node.js 系列教程 Node Hero: https://github.com/simplefeel/react-node-learn
-* Node.js 系列文章：http://blog.fens.me/series-nodejs/
-* 零基础十分钟教你用Node.js写生成器: https://github.com/i5ting/write-scaffold-with-nodejs
+* [Node.js 系列教程 Node Hero:](https://github.com/simplefeel/react-node-learn)
+* [Node.js 系列文章：](http://blog.fens.me/series-nodejs/)
+* [零基础十分钟教你用Node.js写生成器:](https://github.com/i5ting/write-scaffold-with-nodejs)
 
-* Awehunt： https://awehunt.com/?tnid=5af1c0b67b4fac67bf3af2b4
+* [Awehunt： ](https://awehunt.com/?tnid=5af1c0b67b4fac67bf3af2b4)
 
 ## nodejs web 框架
-- https://awehunt.com/?tnid=5af2852253b5378301378d77
+- [nodejs web 框架](https://awehunt.com/?tnid=5af2852253b5378301378d77)
 
->nodejs github: https://github.com/nodejs/node
+- [nodejs github: ](https://github.com/nodejs/node)
 
-* 免费域名解析: http://www.freenom.com/en/index.html  最后不免费
+* [免费域名解析: ](http://www.freenom.com/en/index.html)  最后不免费
   498745097@qq.com yhq123456
 
-* 汇智网: http://www.hubwiz.com/course/?type=Node.js
+* [汇智网: ](http://www.hubwiz.com/course/?type=Node.js)
 
 * [Facebook 最热门的开源项目推荐！](https://www.itcodemonkey.com/article/1293.html)
 * [WebSocket：5分钟从入门到精通](http://mp.weixin.qq.com/s?__biz=MjM5NTEwMTAwNg==&mid=2650213647&idx=1&sn=70467e0ff23500e0498c8fc21775d96e&chksm=befe0d2e8989843883321dbd9c3699218af1f8d4fa1fdbc7560fde9eb985309ab89df386a870&mpshare=1&scene=23&srcid=0108AEvqPGC8sson91HyRNSi#rd)
@@ -26,48 +26,48 @@
 
 * [阮一峰 nodejs 教程](http://javascript.ruanyifeng.com/nodejs/assert.html)
 * [带你入门Nodejs](https://nodelover.me/course/nodejs)
-* node modules: https://github.com/node-modules
-* 深入理解Node.js：核心思想与源码分析：https://github.com/yjhjstz/deep-into-node
+* [node modules: ](https://github.com/node-modules)
+* [深入理解Node.js：核心思想与源码分析：](https://github.com/yjhjstz/deep-into-node)
 * [awesome-nodejs](https://github.com/sindresorhus/awesome-nodejs) : https://github.com/sindresorhus/awesome-nodejs
-* awesome-micro-npm-packages: https://github.com/parro-it/awesome-micro-npm-packages
+* [awesome-micro-npm-packages: ](https://github.com/parro-it/awesome-micro-npm-packages)
 
 ============================
-* node-orm2: https://github.com/dresende/node-orm2
-  - https://github.com/bookshelf/bookshelf
-  - https://github.com/sequelize/sequelize
+* [node-orm2: ](https://github.com/dresende/node-orm2)
+  - [bookshelf:](https://github.com/bookshelf/bookshelf)
+  - [sequelize](https://github.com/sequelize/sequelize)
 
 
 ## 《Node.js 调试指南》
-- node-in-debugging：https://github.com/nswbmw/node-in-debugging
+- [node-in-debugging：](https://github.com/nswbmw/node-in-debugging)
 
 
 ### 实用Node.js，简单粗暴，新手学习的最短曲线
-- practical-node-tutorial： https://github.com/dev-reading/practical-node-tutorial
+- [practical-node-tutorial： ](https://github.com/dev-reading/practical-node-tutorial)
 
 ## nodejs 模板
-- pug(原名 jade): https://github.com/pugjs/pug
-- ejs : https://github.com/tj/ejs
+- [pug(原名 jade): ](https://github.com/pugjs/pug)
+- [ejs : ](https://github.com/tj/ejs)
 
-## 「node.js能开发大型网站吗？」https://www.zhihu.com/question/21176891/answer/81862847
+## [「node.js能开发大型网站吗？」](https://www.zhihu.com/question/21176891/answer/81862847)
 
-## node 调试：http://i5ting.github.io/node-debug-tutorial/
+## [node 调试：](http://i5ting.github.io/node-debug-tutorial/)
 
-## 《Node.js 实战》 源码: https://github.com/MiYogurt/nodejs_shizhan
-  - 《Node.js实战》(node-in-action) book: https://github.com/SFantasy/node-in-action
-  - gitbook: https://sfantasy.gitbooks.io/node-in-action/content/zh/
+## [《Node.js 实战》 源码: ](https://github.com/MiYogurt/nodejs_shizhan)
+  - [《Node.js实战》(node-in-action) book: ](https://github.com/SFantasy/node-in-action)
+  - [gitbook: ](https://sfantasy.gitbooks.io/node-in-action/content/zh/)
 
 ## 《Node.js 包教不包会》 -- by alsotang
-  - gitbook: https://xikong1995.gitbooks.io/nodejs/content/
-  - github: https://github.com/alsotang/node-lessons
+  - [gitbook: ](https://xikong1995.gitbooks.io/nodejs/content/)
+  - [github: ](https://github.com/alsotang/node-lessons)
 
 ### A neat wrapper around node.js fs.watch / fs.watchFile / fsevents. https://paulmillr.com
-  - github: https://github.com/paulmillr/chokidar
+  - [github: ](https://github.com/paulmillr/chokidar)
   
 ### Inquirer.js A collection of common interactive command line user interfaces: 一组通用的交互式命令行用户界面
-  - https://github.com/SBoudrias/Inquirer.js
+  - [Inquirer.js](https://github.com/SBoudrias/Inquirer.js)
   
 ### Excel Workbook Manager: Excel工作簿管理器
-  - https://github.com/guyonroche/exceljs
+  - [exceljs:](https://github.com/guyonroche/exceljs)
 
 
 ### npm 
@@ -94,11 +94,9 @@ npm install --global --production windows-build-tools
 
 ```
 
-学习 node module ：https://github.com/parro-it/awesome-micro-npm-packages
-
 * candybox:https://candy.one/i/1205413
 
-* 轻量级实时 Node.js 内核性能监控分析工具 http://easy-monitor.cn/index
+* [轻量级实时 Node.js 内核性能监控分析工具 ](http://easy-monitor.cn/index)
 
 >>> 使用NPM下载和发布代码时都会接触到版本号。NPM使用语义版本号来管理代码，这里简单介绍一下。
 
