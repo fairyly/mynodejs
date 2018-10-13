@@ -85,3 +85,4 @@ CSRF 的全称是“跨站请求伪造”，而 XSS 的全称是“跨站脚本�
 ## 参考资料
 - https://blog.tonyseek.com/post/introduce-to-xss-and-csrf/
 - https://juejin.im/post/5bc009996fb9a05d0a055192
+- https://juejin.im/post/5bad9140e51d450e935c6d64
