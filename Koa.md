@@ -93,3 +93,4 @@ koa2 使用 koa-body 代替 koa-bodyparser 和 koa-multer
 
 ## 参考资料
 - [Koa 框架教程](http://www.ruanyifeng.com/blog/2017/08/koa.html)
+- [nodejs 写 swagger 文档的正确方式](https://cnodejs.org/topic/5900779931e8c2bb1c3dce85)
