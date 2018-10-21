@@ -23,7 +23,11 @@ https://github.com/koajs/koa/blob/master/docs/api/index.md
 
 
 
-## koa 中间件的原理
+## koa 中间件的原理: 洋葱模型
+>基于async/await 可以更好的处理异步操作。 
+
+
+
 
 
 
