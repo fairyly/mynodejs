@@ -52,6 +52,8 @@ https://github.com/koajs/koa/blob/master/docs/api/index.md
 
 - No.2 koa-bodyparser
 >koa.js并没有内置Request Body的解析器，当我们需要解析请求体时需要加载额外的中间件，官方提供的koa-bodyparser是个很不错的选择，支持x-www-form-urlencoded, application/json等格式的请求体，但不支持form-data的请求体，需要借助 formidable 这个库，也可以直接使用 koa-body 或 koa-better-body
+koa2 使用 koa-body 代替 koa-bodyparser 和 koa-multer
+
 
 - No.3 koa-views
 >koa-views对需要进行视图模板渲染的应用是个不可缺少的中间件，支持ejs, nunjucks等众多模板引擎。
