@@ -5,6 +5,7 @@
 - gitbook: https://zhongsp.gitbooks.io/typescript-handbook/content/
 - 在线complier：http://www.typescriptlang.org/play/index.html
 - 浅谈 TypeScript: https://github.com/welearnmore/typescript-book
+- typescript-tutorial: https://github.com/xcatliu/typescript-tutorial
 
 
 ## 数据类型
