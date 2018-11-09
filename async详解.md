@@ -194,7 +194,7 @@ module.exports = NewsController;
 不能在常规函数里使用 await
 如果我们试图在非 async 函数里使用 await，就会出现一个语法错误：
 
-- foreach 是同步操作并发操作
+- foreach 是同步操作并发操作,可以支持,需要稍微改造下 forEach：
 ```
 demo:
 function test(a) {
@@ -243,6 +243,10 @@ async function test(value, ms) {
 
 asyncPrint('hello world', 50);
 ```
+- 参考
+  - [JavaScript forEach 不支持 async/await？](https://www.zhihu.com/question/53466898)
+  - [当 async/await 遇上 forEach](https://objcer.com/2017/10/12/async-await-with-forEach/)
+  - [ES6 In Depth: Iterators and the for-of loop](https://hacks.mozilla.org/2015/04/es6-in-depth-iterators-and-the-for-of-loop/)
 
 ## 参考资料
 - http://es6.ruanyifeng.com/#docs/async
