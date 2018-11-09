@@ -249,7 +249,8 @@ asyncPrint('hello world', 50);
   - [ES6 In Depth: Iterators and the for-of loop](https://hacks.mozilla.org/2015/04/es6-in-depth-iterators-and-the-for-of-loop/)
 
 ## 参考资料
-- http://es6.ruanyifeng.com/#docs/async
+- [ MDN-await ](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/await)
+- [es6-async](http://es6.ruanyifeng.com/#docs/async)
 - https://github.com/nswbmw/node-in-debugging/blob/master/3.2%20Async%20%2B%20Await.md
 - https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function
 - https://www.jianshu.com/p/5fb1586b9164
