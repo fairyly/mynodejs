@@ -57,6 +57,10 @@ function spawn(genF) {
   
   await 可以理解为是 async wait 的简写。await 必须出现在 async 函数内部，不能单独使用
 
+  await 字面上使得 JavaScript 等待，直到 promise 处理完成，然后将结果继续下去。
+  
+  await不能工作在顶级作用域，需要将await代码包裹在一个async函数中
+
 - demo
 ```
 前文有一个 Generator 函数，依次读取两个文件。
@@ -122,7 +126,43 @@ let res2 = await func2Promise
 
 ```
 
+- async方法： 一个class方法同样能够使用async，只需要将async放在它之前就可以
 
+就像这样：
+```
+class Waiter {
+   async wait () {
+       return await Promise.resolve(1)
+   }
+}
+new Waiter().wait().then(alert) // 1
+```
+
+## 举例说明啊，你有三个请求需要发生，第三个请求是依赖于第二个请求的解构第二个请求依赖于第一个请求的结果。若用 ES5实现会有3层的回调，若用Promise 实现至少需要3个then。一个是代码横向发展，另一个是纵向发展。今天指给出 async-await 的实现哈~
+
+```
+//我们仍然使用 setTimeout 来模拟异步请求
+function sleep(second, param) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(param);
+        }, second);
+    })
+}
+
+async function test() {
+    let result1 = await sleep(2000, 'req01');
+    let result2 = await sleep(1000, 'req02' + result1);
+    let result3 = await sleep(500, 'req03' + result2);
+    console.log(`
+        ${result3}
+        ${result2}
+        ${result1}
+    `);
+}
+
+test();
+```
 
 ## egg 中控制器写法
 
@@ -151,13 +191,15 @@ module.exports = NewsController;
 ## for 循环中使用 async/await
 
 >曾经 vue 中在 forEach 中使用 await 会报错，就换成 for of;
+不能在常规函数里使用 await
+如果我们试图在非 async 函数里使用 await，就会出现一个语法错误：
 
 - foreach 是同步操作并发操作
 ```
 demo:
-function test() {
+function test(a) {
   return new Promise(function(resolve,reject){
-    if (true){
+    if (a){
       resolve(true);
     } else {
       reject(false);
@@ -166,13 +208,26 @@ function test() {
 }
 
 async function demo() {
- let flag = await test()
+ let data = [{id:1},{id:2}];
+ let flag = true
+ data.forEach(function(ele,index) {
+   if(ele.id == 2) {
+     flag = await test(false);  // 这样写相当于 await 不在 async 异步函数内
+   }
+ })
+ 
  console.log(flag)
+ if(!flag) {
+    console.log(666,"信息未填写完")
+    return false;
+ }
+  // 继续下面
 }
 
 demo()
 ```
 
+- demo
 
 ```
 function timeout(ms) {
