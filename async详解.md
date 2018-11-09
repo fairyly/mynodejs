@@ -258,3 +258,4 @@ asyncPrint('hello world', 50);
 - [async-await](https://javascript.info/async-await)
 - [async 函数的含义和用法](www.ruanyifeng.com/blog/2015/05/async.html)
 - [当async/await遇上forEach](http://imweb.io/topic/5b3b7d624d378e703a4f4437)
+- [using-async-await-with-a-foreach-loop](https://stackoverflow.com/questions/37576685/using-async-await-with-a-foreach-loop)
