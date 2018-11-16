@@ -136,6 +136,23 @@ class Waiter {
    }
 }
 new Waiter().wait().then(alert) // 1
+
+=======================
+
+# Class methods:
+class Storage {
+  constructor() {
+    this.cachePromise = caches.open('avatars');
+  }
+
+  async getAvatar(name) {
+    const cache = await this.cachePromise;
+    return cache.match(`/avatars/${name}.jpg`);
+  }
+}
+
+const storage = new Storage();
+storage.getAvatar('jaffathecake').then(…);
 ```
 
 - sleep(): 让线程休眠一段时间
