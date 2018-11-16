@@ -251,6 +251,7 @@ asyncPrint('hello world', 50);
 ## 参考资料
 - [ MDN-await ](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/await)
 - [es6-async](http://es6.ruanyifeng.com/#docs/async)
+- [Google Web Fundamentals](https://developers.google.com/web/fundamentals/primers/async-functions)
 - https://github.com/nswbmw/node-in-debugging/blob/master/3.2%20Async%20%2B%20Await.md
 - https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function
 - https://www.jianshu.com/p/5fb1586b9164
