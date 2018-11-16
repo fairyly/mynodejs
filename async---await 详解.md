@@ -138,6 +138,19 @@ class Waiter {
 new Waiter().wait().then(alert) // 1
 ```
 
+- sleep(): 让线程休眠一段时间
+```
+// wait ms milliseconds
+function wait(ms) {
+  return new Promise(r => setTimeout(r, ms));
+}
+
+async function hello() {
+  await wait(500);
+  return 'world';
+}
+```
+
 ## 举例说明啊，你有三个请求需要发生，第三个请求是依赖于第二个请求的解构第二个请求依赖于第一个请求的结果。若用 ES5实现会有3层的回调，若用Promise 实现至少需要3个then。一个是代码横向发展，另一个是纵向发展。今天指给出 async-await 的实现哈~
 
 ```
