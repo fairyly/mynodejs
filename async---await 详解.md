@@ -48,7 +48,9 @@ function spawn(genF) {
     step(function() { return gen.next(undefined); });
   });
 }
+
 ```
+- [es6](http://es6.ruanyifeng.com/#docs/async#async-%E5%87%BD%E6%95%B0%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86)
 
 ## 简介
 - async 函数是什么？一句话，它就是 Generator 函数的语法糖。
