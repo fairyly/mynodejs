@@ -44,6 +44,22 @@ https://github.com/koajs/koa/blob/master/docs/api/index.md
 - ...
 - 最外层的中间件收回执行权之后，执行next函数后面的代码。
 
+>几乎koa的中间件都会被co给包装一次，  
+而每一个中间件又可以通过Promise的then去监测其后一个中间件是否结束，  
+后一个中间件结束后会执行前一个中间件用then监听的操作，  
+这个操作便是执行该中间件yield next后面的那些代码  
+
+>每次执行use方法，就把外面传进来的generator函数push到middleware数组中
+|             
+|   **当前中间件**（promise.then() 监测 后一个中间件是否结束）   
+|   **后一个中间件** 执行结束，就会在前一个中间件中then() 回调中调用方法，依次向上一个中间件的.then()回调中调用方法，后面每个中间件（也有一个 promise.then() 监测后一个中间件 ）  
+|   .......       
+|   依次类推下一个，下下一个都类似，通过前一个中间件的 next（）方法，调用下一个中间件
+|    
+
+![](https://user-gold-cdn.xitu.io/2017/5/18/b66d6f4b38ce931f512d1c3a12588500?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
+- 参考： [你知道 koa 中间件执行原理吗?](https://juejin.im/post/591c8b4544d904006c90a2cb)
+
 ## 常见 中间件
 
 - No.1 koa-router
