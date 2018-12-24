@@ -71,3 +71,4 @@ keymetrics监控是PM2的开发者的开发和维护的一款监控工具
 - [pm2的fork启动模式和cluster模式的区别](https://segmentfault.com/q/1010000005972763/a-1020000006078840)
 - [cluster-and-fork-mode-difference-in-pm2](https://stackoverflow.com/questions/34682035/cluster-and-fork-mode-difference-in-pm2)
 - [pm2进程管理工具使用总结](https://www.jianshu.com/p/7b10123c8b88)
+- [关于pm2远程部署到多台机器](http://pm2.keymetrics.io/docs/usage/deployment/)
