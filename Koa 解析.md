@@ -75,6 +75,7 @@ koa 通过 compose 方法把中间件封装成一个 promise 对象，然后递�
 ```
 
 - [compose](https://github.com/koajs/compose#readme)
+  - [解读koa中间件处理模块koa-compose](https://segmentfault.com/a/1190000016843275?utm_source=tag-newest)
 
 ```
 # compose 源码
