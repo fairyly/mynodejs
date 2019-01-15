@@ -37,7 +37,10 @@ access：包含 getter 与 setter 的功能
 method：外部对象可以直接调用内部对象的函数
 
 ```
-- [node-delegates 源码](https://github.com/tj/node-delegates/blob/master/index.js)
+- __defineGetter__ is deprecated 被废弃后使用 use Object.defineProperty instead of __defineGetter__ or __defineSetter__
+[ PR#20 ](https://github.com/ikoajs/node-delegates/commit/206da5921fa539062eb21e5d99f5828b7717fe1b)
+
+- 参考：[node-delegates 源码](https://github.com/tj/node-delegates/blob/master/index.js)
 
 - 这个 JS 源码中使用了委托:
 
