@@ -37,8 +37,9 @@ access：包含 getter 与 setter 的功能
 method：外部对象可以直接调用内部对象的函数
 
 ```
+- [node-delegates 源码](https://github.com/tj/node-delegates/blob/master/index.js)
 
-这个 JS 源码中使用了委托:
+- 这个 JS 源码中使用了委托:
 
 在 koa 中，其核心就在于 context 对象，许多读写操作都是基于它进行，例如：
 
