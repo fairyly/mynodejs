@@ -203,3 +203,10 @@ var insertManyData = function(db,callback){
         callback();
     });
 }
+
+
+
+const BigNumber = require('bignumber.js');
+let a1 = new BigNumber(11112222333344445555);
+let b1 = a1.plus(111);
+console.log(b1)
