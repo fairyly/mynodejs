@@ -36,21 +36,10 @@
   - [bookshelf:](https://github.com/bookshelf/bookshelf)
   - [sequelize](https://github.com/sequelize/sequelize)
 
+## Node.js 书籍
 
-## 《Node.js 调试指南》
+### 《Node.js 调试指南》
 - [node-in-debugging：](https://github.com/nswbmw/node-in-debugging)
-
-
-### 实用Node.js，简单粗暴，新手学习的最短曲线
-- [practical-node-tutorial： ](https://github.com/dev-reading/practical-node-tutorial)
-
-## nodejs 模板
-- [pug(原名 jade): ](https://github.com/pugjs/pug)
-- [ejs : ](https://github.com/tj/ejs)
-
-## [「node.js能开发大型网站吗？」](https://www.zhihu.com/question/21176891/answer/81862847)
-
-## [node 调试：](http://i5ting.github.io/node-debug-tutorial/)
 
 ## [《Node.js 实战》 源码: ](https://github.com/MiYogurt/nodejs_shizhan)
   - [《Node.js实战》(node-in-action) book: ](https://github.com/SFantasy/node-in-action)
@@ -63,6 +52,19 @@
 ## 《Node.js 硬实战》
   - [alexyoung/nodeinpractice](https://github.com/alexyoung/nodeinpractice)
 
+
+
+
+### 实用Node.js，简单粗暴，新手学习的最短曲线
+- [practical-node-tutorial： ](https://github.com/dev-reading/practical-node-tutorial)
+
+## nodejs 模板
+- [pug(原名 jade): ](https://github.com/pugjs/pug)
+- [ejs : ](https://github.com/tj/ejs)
+
+## [「node.js能开发大型网站吗？」](https://www.zhihu.com/question/21176891/answer/81862847)
+
+## [node 调试：](http://i5ting.github.io/node-debug-tutorial/)
 
 
 ### A neat wrapper around node.js fs.watch / fs.watchFile / fsevents. https://paulmillr.com
