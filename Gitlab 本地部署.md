@@ -93,6 +93,14 @@ external_url 'http://192.168.1.181/'
 - 修改后出现 10 errors prohibited this user from being saved:
   直接在输入 ip 去访问,使用 root 登录,使用刚才修改的密码登录
 
+- 访问出现 `502 Whoops, GitLab is taking too much time to respond`
+  ```
+    gitlab-ctl status
+    gitlab-ctl tail [process name]命令查看对应的进程是什么情况
+  ```
+  - 参考： https://yq.aliyun.com/articles/663209
+    - https://segmentfault.com/a/1190000017436142
+
 
 ## 参考资料
 - https://blog.csdn.net/zerokkqq/article/details/79728527
