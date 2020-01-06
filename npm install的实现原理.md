@@ -53,5 +53,17 @@
 会将一个版本放在 node_modules 中，另一个仍保留在依赖树里
 
 
+## 安装模块
+
+这一步将会更新工程中的 node_modules，并执行模块中的生命周期函数（按照 preinstall、install、postinstall 的顺序）。
+
+## 执行工程自身生命周期
+
+当前 npm 工程如果定义了钩子此时会被执行（按照 install、postinstall、prepublish、prepare 的顺序）。
+
+最后一步是生成或更新版本描述文件，npm install 过程完成。
+
+
+
 ## 参考
 - [npm install的实现原理](https://www.zhihu.com/question/66629910)
