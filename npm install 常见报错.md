@@ -95,4 +95,9 @@ npm cache clean --force
 2.安装
 
 npm install --no-package-lock
+
+//如果使用没有效果
+
+npm cache clear --force 
+npm install --no-shrinkwrap --update-binary
 ```
