@@ -79,3 +79,20 @@ Run `npm rebuild node-sass --force` to build the binding for your current enviro
 npm rebuild node-sass
 npm update
 ```
+
+## `zlib: unexpected end of file`
+
+解决：
+```
+查看本地 npm 配置
+
+npm config list
+
+1.清理本地 npm 缓存包
+
+npm cache clean --force
+
+2.安装
+
+npm install --no-package-lock
+```
