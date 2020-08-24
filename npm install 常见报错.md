@@ -98,6 +98,7 @@ npm install --no-package-lock
 
 //如果使用没有效果
 
+npm config set registry= https://registry.npm.taobao.org/
 npm cache clear --force 
 npm install --no-shrinkwrap --update-binary
 ```
